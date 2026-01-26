@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know Your PC - Buy Smart</title>
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-desktop"></i>
+            <div class="logo-text">
+                <h3>Know Your PC</h3>
+                <span>Everything About Your PC</span>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Parts Explained</a></li>
+            <li><a href="#">Buying Guide</a></li>
+            <li><a href="#">Comparisons</a></li>
+            <li><a href="#">Budget Guide</a></li>
+            <li><a href="#">Top Brands</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Learn PC & Laptop Parts.<br><span class="highlight">Buy Smart.</span></h1>
+            <p>Understand the key components, compare specs, and make the right buying decisions — all in one place.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary"><i class="fa-solid fa-microchip"></i> Learn Parts</button>
+                <button class="btn btn-outline"><i class="fa-solid fa-cart-shopping"></i> Start Buying Guide</button>
+            </div>
+        </div>
+        <div class="hero-image-container">
+            <img src="../image/hero-img.jpg" alt="Laptop Exploded View" class="hero-img">
+            <span class="tag tag-cpu">CPU</span>
+            <span class="tag tag-gpu">GPU</span>
+            <span class="tag tag-ram">RAM</span>
+            <span class="tag tag-storage">Storage</span>
+        </div>
+    </header>
+
+    <section class="quick-cards">
+        <div class="container">
+            <div class="card">
+                <div class="icon-circle blue"><i class="fa-solid fa-microchip"></i></div>
+                <h3>Parts Explained</h3>
+                <p>Understand CPU, RAM, GPU, and more</p>
+                <i class="fa-solid fa-arrow-right card-arrow"></i>
+            </div>
+            <div class="card">
+                <div class="icon-circle orange"><i class="fa-solid fa-cart-shopping"></i></div>
+                <h3>Buying Guide</h3>
+                <p>Step-by-step guide to pick the right PC/laptop</p>
+                <i class="fa-solid fa-arrow-right card-arrow"></i>
+            </div>
+            <div class="card">
+                <div class="icon-circle green"><i class="fa-solid fa-scale-balanced"></i></div>
+                <h3>Comparisons</h3>
+                <p>Laptop vs PC, SSD vs HDD, and more</p>
+                <i class="fa-solid fa-arrow-right card-arrow"></i>
+            </div>
+            <div class="card">
+                <div class="icon-circle indigo"><i class="fa-solid fa-dollar-sign"></i></div>
+                <h3>Budget Guide</h3>
+                <p>Best laptops & PCs under different budgets</p>
+                <i class="fa-solid fa-arrow-right card-arrow"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-matters">
+        <div class="container split-layout">
+            <div class="text-side">
+                <h2>Why Computers <span class="underline-blue">Matter</span></h2>
+                <p class="subtitle">Computers are essential in today's world. They help us work, learn, create, and
+                    communicate efficiently.</p>
+
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="f-icon"><i class="fa-solid fa-globe"></i></div>
+                        <div>
+                            <h4>Everywhere</h4>
+                            <p>Work, school, entertainment</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="f-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                        <div>
+                            <h4>Fast Processing</h4>
+                            <p>Process information faster than humans</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="f-icon"><i class="fa-solid fa-link"></i></div>
+                        <div>
+                            <h4>Communication Hub</h4>
+                            <p>Help with communication, storage</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="f-icon"><i class="fa-solid fa-building"></i></div>
+                        <div>
+                            <h4>Modern Foundation</h4>
+                            <p>Backbone of modern life</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-side">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop"
+                    alt="People working">
+            </div>
+        </div>
+    </section>
+
+    <section class="dark-info">
+        <div class="container">
+            <div class="section-header center">
+                <h2>First Things to Know About Computers</h2>
+                <p>Understanding these basics will help you make better decisions when buying your next computer.</p>
+
+                <div class="toggle-pill">
+                    <button class="active">Components</button>
+                    <button>Types</button>
+                    <button>Purpose</button>
+                </div>
+            </div>
+
+            <div id="tab-container">
+                <div class="tab-content active" id="content-components">
+                    <div class="components-grid">
+                        <div class="comp-card">
+                            <div class="comp-icon c-blue"><i class="fa-solid fa-microchip"></i></div>
+                            <div class="comp-text">
+                                <h3>CPU</h3>
+                                <p>Brain of the computer</p>
+                            </div>
+                        </div>
+                        <div class="comp-card">
+                            <div class="comp-icon c-green"><i class="fa-solid fa-memory"></i></div>
+                            <div class="comp-text">
+                                <h3>RAM</h3>
+                                <p>Runs multiple apps smoothly</p>
+                            </div>
+                        </div>
+                        <div class="comp-card">
+                            <div class="comp-icon c-orange"><i class="fa-solid fa-hard-drive"></i></div>
+                            <div class="comp-text">
+                                <h3>Storage</h3>
+                                <p>Holds files and programs</p>
+                            </div>
+                        </div>
+                        <div class="comp-card">
+                            <div class="comp-icon c-purple"><i class="fa-solid fa-gamepad"></i></div>
+                            <div class="comp-text">
+                                <h3>GPU</h3>
+                                <p>Handles graphics, games, videos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="content-types">
+                    <div class="components-grid grid-2">
+                        <div class="comp-card type-card purple-grad">
+                            <div class="comp-icon-large"><i class="fa-solid fa-laptop"></i></div>
+                            <div class="comp-text">
+                                <h3>Laptop</h3>
+                                <p>Portable, battery-powered, good for students & office</p>
+                            </div>
+                        </div>
+                        <div class="comp-card type-card orange-grad">
+                            <div class="comp-icon-large"><i class="fa-solid fa-desktop"></i></div>
+                            <div class="comp-text">
+                                <h3>Desktop PC</h3>
+                                <p>Powerful, upgradable, better cooling</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="content-purpose">
+                    <div class="components-grid grid-2">
+                        <div class="comp-card type-card blue-grad">
+                            <div class="comp-icon-large"><i class="fa-solid fa-book-open"></i></div>
+                            <div class="comp-text">
+                                <h3>Student/Office</h3>
+                                <p>Basic CPU, 8GB RAM, SSD</p>
+                            </div>
+                        </div>
+                        <div class="comp-card type-card pink-grad">
+                            <div class="comp-icon-large"><i class="fa-solid fa-ghost"></i></div>
+                            <div class="comp-text">
+                                <h3>Gaming/Editing</h3>
+                                <p>High-performance CPU, 16GB+ RAM, dedicated GPU</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quick-tip">
+                <div class="bulb"><i class="fa-regular fa-lightbulb"></i></div>
+                <div>
+                    <h4>Quick Tip</h4>
+                    <p>Always check CPU, RAM, storage, and purpose first before making any computer purchase decision.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="top-tips">
+        <div class="container">
+            <h2>Top Tips for Buyers</h2>
+            <p class="sub-center">Quick insights to help you make smarter purchasing decisions</p>
+
+            <div class="quote-slider">
+                <i class="fa-solid fa-quote-left quote-icon left-q"></i>
+                <i class="fa-solid fa-quote-right quote-icon right-q"></i>
+
+                <div class="quote-content">
+                    <h3 id="tip-text">8GB RAM is minimum for 2024, but 16GB is recommended for future-proofing</h3>
+                </div>
+
+                <div class="slider-controls">
+                    <button class="arrow" id="prevBtn"><i class="fa-solid fa-arrow-left"></i></button>
+                    <div class="dots" id="sliderDots">
+                    </div>
+                    <button class="arrow" id="nextBtn"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="tip-cards">
+                <div class="tip-card">
+                    <div class="tip-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h4>Smart Buying</h4>
+                    <p>Make informed decisions with our comprehensive guides</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon"><i class="fa-solid fa-tag"></i></div>
+                    <h4>Best Value</h4>
+                    <p>Find the perfect balance between price and performance</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon"><i class="fa-solid fa-clock"></i></div>
+                    <h4>Future-Proof</h4>
+                    <p>Choose specs that will last for years to come</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="resources">
+        <div class="container">
+            <h2>More Resources</h2>
+            <p class="sub-center">Explore additional guides to help you make the best decision</p>
+
+            <div class="resource-grid">
+                <div class="res-card pink-bg">
+                    <div class="res-icon"><i class="fa-solid fa-certificate"></i></div>
+                    <h3>Top Brands</h3>
+                    <p>Discover the most popular and trusted laptop and PC brands worldwide and in Nepal. Learn about
+                        their strengths and best series.</p>
+                    <a href="#" class="res-link">Explore Brands <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="res-card blue-bg">
+                    <div class="res-icon"><i class="fa-solid fa-comments"></i></div>
+                    <h3>FAQ & Glossary</h3>
+                    <p>Get quick answers to common questions and learn technical terms explained in simple language.
+                        Perfect for beginners.</p>
+                    <a href="#" class="res-link">View FAQs <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="logo">
+                    <i class="fa-solid fa-desktop"></i>
+                    <div class="logo-text">
+                        <h3>Know Your PC</h3>
+                        <span>Everything About Your PC</span>
+                    </div>
+                </div>
+                <p class="footer-desc">Your complete guide to understanding computers and making smart buying decisions.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Parts Explained</a></li>
+                    <li><a href="#">Buying Guide</a></li>
+                    <li><a href="#">Comparisons</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Budget Guide</a></li>
+                    <li><a href="#">Top Brands</a></li>
+                    <li><a href="#">FAQ & Glossary</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Know Your PC. All rights reserved.</p>
+            <p>Powered by Readdy</p>
+        </div>
+    </footer>
+
+    <script src="../JS/home.js"></script>
+</body>
+
+</html>
