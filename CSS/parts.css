@@ -1,0 +1,417 @@
+/* --- Global Vars Update --- */
+:root {
+    --primary-blue: #38bdf8;
+    --dark-bg: #0b1120;
+    --white: #ffffff;
+    --text-main: #334155;
+    /* Theme Colors */
+    --t-blue: #0ea5e9;
+    --t-green: #22c55e;
+    --t-orange: #f97316;
+    --t-pink: #ec4899;
+    --t-purple: #a855f7;
+    --t-red: #ea580c;
+    --t-lime: #84cc16;
+    --t-cyan: #3b82f6;
+    --t-bright-green: #65a30d;
+    --t-magenta: #d946ef;
+}
+
+/* --- Global Reset & Basics (Keep your existing top section) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ... (Keep your Navbar Styles) ... */
+
+/* --- Parts Page Specifics --- */
+.page-header {
+    background: #1e293b;
+    color: white;
+    padding: 4rem 5% 5rem;
+    /* Taller padding */
+}
+
+.breadcrumbs {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+}
+
+.breadcrumbs i {
+    font-size: 0.7rem;
+    margin: 0 8px;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    max-width: 700px;
+    color: #cbd5e1;
+    font-size: 1.1rem;
+}
+
+/* Sections */
+.part-section {
+    padding: 5rem 5%;
+    background: white;
+}
+
+.bg-grey {
+    background: #f8fafc;
+}
+
+/* Layouts */
+.split-layout {
+    display: flex;
+    align-items: flex-start;
+    /* Top align */
+    gap: 4rem;
+}
+
+.reverse-layout {
+    flex-direction: row-reverse;
+}
+
+/* Text Content */
+.title-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.vertical-bar {
+    width: 4px;
+    border-radius: 4px;
+}
+
+.italic-sub {
+    font-style: italic;
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-top: 2px;
+}
+
+.desc-text {
+    margin-bottom: 2rem;
+    color: #475569;
+}
+
+.feature-list {
+    list-style: none;
+    margin-bottom: 2.5rem;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    color: #334155;
+}
+
+/* Image */
+.image-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.part-img {
+    width: 100%;
+    max-width: 550px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.text-side {
+    flex: 1;
+}
+
+/* --- Theme System (Colors) --- */
+/* Blue */
+.theme-blue .vertical-bar {
+    background: var(--t-blue);
+}
+
+.theme-blue h2 {
+    color: #0f172a;
+}
+
+.theme-blue .feature-list i {
+    color: var(--t-blue);
+}
+
+.theme-blue .check-box {
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+}
+
+/* Green */
+.theme-green .vertical-bar {
+    background: var(--t-green);
+}
+
+.theme-green .feature-list i {
+    color: var(--t-green);
+}
+
+.theme-green .check-box {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+/* Orange */
+.theme-orange .vertical-bar {
+    background: var(--t-orange);
+}
+
+.theme-orange .feature-list i {
+    color: var(--t-orange);
+}
+
+.theme-orange .check-box {
+    background: linear-gradient(135deg, #f97316, #ea580c);
+}
+
+/* Pink */
+.theme-pink .vertical-bar {
+    background: var(--t-pink);
+}
+
+.theme-pink .feature-list i {
+    color: var(--t-pink);
+}
+
+.theme-pink .check-box {
+    background: linear-gradient(135deg, #ec4899, #db2777);
+}
+
+/* Purple */
+.theme-purple .vertical-bar {
+    background: var(--t-purple);
+}
+
+.theme-purple .feature-list i {
+    color: var(--t-purple);
+}
+
+.theme-purple .check-box {
+    background: linear-gradient(135deg, #a855f7, #9333ea);
+}
+
+/* Red (Motherboard) */
+.theme-red .vertical-bar {
+    background: var(--t-red);
+}
+
+.theme-red .feature-list i {
+    color: var(--t-red);
+}
+
+.theme-red .check-box {
+    background: linear-gradient(135deg, #f97316, #c2410c);
+}
+
+/* Lime (PSU) */
+.theme-lime .vertical-bar {
+    background: var(--t-lime);
+}
+
+.theme-lime .feature-list i {
+    color: var(--t-lime);
+}
+
+.theme-lime .check-box {
+    background: linear-gradient(135deg, #84cc16, #65a30d);
+}
+
+/* Cyan (Cooling) */
+.theme-cyan .vertical-bar {
+    background: var(--t-cyan);
+}
+
+.theme-cyan .feature-list i {
+    color: var(--t-cyan);
+}
+
+.theme-cyan .check-box {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+/* Bright Green (Battery) */
+.theme-bright-green .vertical-bar {
+    background: var(--t-bright-green);
+}
+
+.theme-bright-green .feature-list i {
+    color: var(--t-bright-green);
+}
+
+.theme-bright-green .check-box {
+    background: linear-gradient(135deg, #84cc16, #4d7c0f);
+}
+
+/* Magenta (Ports) */
+.theme-magenta .vertical-bar {
+    background: var(--t-magenta);
+}
+
+.theme-magenta .feature-list i {
+    color: var(--t-magenta);
+}
+
+.theme-magenta .check-box {
+    background: linear-gradient(135deg, #d946ef, #c026d3);
+}
+
+
+/* Check Box Styling (Universal) */
+.check-box {
+    padding: 2rem;
+    border-radius: 16px;
+    color: white;
+    /* Always white text on colored bg */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.check-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.check-header i {
+    font-size: 1.2rem;
+}
+
+.check-header h4 {
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 0.8rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.check-list li i {
+    margin-top: 4px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* --- Table Section --- */
+.table-section {
+    padding: 5rem 5%;
+    background: white;
+    text-align: center;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    text-align: left;
+}
+
+thead {
+    background: #0f172a;
+    color: white;
+}
+
+th {
+    padding: 1.2rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+td {
+    padding: 1.2rem;
+    font-size: 0.95rem;
+    color: #475569;
+}
+
+td i {
+    margin-right: 8px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Badges for Table */
+.badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.badge-red {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.badge-green {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 900px) {
+
+    .split-layout,
+    .reverse-layout {
+        flex-direction: column !important;
+        /* Force vertical stack */
+        gap: 2rem;
+    }
+
+    .image-side {
+        width: 100%;
+        order: -1;
+        /* Always image on top for mobile */
+    }
+
+    .part-img {
+        max-width: 100%;
+    }
+
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+}
