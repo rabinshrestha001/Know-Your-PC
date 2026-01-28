@@ -1,0 +1,499 @@
+/* --- BUYING GUIDE PAGE STYLES --- */
+
+/* --- IMPROVED HEADER & STEPS --- */
+
+.guide-header {
+    /* Better Gradient: Deep Blue to Slate */
+    background: radial-gradient(circle at top right, #334155, #0f172a);
+    padding: 8rem 0 10rem;
+    /* Extra padding at bottom for the overlap */
+    text-align: center;
+    /* Centers all text */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle background pattern for texture */
+.guide-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 20%),
+        radial-gradient(circle at 80% 30%, rgba(56, 189, 248, 0.05) 0%, transparent 20%);
+    pointer-events: none;
+}
+
+/* Fix Text Color & Size */
+.guide-header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    /* FORCE WHITE */
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* Adds depth */
+}
+
+.guide-header p {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    /* Light grey for readability */
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Breadcrumbs (Home > Buying Guide) styling */
+.breadcrumbs {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+/* --- FLOATING STEPS BAR (The "Pill") --- */
+.steps-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 850px;
+    margin: -50px auto 4rem;
+    /* Negative margin pulls it up */
+
+    /* Glassmorphism Effect */
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 2rem 4rem;
+    border-radius: 60px;
+
+    /* 3D Shadow to make it pop */
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+
+    position: relative;
+    z-index: 10;
+}
+
+.step {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    min-width: 80px;
+    cursor: default;
+}
+
+.step-circle {
+    width: 45px;
+    height: 45px;
+    background: #e2e8f0;
+    /* Default inactive gray */
+    color: #64748b;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0 auto 10px;
+    transition: all 0.3s ease;
+    border: 3px solid white;
+    /* White ring around circle */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.step span {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+/* Styles for the ACTIVE step (Step 1) */
+.step.active .step-circle {
+    background: #0284c7;
+    /* Bright Blue */
+    color: white;
+    transform: scale(1.1);
+    /* Make it slightly bigger */
+    box-shadow: 0 0 20px rgba(2, 132, 199, 0.4);
+    /* Glow effect */
+    animation: pulse 2s infinite;
+}
+
+.step.active span {
+    color: #0f172a;
+    /* Dark active text */
+}
+
+/* The connecting line */
+.line {
+    flex: 1;
+    height: 4px;
+    background: #f1f5f9;
+    margin: -30px 10px 0;
+    border-radius: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Animation for the Active Dot */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(2, 132, 199, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(2, 132, 199, 0);
+    }
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+    .guide-header {
+        padding: 6rem 1rem 8rem;
+    }
+
+    .guide-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .steps-container {
+        padding: 1.5rem;
+        width: 90%;
+        margin-top: -40px;
+        border-radius: 20px;
+    }
+
+    .step-circle {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .step span {
+        font-size: 0.7rem;
+    }
+}
+
+/* Sections */
+.guide-section {
+    padding: 5rem 5%;
+}
+
+.section-badge {
+    background: #e0f2fe;
+    color: #0284c7;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    width: fit-content;
+    margin: 0 auto 1rem;
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.sub-center {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+/* Purpose Grid (Step 1) */
+.purpose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.purpose-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid #f1f5f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.purpose-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.card-green .icon-box {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.card-blue .icon-box {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.card-red .icon-box {
+    background: linear-gradient(135deg, #f43f5e, #e11d48);
+}
+
+.card-purple .icon-box {
+    background: linear-gradient(135deg, #a855f7, #9333ea);
+}
+
+.purpose-card h3 {
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+}
+
+.purpose-card p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+}
+
+.mini-list {
+    list-style: none;
+}
+
+.mini-list li {
+    font-size: 0.85rem;
+    color: #475569;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mini-list li i {
+    color: #22c55e;
+    font-size: 0.8rem;
+}
+
+/* Table Styling (Step 2) */
+.shadow-table {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+.guide-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.guide-table th {
+    background: #1e293b;
+    color: white;
+    padding: 1.2rem;
+    text-align: left;
+}
+
+.guide-table td {
+    padding: 1.2rem;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+}
+
+.guide-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Comparison Cards (Step 3) */
+.compare-card {
+    flex: 1;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.compare-header {
+    padding: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.c-blue-bg {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.c-purple-bg {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.compare-header i {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.compare-body {
+    padding: 2rem;
+}
+
+.pros-list li,
+.cons-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #475569;
+}
+
+.pros-list i {
+    color: #22c55e;
+    margin-top: 4px;
+}
+
+.cons-list i {
+    color: #ef4444;
+    margin-top: 4px;
+}
+
+.divider {
+    height: 1px;
+    background: #e2e8f0;
+    margin: 1.5rem 0;
+}
+
+/* Checklist Grid (Step 4) */
+.checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.check-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: left;
+    border-left: 4px solid var(--primary-blue);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.check-item i {
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.check-item h4 {
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+}
+
+.check-item p {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+    color: white;
+    padding: 5rem 5%;
+    margin-top: 2rem;
+}
+
+.cta-buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-light {
+    background: white;
+    color: #0f172a;
+}
+
+.btn-outline {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+/* Responsive Guide */
+@media (max-width: 768px) {
+    .steps-container {
+        padding: 1rem;
+        margin-top: -30px;
+        width: 90%;
+    }
+
+    .line {
+        margin: -15px 5px 0;
+    }
+
+    /* Smaller lines */
+    .step span {
+        font-size: 0.7rem;
+    }
+
+    .step-circle {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .guide-table {
+        display: block;
+        overflow-x: auto;
+    }
+}

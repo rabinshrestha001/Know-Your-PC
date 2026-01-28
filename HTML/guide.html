@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buying Guide - Know Your PC</title>
+    <link rel="stylesheet" href="../CSS/guide.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-desktop"></i>
+            <div class="logo-text">
+                <h3>Know Your PC</h3>
+                <span>Everything About Your PC</span>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="parts.html">Parts Explained</a></li>
+            <li><a href="guide.html" class="active-link">Buying Guide</a></li>
+            <li><a href="#">Comparisons</a></li>
+        </ul>
+    </nav>
+    <header class="page-header guide-header">
+        <div class="container">
+            <div class="breadcrumbs">Home &nbsp;/&nbsp; Buying Guide</div>
+            <h1>Ultimate PC Buying Guide</h1>
+            <p>Follow this simple 4-step guide to choose the right computer for your needs. We break down the specs so
+                you don't have to guess.</p>
+        </div>
+    </header>
+
+
+
+    <div class="steps-container">
+        <div class="step active">
+            <div class="step-circle">1</div>
+            <span>Purpose</span>
+        </div>
+        <div class="line"></div>
+        <div class="step">
+            <div class="step-circle">2</div>
+            <span>Specs</span>
+        </div>
+        <div class="line"></div>
+        <div class="step">
+            <div class="step-circle">3</div>
+            <span>Type</span>
+        </div>
+        <div class="line"></div>
+        <div class="step">
+            <div class="step-circle">4</div>
+            <span>Checklist</span>
+        </div>
+    </div>
+
+    <section class="guide-section">
+        <div class="container">
+            <div class="section-badge">Step 1</div>
+            <h2 class="text-center">Choose Your Purpose</h2>
+            <p class="sub-center">Understanding how you will use the computer is the first step.</p>
+
+            <div class="purpose-grid hidden hidden-up">
+                <div class="purpose-card card-green">
+                    <div class="icon-box"><i class="fa-solid fa-book-open"></i></div>
+                    <h3>Student</h3>
+                    <p>Browsing, docs, online classes.</p>
+                    <ul class="mini-list">
+                        <li><i class="fa-solid fa-check"></i> Portable</li>
+                        <li><i class="fa-solid fa-check"></i> Good Battery</li>
+                        <li><i class="fa-solid fa-check"></i> Budget Friendly</li>
+                    </ul>
+                </div>
+
+                <div class="purpose-card card-blue">
+                    <div class="icon-box"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3>Office/Work</h3>
+                    <p>Excel, Zoom calls, multitasking.</p>
+                    <ul class="mini-list">
+                        <li><i class="fa-solid fa-check"></i> Reliable</li>
+                        <li><i class="fa-solid fa-check"></i> Fast SSD</li>
+                        <li><i class="fa-solid fa-check"></i> Clear Webcam</li>
+                    </ul>
+                </div>
+
+                <div class="purpose-card card-red">
+                    <div class="icon-box"><i class="fa-solid fa-gamepad"></i></div>
+                    <h3>Gaming</h3>
+                    <p>Playing high-end video games.</p>
+                    <ul class="mini-list">
+                        <li><i class="fa-solid fa-check"></i> Powerful GPU</li>
+                        <li><i class="fa-solid fa-check"></i> High Refresh Rate</li>
+                        <li><i class="fa-solid fa-check"></i> Good Cooling</li>
+                    </ul>
+                </div>
+
+                <div class="purpose-card card-purple">
+                    <div class="icon-box"><i class="fa-solid fa-pen-nib"></i></div>
+                    <h3>Editing/Creative</h3>
+                    <p>Video editing, 3D design, coding.</p>
+                    <ul class="mini-list">
+                        <li><i class="fa-solid fa-check"></i> High RAM (16GB+)</li>
+                        <li><i class="fa-solid fa-check"></i> Color Accurate Screen</li>
+                        <li><i class="fa-solid fa-check"></i> Powerful CPU</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="guide-section bg-grey">
+        <div class="container">
+            <div class="section-badge">Step 2</div>
+            <h2 class="text-center">Minimum Specs Table</h2>
+            <p class="sub-center">Minimum recommended specs for 2024-2025.</p>
+
+            <div class="table-container shadow-table hidden hidden-up">
+                <table class="guide-table">
+                    <thead>
+                        <tr>
+                            <th>User Case</th>
+                            <th>CPU (Intel/AMD)</th>
+                            <th>RAM</th>
+                            <th>Storage</th>
+                            <th>GPU Needed?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Student</strong></td>
+                            <td>i3 / Ryzen 3</td>
+                            <td>8GB</td>
+                            <td>256GB SSD</td>
+                            <td><span class="badge badge-red">No</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Office</strong></td>
+                            <td>i5 / Ryzen 5</td>
+                            <td>16GB</td>
+                            <td>512GB SSD</td>
+                            <td><span class="badge badge-red">No</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gaming</strong></td>
+                            <td>i5 / Ryzen 5 (H-Series)</td>
+                            <td>16GB</td>
+                            <td>1TB SSD</td>
+                            <td><span class="badge badge-green">Yes (RTX 3050+)</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Editing</strong></td>
+                            <td>i7 / Ryzen 7</td>
+                            <td>32GB</td>
+                            <td>1TB NVMe</td>
+                            <td><span class="badge badge-green">Yes (RTX 4060+)</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="guide-section">
+        <div class="container">
+            <div class="section-badge">Step 3</div>
+            <h2 class="text-center">Laptop vs Desktop</h2>
+            <p class="sub-center">Choose the form factor based on your lifestyle.</p>
+
+            <div class="split-layout align-top mt-5">
+                <div class="compare-card hidden hidden-left">
+                    <div class="compare-header c-blue-bg">
+                        <i class="fa-solid fa-laptop"></i>
+                        <h3>Laptop</h3>
+                    </div>
+                    <div class="compare-body">
+                        <ul class="pros-list">
+                            <li><i class="fa-solid fa-check"></i> <strong>Portable:</strong> Take it anywhere.</li>
+                            <li><i class="fa-solid fa-check"></i> <strong>All-in-One:</strong> Includes screen,
+                                keyboard, mouse.</li>
+                            <li><i class="fa-solid fa-check"></i> <strong>Battery:</strong> Works without power.</li>
+                        </ul>
+                        <div class="divider"></div>
+                        <ul class="cons-list">
+                            <li><i class="fa-solid fa-xmark"></i> Hard to upgrade.</li>
+                            <li><i class="fa-solid fa-xmark"></i> Can get hot/loud under load.</li>
+                            <li><i class="fa-solid fa-xmark"></i> More expensive for same performance.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="compare-card hidden hidden-right">
+                    <div class="compare-header c-purple-bg">
+                        <i class="fa-solid fa-desktop"></i>
+                        <h3>Desktop PC</h3>
+                    </div>
+                    <div class="compare-body">
+                        <ul class="pros-list">
+                            <li><i class="fa-solid fa-check"></i> <strong>Powerful:</strong> Better performance.</li>
+                            <li><i class="fa-solid fa-check"></i> <strong>Upgradable:</strong> Change parts easily.</li>
+                            <li><i class="fa-solid fa-check"></i> <strong>Cooling:</strong> Runs cooler and quieter.
+                            </li>
+                        </ul>
+                        <div class="divider"></div>
+                        <ul class="cons-list">
+                            <li><i class="fa-solid fa-xmark"></i> Not portable at all.</li>
+                            <li><i class="fa-solid fa-xmark"></i> Requires separate monitor & keyboard.</li>
+                            <li><i class="fa-solid fa-xmark"></i> Needs constant power.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="guide-section bg-grey">
+        <div class="container">
+            <div class="section-badge">Step 4</div>
+            <h2 class="text-center">Final Checklist</h2>
+            <p class="sub-center">Before you pay, double-check these important factors.</p>
+
+            <div class="checklist-grid hidden hidden-up">
+                <div class="check-item">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <h4>Performance</h4>
+                    <p>Is the CPU generation current? (e.g. Intel 13th/14th Gen)</p>
+                </div>
+                <div class="check-item">
+                    <i class="fa-solid fa-wrench"></i>
+                    <h4>Maintainability</h4>
+                    <p>Can you upgrade RAM or Storage later if needed?</p>
+                </div>
+                <div class="check-item">
+                    <i class="fa-solid fa-battery-full"></i>
+                    <h4>Battery (Laptops)</h4>
+                    <p>Does it have at least 50Wh battery for decent life?</p>
+                </div>
+                <div class="check-item">
+                    <i class="fa-solid fa-headset"></i>
+                    <h4>Support</h4>
+                    <p>Does the brand have a service center near you?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section hidden hidden-up">
+        <div class="container text-center">
+            <h2>Ready to Find Your Perfect Computer?</h2>
+            <p>Read our in-depth comparisons or check specific budgets.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-light">View Comparisons</a>
+                <a href="#" class="btn btn-outline">Budget Guide</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Know Your PC</h3>
+                <p class="footer-desc">Making tech simple for everyone.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="parts.html">Parts Explained</a></li>
+                    <li><a href="guide.html">Buying Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Know Your PC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.hidden').forEach((el) => observer.observe(el));
+    </script>
+</body>
+
+</html>
