@@ -3,35 +3,57 @@
     --bg-body: #ffffff;
     --bg-alt: #f1f5f9;
     --text-main: #1e293b;
+    /* Darker main text for better contrast */
     --text-muted: #64748b;
     --white: #ffffff;
 
-    /* Soft Modern Gradients (Lighter) */
-    --grad-blue: linear-gradient(135deg, #bae6fd 0%, #7dd3fc 100%);
-    --grad-green: linear-gradient(135deg, #bbf7d0 0%, #86efac 100%);
-    --grad-orange: linear-gradient(135deg, #fde68a 0%, #fcd34d 100%);
-    --grad-pink: linear-gradient(135deg, #fbcfe8 0%, #f9a8d4 100%);
-    --grad-purple: linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 100%);
-    --grad-red: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
-    --grad-lime: linear-gradient(135deg, #d9f99d 0%, #bef264 100%);
-    --grad-cyan: linear-gradient(135deg, #a5f3fc 0%, #67e8f9 100%);
-    --grad-magenta: linear-gradient(135deg, #f5d0fe 0%, #e879f9 100%);
+    /* Theme Colors for Image Backgrounds & Cards */
+    /* CPU - Blue */
+    --t-blue-bg: #e0f2fe;
+    /* Light blue for image bg */
+    --t-blue-main: #0284c7;
+    /* Strong blue for text/icons */
 
-    /* Text colors for inside the light cards */
-    --text-blue: #0369a1;
-    --text-green: #15803d;
-    --text-orange: #b45309;
-    --text-pink: #be185d;
-    --text-purple: #7e22ce;
-    --text-red: #b91c1c;
-    --text-lime: #4d7c0f;
-    --text-cyan: #0e7490;
-    --text-magenta: #a21caf;
+    /* RAM - Green */
+    --t-green-bg: #dcfce7;
+    /* Light green for image bg */
+    --t-green-main: #16a34a;
+
+    /* Storage - Orange */
+    --t-orange-bg: #ffedd5;
+    --t-orange-main: #ea580c;
+
+    /* GPU - Pink */
+    --t-pink-bg: #fce7f3;
+    --t-pink-main: #db2777;
+
+    /* Display - Purple */
+    --t-purple-bg: #f3e8ff;
+    --t-purple-main: #9333ea;
+
+    /* Motherboard - Red */
+    --t-red-bg: #fee2e2;
+    --t-red-main: #dc2626;
+
+    /* PSU - Lime */
+    --t-lime-bg: #ecfccb;
+    --t-lime-main: #65a30d;
+
+    /* Cooling - Cyan */
+    --t-cyan-bg: #cffafe;
+    --t-cyan-main: #0891b2;
+
+    /* Battery - Bright Green */
+    --t-bright-bg: #d9f99d;
+    --t-bright-main: #4d7c0f;
+
+    /* Ports - Magenta */
+    --t-magenta-bg: #fae8ff;
+    --t-magenta-main: #c026d3;
 
     /* Shadows */
     --shadow-sm: 0 4px 6px -1px rgb(0 0 0 / 0.05);
     --shadow-card: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.01);
-    --shadow-glow: 0 0 20px rgba(0, 0, 0, 0.05);
 }
 
 /* --- Reset & Base --- */
@@ -55,13 +77,12 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1.2rem 5%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: white;
+    /* Clean white navbar */
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: var(--shadow-sm);
-    border-bottom: 1px solid #f1f5f9;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .logo {
@@ -106,85 +127,80 @@ body {
     color: #0ea5e9;
 }
 
-/* --- Page Header (Light Theme) --- */
+/* --- Page Header (Dark Theme with Left Align Text) --- */
+/* User requested dark background for header logic */
 .page-header {
-    background: #ffffff;
-    color: var(--text-main);
-    padding: 6rem 5% 4rem;
+    background: #0f172a;
+    /* Dark Blue/Black Background */
+    color: white;
+    padding: 8rem 5% 6rem;
+    text-align: left;
+    /* Aligned Left */
     position: relative;
     overflow: hidden;
-    text-align: center;
 }
 
-/* Subtle background decorations */
-.page-header::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -10%;
-    width: 60%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(14, 165, 233, 0.05) 0%, transparent 70%);
-    z-index: 0;
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
+.breadcrumbs {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.breadcrumbs i {
+    font-size: 0.7rem;
+    color: #38bdf8;
+}
+
+.page-header h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    color: white;
+}
+
+.page-header p {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+    /* Light grey text */
+    max-width: 700px;
+    line-height: 1.7;
+}
+
+/* Abstract shapes for header depth */
 .page-header::after {
     content: '';
     position: absolute;
     top: -50%;
     right: -10%;
-    width: 60%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(168, 85, 247, 0.05) 0%, transparent 70%);
-    z-index: 0;
-}
-
-.header-content {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.breadcrumbs {
-    font-size: 0.85rem;
-    color: #94a3b8;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
-}
-
-.breadcrumbs i {
-    font-size: 0.7rem;
-    margin: 0 8px;
-}
-
-.page-header h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    line-height: 1.1;
-    color: #0f172a;
-}
-
-.page-header p {
-    font-size: 1.2rem;
-    color: #64748b;
-    line-height: 1.7;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
 }
 
 /* --- Main Sections Layout --- */
 .part-section {
-    padding: 7rem 5%;
-    position: relative;
-    background: var(--bg-body);
+    padding: 6rem 5%;
+    background: white;
+    /* Clean white background for all sections */
 }
 
-/* Alternating background colors */
+/* Optional: Slight grey for alternate sections if desired, but user images show clean white */
 .part-section:nth-child(even) {
-    background: var(--bg-alt);
-    /* Light Grey */
+    background: #fdfdfd;
 }
 
 .container {
@@ -195,13 +211,10 @@ body {
 .split-layout {
     display: flex;
     align-items: center;
-    gap: 8rem;
+    gap: 5rem;
     justify-content: space-between;
 }
 
-/* Zig-Zag Logic */
-/* .reverse-layout applies row-reverse to swap Image and Text visual order */
-/* IMPORTANT: HTML Order must always be [Image, Text] for this to work */
 .reverse-layout {
     flex-direction: row-reverse;
 }
@@ -215,76 +228,61 @@ body {
     position: relative;
 }
 
-/* Backdrop for images */
-.image-side::before {
-    content: '';
-    position: absolute;
-    width: 80%;
-    height: 80%;
-    background: currentColor;
-    /* Inherits color from section theme */
-    opacity: 0.1;
-    filter: blur(40px);
-    border-radius: 50%;
-    z-index: 0;
-    transform: translate(10px, 10px);
+/* The colored background box for images */
+.image-bg-box {
+    width: fit-content;
+    margin: 0 auto;
+    height: auto;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Background color will be set by specific theme classes below */
+    transition: transform 0.4s ease;
+}
+
+.image-bg-box:hover {
+    transform: translateY(-5px);
 }
 
 .part-img {
     width: 100%;
-    max-width: 480px;
-    border-radius: 20px;
-    box-shadow: var(--shadow-card);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    z-index: 1;
-    background: white;
-    /* Ensure clean edges */
-    padding: 10px;
-    /* White frame effect */
+    max-width: 400px;
+    /* Control image size inside the box */
+    height: auto;
+    object-fit: contain;
+    /* This makes the white background of the JPG transparent so it blends with the color */
+    mix-blend-mode: multiply;
+    /* Remove shadow/border from image itself to blend with box */
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.15));
+    /* Realistic shadow for the object */
 }
-
-.part-img:hover {
-    transform: scale(1.03) translateY(-5px);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
-}
-
 
 /* --- Text Side --- */
 .text-side {
     flex: 1;
 }
 
-.title-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1.5rem;
-    border-left: 4px solid #ccc;
-    /* Fallback */
-    padding-left: 1.5rem;
-}
-
 .title-group h2 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 800;
-    color: var(--text-main);
-    line-height: 1.2;
+    color: #1e293b;
     margin-bottom: 0.5rem;
 }
 
 .italic-sub {
-    font-style: normal;
-    font-weight: 500;
-    color: var(--text-muted);
+    font-style: italic;
     font-size: 1.1rem;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+    display: block;
 }
 
 .desc-text {
     font-size: 1.05rem;
-    color: #475569;
+    color: #334155;
     margin-bottom: 2rem;
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
 .feature-list {
@@ -298,26 +296,18 @@ body {
     gap: 12px;
     margin-bottom: 0.8rem;
     font-size: 1rem;
-    color: var(--text-main);
+    color: #334155;
     font-weight: 500;
 }
 
-.feature-list i {
-    margin-top: 5px;
-    font-size: 1.1rem;
-}
-
-/* --- Light/Modern Check Boxes --- */
+/* --- Check Box Styling --- */
+/* User requested solid vivid colors for the "Check" block, similar to images */
 .check-box {
     padding: 2rem;
-    border-radius: 20px;
-    /* We use the gradient variables defined in root */
-    background: #f8fafc;
-    /* Default fallback */
-    color: var(--text-main);
-    position: relative;
-    box-shadow: var(--shadow-sm);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    color: white;
+    /* Text matches theme color or white depending on contrast, let's go with White text on colored bg */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
 .check-header {
@@ -325,10 +315,6 @@ body {
     align-items: center;
     gap: 10px;
     margin-bottom: 1rem;
-}
-
-.check-header i {
-    font-size: 1.2rem;
 }
 
 .check-header h4 {
@@ -346,283 +332,236 @@ body {
     gap: 10px;
     font-size: 0.95rem;
     line-height: 1.5;
-    color: #334155;
 }
 
-.check-list li i {
-    margin-top: 5px;
-    font-size: 0.9rem;
+/* --- Scoped Themes (Apply Colors to Components) --- */
+
+/* CPU: Blue */
+.theme-blue .image-bg-box {
+    background-color: var(--t-blue-bg);
 }
 
-
-/* --- Scoped Themes (Applied to Colors & Gradients) --- */
-/* The .text-side class will have theme-blue/green etc */
-
-/* Blue Theme */
-.theme-blue .title-group {
-    border-color: #38bdf8;
-}
-
-.theme-blue .image-side {
-    color: #38bdf8;
-}
-
-/* For backdrop */
 .theme-blue .feature-list i {
-    color: #0284c7;
+    color: var(--t-blue-main);
 }
 
+/* Tick text color */
 .theme-blue .check-box {
-    background: var(--grad-blue);
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
 }
 
-.theme-blue .check-header,
+/* Solid color block */
 .theme-blue .check-list li {
-    color: var(--text-blue);
+    color: white;
 }
 
 .theme-blue .check-list li i {
-    color: var(--text-blue);
+    color: rgba(255, 255, 255, 0.7);
 }
 
-/* Green Theme */
-.theme-green .title-group {
-    border-color: #4ade80;
-}
-
-.theme-green .image-side {
-    color: #4ade80;
+/* RAM: Green */
+.theme-green .image-bg-box {
+    background-color: var(--t-green-bg);
 }
 
 .theme-green .feature-list i {
-    color: #16a34a;
+    color: var(--t-green-main);
 }
 
 .theme-green .check-box {
-    background: var(--grad-green);
+    background: linear-gradient(135deg, #22c55e 0%, #10b981 100%);
 }
 
-.theme-green .check-header,
 .theme-green .check-list li {
-    color: var(--text-green);
+    color: white;
 }
 
 .theme-green .check-list li i {
-    color: var(--text-green);
+    color: rgba(255, 255, 255, 0.7);
 }
 
-/* Orange Theme */
-.theme-orange .title-group {
-    border-color: #fbbf24;
-}
+/* Storage: Orange */
 
-.theme-orange .image-side {
-    color: #fbbf24;
+.theme-orange .image-bg-box {
+    background-color: var(--t-orange-bg);
 }
 
 .theme-orange .feature-list i {
-    color: #ea580c;
+    color: var(--t-orange-main);
 }
 
 .theme-orange .check-box {
-    background: var(--grad-orange);
+    background: linear-gradient(135deg, #f97316 0%, #eab308 100%);
 }
 
-.theme-orange .check-header,
 .theme-orange .check-list li {
-    color: var(--text-orange);
+    color: white;
 }
 
 .theme-orange .check-list li i {
-    color: var(--text-orange);
+    color: rgba(255, 255, 255, 0.7);
 }
 
-/* Pink Theme */
-.theme-pink .title-group {
-    border-color: #f472b6;
+/* GPU: Pink */
+.theme-pink .image-bg-box {
+    background-color: var(--t-pink-bg);
 }
 
-.theme-pink .image-side {
-    color: #f472b6;
-}
 
 .theme-pink .feature-list i {
-    color: #db2777;
+    color: var(--t-pink-main);
 }
 
 .theme-pink .check-box {
-    background: var(--grad-pink);
+    background: linear-gradient(135deg, #d946ef 0%, #ec4899 100%);
 }
 
-.theme-pink .check-header,
 .theme-pink .check-list li {
-    color: var(--text-pink);
+    color: white;
 }
 
 .theme-pink .check-list li i {
-    color: var(--text-pink);
+    color: rgba(255, 255, 255, 0.7);
 }
 
-/* Purple Theme */
-.theme-purple .title-group {
-    border-color: #c084fc;
+/* Display: Purple */
+.theme-purple .image-bg-box {
+    background-color: var(--t-purple-bg);
 }
 
-.theme-purple .image-side {
-    color: #c084fc;
-}
 
 .theme-purple .feature-list i {
-    color: #9333ea;
+    color: var(--t-purple-main);
 }
 
 .theme-purple .check-box {
-    background: var(--grad-purple);
+    background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
 }
 
-.theme-purple .check-header,
 .theme-purple .check-list li {
-    color: var(--text-purple);
+    color: white;
 }
 
 .theme-purple .check-list li i {
-    color: var(--text-purple);
+    color: rgba(255, 255, 255, 0.7);
 }
 
-/* Red Theme */
-.theme-red .title-group {
-    border-color: #f87171;
+/* Motherboard: Red */
+.theme-red .image-bg-box {
+    background-color: var(--t-red-bg);
 }
 
-.theme-red .image-side {
-    color: #f87171;
-}
 
 .theme-red .feature-list i {
-    color: #dc2626;
+    color: var(--t-red-main);
 }
 
 .theme-red .check-box {
-    background: var(--grad-red);
+    background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
 }
 
-.theme-red .check-header,
 .theme-red .check-list li {
-    color: var(--text-red);
+    color: white;
 }
 
 .theme-red .check-list li i {
-    color: var(--text-red);
+    color: rgba(255, 255, 255, 0.7);
 }
 
-/* Lime Theme */
-.theme-lime .title-group {
-    border-color: #a3e635;
-}
+/* PSU: Lime */
 
-.theme-lime .image-side {
-    color: #a3e635;
-}
 
 .theme-lime .feature-list i {
-    color: #65a30d;
+    color: var(--t-lime-main);
+}
+
+.theme-lime .image-bg-box {
+    background-color: var(--t-lime-bg);
 }
 
 .theme-lime .check-box {
-    background: var(--grad-lime);
+    background: linear-gradient(135deg, #84cc16 0%, #22c55e 100%);
 }
 
-.theme-lime .check-header,
 .theme-lime .check-list li {
-    color: var(--text-lime);
+    color: white;
 }
 
 .theme-lime .check-list li i {
-    color: var(--text-lime);
+    color: rgba(255, 255, 255, 0.7);
 }
 
-/* Cyan Theme */
-.theme-cyan .title-group {
-    border-color: #22d3ee;
+/* Cooling: Cyan */
+.theme-cyan .image-bg-box {
+    background-color: var(--t-cyan-bg);
 }
 
-.theme-cyan .image-side {
-    color: #22d3ee;
-}
 
 .theme-cyan .feature-list i {
-    color: #0891b2;
+    color: var(--t-cyan-main);
 }
 
 .theme-cyan .check-box {
-    background: var(--grad-cyan);
+    background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
 }
 
-.theme-cyan .check-header,
 .theme-cyan .check-list li {
-    color: var(--text-cyan);
+    color: white;
 }
 
 .theme-cyan .check-list li i {
-    color: var(--text-cyan);
+    color: rgba(255, 255, 255, 0.7);
 }
 
-/* Bright Green Theme (Battery) */
-.theme-bright-green .title-group {
-    border-color: #84cc16;
+/* Battery: Bright Green */
+.theme-bright-green .image-bg-box {
+    background-color: var(--t-bright-bg);
 }
 
-.theme-bright-green .image-side {
-    color: #84cc16;
-}
 
 .theme-bright-green .feature-list i {
-    color: #4d7c0f;
+    color: var(--t-bright-main);
 }
 
 .theme-bright-green .check-box {
-    background: var(--grad-lime);
+    background: linear-gradient(135deg, #65a30d 0%, #16a34a 100%);
 }
 
-.theme-bright-green .check-header,
 .theme-bright-green .check-list li {
-    color: var(--text-lime);
+    color: white;
 }
 
 .theme-bright-green .check-list li i {
-    color: var(--text-lime);
+    color: rgba(255, 255, 255, 0.7);
 }
 
-/* Magenta Theme */
-.theme-magenta .title-group {
-    border-color: #e879f9;
+/* Ports: Magenta */
+.theme-magenta .image-bg-box {
+    background-color: var(--t-magenta-bg);
 }
 
-.theme-magenta .image-side {
-    color: #e879f9;
-}
 
 .theme-magenta .feature-list i {
-    color: #c026d3;
+    color: var(--t-magenta-main);
 }
 
 .theme-magenta .check-box {
-    background: var(--grad-magenta);
+    background: linear-gradient(135deg, #c026d3 0%, #7c3aed 100%);
 }
 
-.theme-magenta .check-header,
 .theme-magenta .check-list li {
-    color: var(--text-magenta);
+    color: white;
 }
 
 .theme-magenta .check-list li i {
-    color: var(--text-magenta);
+    color: rgba(255, 255, 255, 0.7);
 }
+
 
 /* --- Table & Footer --- */
 .table-section {
     padding: 6rem 5%;
-    background: white;
+    background: #f8fafc;
 }
 
 .table-section h2 {
@@ -641,7 +580,8 @@ body {
     border-radius: 16px;
     box-shadow: var(--shadow-card);
     overflow: hidden;
-    border: 1px solid #f1f5f9;
+    border: 1px solid #e2e8f0;
+    background: white;
 }
 
 table {
@@ -650,8 +590,8 @@ table {
 }
 
 thead th {
-    background: #f8fafc;
-    color: #334155;
+    background: #0f172a;
+    color: white;
     padding: 1.5rem;
     text-align: left;
 }
@@ -662,26 +602,21 @@ tbody td {
     color: #475569;
 }
 
-.badge {
-    padding: 5px 10px;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 0.8rem;
-}
-
+/* Badge colors update */
 .badge-red {
     background: #fee2e2;
-    color: #b91c1c;
+    color: #dc2626;
+    border: 1px solid #fecaca;
 }
 
 .badge-green {
     background: #dcfce7;
-    color: #15803d;
+    color: #16a34a;
+    border: 1px solid #bbf7d0;
 }
 
 footer {
     background: #0f172a;
-    /* Keep dark footer for contrast */
     color: #94a3b8;
     padding: 4rem 5% 2rem;
 }
@@ -732,27 +667,16 @@ footer {
     .split-layout,
     .reverse-layout {
         flex-direction: column !important;
-        /* Always stack vertically */
         gap: 3rem;
         align-items: flex-start;
     }
 
     .image-side {
         width: 100%;
-        order: -1;
-        /* Always put image on top for mobile */
-    }
-
-    .image-side::before {
-        width: 60%;
-        height: 60%;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
+        margin-bottom: 1rem;
     }
 
     .page-header h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
 }

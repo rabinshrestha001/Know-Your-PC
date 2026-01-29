@@ -39,7 +39,7 @@
 
 
     <div class="steps-container">
-        <div class="step active">
+        <div class="step">
             <div class="step-circle">1</div>
             <span>Purpose</span>
         </div>
@@ -172,45 +172,49 @@
             <h2 class="text-center">Laptop vs Desktop</h2>
             <p class="sub-center">Choose the form factor based on your lifestyle.</p>
 
-            <div class="split-layout align-top mt-5">
+            <div class="split-layout align-top mt-5 relative-container">
                 <div class="compare-card hidden hidden-left">
                     <div class="compare-header c-blue-bg">
-                        <i class="fa-solid fa-laptop"></i>
+                        <div class="icon-floating"><i class="fa-solid fa-laptop"></i></div>
                         <h3>Laptop</h3>
+                        <p>For those on the move</p>
                     </div>
                     <div class="compare-body">
                         <ul class="pros-list">
-                            <li><i class="fa-solid fa-check"></i> <strong>Portable:</strong> Take it anywhere.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>All-in-One:</strong> Includes screen,
-                                keyboard, mouse.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Battery:</strong> Works without power.</li>
+                            <li><i class="fa-solid fa-check-circle"></i> <strong>Portable:</strong> Take it anywhere.
+                            </li>
+                            <li><i class="fa-solid fa-check-circle"></i> <strong>All-in-One:</strong> Screen included.
+                            </li>
+                            <li><i class="fa-solid fa-check-circle"></i> <strong>Battery:</strong> Work unplugged.</li>
                         </ul>
                         <div class="divider"></div>
                         <ul class="cons-list">
-                            <li><i class="fa-solid fa-xmark"></i> Hard to upgrade.</li>
-                            <li><i class="fa-solid fa-xmark"></i> Can get hot/loud under load.</li>
-                            <li><i class="fa-solid fa-xmark"></i> More expensive for same performance.</li>
+                            <li><i class="fa-solid fa-circle-xmark"></i> Hard to upgrade.</li>
+                            <li><i class="fa-solid fa-circle-xmark"></i> Can get hot/loud.</li>
                         </ul>
                     </div>
                 </div>
 
+                <div class="vs-badge">VS</div>
+
                 <div class="compare-card hidden hidden-right">
                     <div class="compare-header c-purple-bg">
-                        <i class="fa-solid fa-desktop"></i>
+                        <div class="icon-floating"><i class="fa-solid fa-desktop"></i></div>
                         <h3>Desktop PC</h3>
+                        <p>Maximum power & value</p>
                     </div>
                     <div class="compare-body">
                         <ul class="pros-list">
-                            <li><i class="fa-solid fa-check"></i> <strong>Powerful:</strong> Better performance.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Upgradable:</strong> Change parts easily.</li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Cooling:</strong> Runs cooler and quieter.
+                            <li><i class="fa-solid fa-check-circle"></i> <strong>Powerful:</strong> Higher performance.
                             </li>
+                            <li><i class="fa-solid fa-check-circle"></i> <strong>Upgradable:</strong> Swap parts easily.
+                            </li>
+                            <li><i class="fa-solid fa-check-circle"></i> <strong>Cooling:</strong> Runs quieter.</li>
                         </ul>
                         <div class="divider"></div>
                         <ul class="cons-list">
-                            <li><i class="fa-solid fa-xmark"></i> Not portable at all.</li>
-                            <li><i class="fa-solid fa-xmark"></i> Requires separate monitor & keyboard.</li>
-                            <li><i class="fa-solid fa-xmark"></i> Needs constant power.</li>
+                            <li><i class="fa-solid fa-circle-xmark"></i> Not portable.</li>
+                            <li><i class="fa-solid fa-circle-xmark"></i> Needs monitor/keyboard.</li>
                         </ul>
                     </div>
                 </div>
@@ -260,30 +264,66 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <h3>Know Your PC</h3>
-                <p class="footer-desc">Making tech simple for everyone.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="parts.html">Parts Explained</a></li>
-                    <li><a href="guide.html">Buying Guide</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Connect</h4>
-                <div class="socials">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-grid">
+                    <!-- Brand Column -->
+                    <div class="footer-col brand-col">
+                        <div class="logo footer-logo">
+                            <i class="fa-solid fa-desktop"></i>
+                            <div class="logo-text">
+                                <h3>Know Your PC</h3>
+                            </div>
+                        </div>
+                        <p class="tagline">Everything About Your PC in One Place</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="parts.html">Parts Explained</a></li>
+                            <li><a href="guide.html">Buying Guide</a></li>
+                            <li><a href="#">Comparisons</a></li>
+                            <li><a href="#">Budget Guide</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Learn Directory -->
+                    <div class="footer-col">
+                        <h4>Learn</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">CPU Basics</a></li>
+                            <li><a href="#">RAM Guide</a></li>
+                            <li><a href="#">GPU Explained</a></li>
+                            <li><a href="#">Storage Types</a></li>
+                            <li><a href="#">Display Guide</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="footer-col newsletter-col">
+                        <h4>Stay Updated</h4>
+                        <p>Get the latest PC tips and buying guides delivered to your inbox.</p>
+                        <form class="newsletter-form" onsubmit="event.preventDefault();">
+                            <input type="email" placeholder="Your email" required>
+                            <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2026 Know Your PC. All rights reserved.</p>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Know Your PC. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 

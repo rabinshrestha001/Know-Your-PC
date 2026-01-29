@@ -24,11 +24,12 @@
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="parts.html" class="active-link">Parts Explained</a></li>
-            <li><a href="#">Buying Guide</a></li>
-            <li><a href="#">Comparisons</a></li>
+            <li><a href="guide.html">Buying Guide</a></li>
+            <li><a href="comparison.html">Comparisons</a></li>
         </ul>
     </nav>
 
+    <!-- Header Left Aligned + Dark BG -->
     <header class="page-header">
         <div class="header-content reveal">
             <div class="breadcrumbs">Home <i class="fa-solid fa-chevron-right"></i> Parts Explained</div>
@@ -38,16 +39,18 @@
         </div>
     </header>
 
-    <!-- CPU Section (Image Left, Text Right) -->
+    <!-- CPU Section (Image Left) -->
     <section class="part-section reveal">
         <div class="container split-layout">
-            <div class="image-side">
-                <img src="../image/CPU.jpg" alt="CPU Processor" class="part-img">
+            <div class="image-side theme-blue">
+                <div class="image-bg-box">
+                    <img src="../image/CPU.jpg" alt="CPU Processor" class="part-img">
+                </div>
             </div>
             <div class="text-side theme-blue">
                 <div class="title-group">
                     <h2>CPU (Processor)</h2>
-                    <p class="italic-sub">Brain of the computer</p>
+                    <span class="italic-sub">Brain of the computer</span>
                 </div>
                 <p class="desc-text">The Central Processing Unit (CPU) is the most important component of your computer.
                     It executes instructions and performs calculations that make your computer work.</p>
@@ -70,29 +73,24 @@
                             AMD Ryzen 7000)</li>
                         <li><i class="fa-regular fa-circle-right"></i> Minimum i5/Ryzen 5 for good performance</li>
                         <li><i class="fa-regular fa-circle-right"></i> Consider core count for multitasking</li>
-                        <li><i class="fa-regular fa-circle-right"></i> Check power consumption for laptops</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- RAM Section (Reverse: Image Right, Text Left) -->
+    <!-- RAM Section (Reverse: Image Right) -->
     <section class="part-section reveal">
         <div class="container split-layout reverse-layout">
-            <!-- IMPORTANT: Order is Image, then Text in DOM, but CSS reverses it visually to Text | Image -->
-            <!-- Wait, looking at my CSS comment: ".reverse-layout applies row-reverse". -->
-            <!-- If I want Visual: Text | Image. -->
-            <!-- If DOM is layout: Image, Text. -->
-            <!-- Row-Reverse -> Text (Left), Image (Right). -->
-            <!-- YES. So I keep DOM order as Image, Text. -->
-            <div class="image-side">
-                <img src="../image/RAM.jpg" alt="RAM Sticks" class="part-img">
+            <div class="image-side theme-green">
+                <div class="image-bg-box">
+                    <img src="../image/RAM.jpg" alt="RAM Sticks" class="part-img">
+                </div>
             </div>
             <div class="text-side theme-green">
                 <div class="title-group">
                     <h2>RAM (Memory)</h2>
-                    <p class="italic-sub">Runs multiple apps smoothly</p>
+                    <span class="italic-sub">Runs multiple apps smoothly</span>
                 </div>
                 <p class="desc-text">Random Access Memory (RAM) is your computer's short-term memory. It stores data
                     that your CPU needs quick access to, enabling smooth multitasking.</p>
@@ -103,7 +101,6 @@
                     <li><i class="fa-solid fa-circle-check"></i> Affects how many programs you can run simultaneously
                     </li>
                     <li><i class="fa-solid fa-circle-check"></i> Influences overall system responsiveness</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Temporary storage for active programs and data</li>
                 </ul>
 
                 <div class="check-box">
@@ -112,27 +109,28 @@
                         <h4>Check Before Buying:</h4>
                     </div>
                     <ul class="check-list">
-                        <li><i class="fa-regular fa-circle-right"></i> 8GB minimum for basic use, 16GB recommended</li>
+                        <li><i class="fa-regular fa-circle-right"></i> 16GB minimum recommended for modern systems</li>
                         <li><i class="fa-regular fa-circle-right"></i> 32GB for professional work like video editing
                         </li>
-                        <li><i class="fa-regular fa-circle-right"></i> Choose DDR4 or newer DDR5 for latest systems</li>
-                        <li><i class="fa-regular fa-circle-right"></i> Check if RAM is upgradeable in laptops</li>
+                        <li><i class="fa-regular fa-circle-right"></i> Choose DDR4 or newer DDR5</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Storage Section (Image Left, Text Right) -->
+    <!-- Storage Section (Image Left) -->
     <section class="part-section reveal">
         <div class="container split-layout">
-            <div class="image-side">
-                <img src="../image/SSD.jpg" alt="SSD and HDD" class="part-img">
+            <div class="image-side theme-orange">
+                <div class="image-bg-box">
+                    <img src="../image/SSD.jpg" alt="SSD and HDD" class="part-img">
+                </div>
             </div>
             <div class="text-side theme-orange">
                 <div class="title-group">
                     <h2>Storage (SSD/HDD)</h2>
-                    <p class="italic-sub">Holds data, files, and software</p>
+                    <span class="italic-sub">Holds data, files, and software</span>
                 </div>
                 <p class="desc-text">Storage devices keep your files, programs, and operating system. SSDs are much
                     faster than traditional HDDs and significantly improve your computer's performance.</p>
@@ -142,7 +140,6 @@
                     <li><i class="fa-solid fa-circle-check"></i> Stores your operating system, programs, and files</li>
                     <li><i class="fa-solid fa-circle-check"></i> SSD provides much faster boot and load times</li>
                     <li><i class="fa-solid fa-circle-check"></i> Affects how quickly programs and files open</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Determines how much data you can store</li>
                 </ul>
 
                 <div class="check-box">
@@ -152,8 +149,7 @@
                     </div>
                     <ul class="check-list">
                         <li><i class="fa-regular fa-circle-right"></i> Always choose SSD over HDD for main storage</li>
-                        <li><i class="fa-regular fa-circle-right"></i> 512GB minimum recommended for most users</li>
-                        <li><i class="fa-regular fa-circle-right"></i> 1TB+ if you store lots of media files</li>
+                        <li><i class="fa-regular fa-circle-right"></i> 1TB recommended for most users</li>
                         <li><i class="fa-regular fa-circle-right"></i> Consider SSD + HDD combo for best value</li>
                     </ul>
                 </div>
@@ -161,16 +157,18 @@
         </div>
     </section>
 
-    <!-- GPU Section (Reverse: Image Right, Text Left) -->
+    <!-- GPU Section (Reverse) -->
     <section class="part-section reveal">
         <div class="container split-layout reverse-layout">
-            <div class="image-side">
-                <img src="../image/GPU.jpg" alt="Graphics Card" class="part-img">
+            <div class="image-side theme-pink">
+                <div class="image-bg-box">
+                    <img src="../image/GPU.jpg" alt="Graphics Card" class="part-img">
+                </div>
             </div>
             <div class="text-side theme-pink">
                 <div class="title-group">
                     <h2>GPU (Graphics Card)</h2>
-                    <p class="italic-sub">Handles graphics, games, videos</p>
+                    <span class="italic-sub">Handles graphics, games, videos</span>
                 </div>
                 <p class="desc-text">The Graphics Processing Unit (GPU) renders images, videos, and animations.
                     Essential for gaming, video editing, and graphics-intensive tasks.</p>
@@ -180,7 +178,6 @@
                     <li><i class="fa-solid fa-circle-check"></i> Renders all visual content on your screen</li>
                     <li><i class="fa-solid fa-circle-check"></i> Essential for gaming and video editing</li>
                     <li><i class="fa-solid fa-circle-check"></i> Accelerates creative software performance</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Handles multiple monitor setups</li>
                 </ul>
 
                 <div class="check-box">
@@ -193,25 +190,25 @@
                         </li>
                         <li><i class="fa-regular fa-circle-right"></i> Dedicated GPU required for gaming and editing
                         </li>
-                        <li><i class="fa-regular fa-circle-right"></i> Consider VRAM amount (8GB+ for modern gaming)
-                        </li>
-                        <li><i class="fa-regular fa-circle-right"></i> Check power requirements and cooling needs</li>
+                        <li><i class="fa-regular fa-circle-right"></i> Check power requirements (PSU Wattage)</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Display Section (Image Left, Text Right) -->
+    <!-- Display Section (Image Left) -->
     <section class="part-section reveal">
         <div class="container split-layout">
-            <div class="image-side">
-                <img src="../image/SCREEN.jpg" alt="Monitor Display" class="part-img">
+            <div class="image-side theme-purple">
+                <div class="image-bg-box">
+                    <img src="../image/SCREEN.jpg" alt="Monitor Display" class="part-img">
+                </div>
             </div>
             <div class="text-side theme-purple">
                 <div class="title-group">
                     <h2>Display</h2>
-                    <p class="italic-sub">Your window to the digital world</p>
+                    <span class="italic-sub">Your window to the digital world</span>
                 </div>
                 <p class="desc-text">The display is how you interact with your computer. Resolution, size, and panel
                     type all affect your viewing experience and productivity.</p>
@@ -219,10 +216,8 @@
                 <h4>Key Features:</h4>
                 <ul class="feature-list">
                     <li><i class="fa-solid fa-circle-check"></i> Determines image clarity and sharpness</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Panel type affects color accuracy and viewing angles
-                    </li>
+                    <li><i class="fa-solid fa-circle-check"></i> Panel type affects color accuracy (IPS/OLED)</li>
                     <li><i class="fa-solid fa-circle-check"></i> Size impacts productivity and comfort</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Refresh rate matters for gaming and smooth motion</li>
                 </ul>
 
                 <div class="check-box">
@@ -234,35 +229,34 @@
                         <li><i class="fa-regular fa-circle-right"></i> Full HD (1920x1080) minimum resolution</li>
                         <li><i class="fa-regular fa-circle-right"></i> IPS panel for better colors and viewing angles
                         </li>
-                        <li><i class="fa-regular fa-circle-right"></i> 24-27 inches ideal for desktop monitors</li>
-                        <li><i class="fa-regular fa-circle-right"></i> Consider 4K for professional work</li>
+                        <li><i class="fa-regular fa-circle-right"></i> Consider 144Hz+ for gaming</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Motherboard Section (Reverse: Image Right, Text Left) -->
+    <!-- Motherboard Section (Reverse) -->
     <section class="part-section reveal">
         <div class="container split-layout reverse-layout">
-            <div class="image-side">
-                <img src="../image/Motherboard.jpg" alt="Motherboard" class="part-img">
+            <div class="image-side theme-red">
+                <div class="image-bg-box">
+                    <img src="../image/Motherboard.jpg" alt="Motherboard" class="part-img">
+                </div>
             </div>
             <div class="text-side theme-red">
                 <div class="title-group">
                     <h2>Motherboard</h2>
-                    <p class="italic-sub">Connects all components together</p>
+                    <span class="italic-sub">Connects all components together</span>
                 </div>
                 <p class="desc-text">The motherboard is the main circuit board that connects all components. It
                     determines what parts you can use and affects future upgrade options.</p>
 
                 <h4>Key Features:</h4>
                 <ul class="feature-list">
-                    <li><i class="fa-solid fa-circle-check"></i> Connects CPU, RAM, storage, and all other components
-                    </li>
+                    <li><i class="fa-solid fa-circle-check"></i> Connects CPU, RAM, storage, and all components</li>
                     <li><i class="fa-solid fa-circle-check"></i> Determines compatibility with future upgrades</li>
                     <li><i class="fa-solid fa-circle-check"></i> Provides power distribution to all parts</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Contains chipset that affects performance</li>
                 </ul>
 
                 <div class="check-box">
@@ -272,7 +266,6 @@
                     </div>
                     <ul class="check-list">
                         <li><i class="fa-regular fa-circle-right"></i> Match socket type with your CPU (Intel/AMD)</li>
-                        <li><i class="fa-regular fa-circle-right"></i> Check RAM slots and maximum capacity</li>
                         <li><i class="fa-regular fa-circle-right"></i> Ensure enough expansion slots for upgrades</li>
                         <li><i class="fa-regular fa-circle-right"></i> Consider built-in Wi-Fi and Bluetooth</li>
                     </ul>
@@ -281,16 +274,18 @@
         </div>
     </section>
 
-    <!-- PSU Section (Image Left, Text Right) -->
+    <!-- PSU Section (Image Left) -->
     <section class="part-section reveal">
         <div class="container split-layout">
-            <div class="image-side">
-                <img src="../image/PSU.jpg" alt="Power Supply" class="part-img">
+            <div class="image-side theme-lime">
+                <div class="image-bg-box">
+                    <img src="../image/PSU.jpg" alt="Power Supply" class="part-img">
+                </div>
             </div>
             <div class="text-side theme-lime">
                 <div class="title-group">
                     <h2>Power Supply (PSU)</h2>
-                    <p class="italic-sub">Provides stable power to all components</p>
+                    <span class="italic-sub">Provides stable power to all components</span>
                 </div>
                 <p class="desc-text">The PSU converts AC power from your wall outlet to DC power that your computer
                     components need. A quality PSU is crucial for system stability.</p>
@@ -300,7 +295,6 @@
                     <li><i class="fa-solid fa-circle-check"></i> Distributes power to all components</li>
                     <li><i class="fa-solid fa-circle-check"></i> Protects against power surges and fluctuations</li>
                     <li><i class="fa-solid fa-circle-check"></i> Efficiency rating affects electricity costs</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Wattage determines what components you can power</li>
                 </ul>
 
                 <div class="check-box">
@@ -314,8 +308,6 @@
                         <li><i class="fa-regular fa-circle-right"></i> Look for 80 Plus Bronze certification minimum
                         </li>
                         <li><i class="fa-regular fa-circle-right"></i> Modular cables make building easier</li>
-                        <li><i class="fa-regular fa-circle-right"></i> Never cheap out on PSU - affects system stability
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -325,13 +317,15 @@
     <!-- Cooling Section (Reverse) -->
     <section class="part-section reveal">
         <div class="container split-layout reverse-layout">
-            <div class="image-side">
-                <img src="../image/Cololing.jpg" alt="PC Fans" class="part-img">
+            <div class="image-side theme-cyan">
+                <div class="image-bg-box">
+                    <img src="../image/Cololing.jpg" alt="PC Fans" class="part-img">
+                </div>
             </div>
             <div class="text-side theme-cyan">
                 <div class="title-group">
                     <h2>Cooling System</h2>
-                    <p class="italic-sub">Keeps components at safe temperatures</p>
+                    <span class="italic-sub">Keeps components at safe temperatures</span>
                 </div>
                 <p class="desc-text">Cooling systems prevent overheating and maintain optimal performance. Options
                     include air cooling (fans and heatsinks) or liquid cooling for high-performance systems.</p>
@@ -341,7 +335,6 @@
                     <li><i class="fa-solid fa-circle-check"></i> Prevents overheating and thermal throttling</li>
                     <li><i class="fa-solid fa-circle-check"></i> Maintains consistent performance under load</li>
                     <li><i class="fa-solid fa-circle-check"></i> Extends component lifespan</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Reduces noise with proper fan management</li>
                 </ul>
 
                 <div class="check-box">
@@ -353,7 +346,6 @@
                         <li><i class="fa-regular fa-circle-right"></i> Stock coolers fine for basic use</li>
                         <li><i class="fa-regular fa-circle-right"></i> Aftermarket coolers for gaming and overclocking
                         </li>
-                        <li><i class="fa-regular fa-circle-right"></i> Liquid cooling for high-end systems</li>
                         <li><i class="fa-regular fa-circle-right"></i> Check case airflow and fan placement</li>
                     </ul>
                 </div>
@@ -364,13 +356,15 @@
     <!-- Battery Section (Image Left) -->
     <section class="part-section reveal">
         <div class="container split-layout">
-            <div class="image-side">
-                <img src="../image/Battery.jpg" alt="Laptop Battery" class="part-img">
+            <div class="image-side theme-bright-green">
+                <div class="image-bg-box">
+                    <img src="../image/Battery.jpg" alt="Laptop Battery" class="part-img">
+                </div>
             </div>
             <div class="text-side theme-bright-green">
                 <div class="title-group">
                     <h2>Battery (Laptops)</h2>
-                    <p class="italic-sub">Powers your laptop on the go</p>
+                    <span class="italic-sub">Powers your laptop on the go</span>
                 </div>
                 <p class="desc-text">Laptop batteries determine how long you can work without being plugged in. Battery
                     capacity, charging speed, and health are important factors.</p>
@@ -380,7 +374,6 @@
                     <li><i class="fa-solid fa-circle-check"></i> Measured in Wh (Watt-hours) or mAh</li>
                     <li><i class="fa-solid fa-circle-check"></i> Typical life: 4-12 hours depending on usage</li>
                     <li><i class="fa-solid fa-circle-check"></i> Fast charging reduces downtime</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Battery health degrades over time</li>
                 </ul>
 
                 <div class="check-box">
@@ -392,7 +385,6 @@
                         <li><i class="fa-regular fa-circle-right"></i> Minimum 50Wh for decent battery life</li>
                         <li><i class="fa-regular fa-circle-right"></i> Look for fast charging support (USB-C PD)</li>
                         <li><i class="fa-regular fa-circle-right"></i> Check real-world battery reviews</li>
-                        <li><i class="fa-regular fa-circle-right"></i> Consider replaceable batteries for longevity</li>
                     </ul>
                 </div>
             </div>
@@ -402,13 +394,15 @@
     <!-- Ports Section (Reverse) -->
     <section class="part-section reveal">
         <div class="container split-layout reverse-layout">
-            <div class="image-side">
-                <img src="../image/PORT.jpg" alt="Laptop Ports" class="part-img">
+            <div class="image-side theme-magenta">
+                <div class="image-bg-box">
+                    <img src="../image/PORT.jpg" alt="Laptop Ports" class="part-img">
+                </div>
             </div>
             <div class="text-side theme-magenta">
                 <div class="title-group">
                     <h2>Ports & Connectivity</h2>
-                    <p class="italic-sub">Connect to devices and networks</p>
+                    <span class="italic-sub">Connect to devices and networks</span>
                 </div>
                 <p class="desc-text">Ports and connectivity options determine what devices you can connect. Modern
                     standards like USB-C, Wi-Fi 6, and Thunderbolt offer faster speeds.</p>
@@ -418,7 +412,6 @@
                     <li><i class="fa-solid fa-circle-check"></i> USB ports for peripherals and storage</li>
                     <li><i class="fa-solid fa-circle-check"></i> HDMI/DisplayPort for external monitors</li>
                     <li><i class="fa-solid fa-circle-check"></i> Wi-Fi 6 for faster wireless speeds</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Ethernet for stable wired internet</li>
                 </ul>
 
                 <div class="check-box">
@@ -429,7 +422,6 @@
                     <ul class="check-list">
                         <li><i class="fa-regular fa-circle-right"></i> Minimum 2-3 USB ports (at least one USB-C)</li>
                         <li><i class="fa-regular fa-circle-right"></i> HDMI essential for external displays</li>
-                        <li><i class="fa-regular fa-circle-right"></i> Wi-Fi 6 for faster wireless speeds</li>
                         <li><i class="fa-regular fa-circle-right"></i> Thunderbolt 4 for high-speed data transfer</li>
                     </ul>
                 </div>
@@ -503,8 +495,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="parts.html">Parts Explained</a></li>
-                    <li><a href="#">Buying Guide</a></li>
-                    <li><a href="#">Comparisons</a></li>
+                    <li><a href="guide.html">Buying Guide</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -529,7 +520,7 @@
         </div>
     </footer>
 
-    <!-- Script for Scroll Animation -->
+    <!-- Script same as before -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const reveals = document.querySelectorAll('.reveal');
