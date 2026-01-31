@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparisons - Know Your PC</title>
+    <link rel="stylesheet" href="../CSS/comparison.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-desktop"></i>
+                <div class="logo-text">
+                    <h3>Know Your PC</h3>
+                    <span>Everything About Your PC</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="parts.html">Parts Explained</a></li>
+                <li><a href="guide.html">Buying Guide</a></li>
+                <li><a href="comparison.html" class="active-link">Comparisons</a></li>
+                <li><a href="#">Budget Guide</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="comp-header">
+        <div class="container">
+            <div class="breadcrumbs">
+                Home <span>/</span> Comparisons
+            </div>
+            <h1>Comparisons</h1>
+            <p>Compare different parts, devices, and specifications to make the right choice for your needs and budget.
+            </p>
+        </div>
+    </header>
+
+    <section class="selector-section">
+        <div class="container">
+            <h2>Choose a Comparison</h2>
+            <p>Select what you'd like to compare</p>
+            <div class="comparison-tabs">
+                <button class="tab-btn active" onclick="switchComparison('laptop-desktop')">Laptop vs Desktop</button>
+                <button class="tab-btn" onclick="switchComparison('ssd-hdd')">SSD vs HDD</button>
+                <button class="tab-btn" onclick="switchComparison('intel-amd')">Intel vs AMD (Ryzen)</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="comparison-container container">
+        <!-- Laptop vs Desktop Section -->
+        <div id="laptop-desktop" class="comparison-content active">
+            <div class="comparison-card">
+                <div class="card-header">
+                    <h3>Laptop vs Desktop</h3>
+                    <span>Side-by-side comparison</span>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Laptop</th>
+                                <th>Desktop</th>
+                                <th class="winner-col">Winner</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="feature-col">Portability</td>
+                                <td class="data-col"><span class="badge badge-excellent">Excellent</span></td>
+                                <td class="data-col">None</td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Performance</td>
+                                <td class="data-col"><span class="badge badge-good">Good</span></td>
+                                <td class="data-col"><span class="badge badge-excellent">Excellent</span></td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Upgradability</td>
+                                <td class="data-col"><span class="badge badge-low">Limited</span></td>
+                                <td class="data-col"><span class="badge badge-excellent">Excellent</span></td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Price-for-Performance</td>
+                                <td class="data-col">Higher</td>
+                                <td class="data-col"><span class="badge badge-verygood">Better</span></td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Power Consumption</td>
+                                <td class="data-col"><span class="badge badge-excellent">Low</span></td>
+                                <td class="data-col">High</td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Screen Size</td>
+                                <td class="data-col">11 - 17 inches</td>
+                                <td class="data-col"><span class="badge badge-verygood">Any inches</span></td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Battery Life</td>
+                                <td class="data-col"><span class="badge badge-excellent">4-12 hours</span></td>
+                                <td class="data-col">N/A (Plugged)</td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Space Required</td>
+                                <td class="data-col"><span class="badge badge-excellent">Minimal</span></td>
+                                <td class="data-col">Significant</td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="summary-grid">
+                <div class="summary-card side-a">
+                    <div class="summary-card-header">
+                        <div class="icon-box icon-blue"><i class="fa-solid fa-laptop"></i></div>
+                        <h4>Laptop</h4>
+                    </div>
+                    <ul class="summary-list">
+                        <li><i class="fa-solid fa-check"></i> Best for Portability</li>
+                        <li><i class="fa-solid fa-check"></i> Best for Power Consumption</li>
+                        <li><i class="fa-solid fa-check"></i> Best for Battery Life</li>
+                        <li><i class="fa-solid fa-check"></i> Best for Minimal Space</li>
+                    </ul>
+                </div>
+                <div class="summary-card side-b">
+                    <div class="summary-card-header">
+                        <div class="icon-box icon-purple"><i class="fa-solid fa-desktop"></i></div>
+                        <h4>Desktop</h4>
+                    </div>
+                    <ul class="summary-list">
+                        <li><i class="fa-solid fa-check"></i> Best for Performance</li>
+                        <li><i class="fa-solid fa-check"></i> Best for Upgradability</li>
+                        <li><i class="fa-solid fa-check"></i> Best for Price-for-Performance</li>
+                        <li><i class="fa-solid fa-check"></i> Best for Large Screen</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SSD vs HDD Section -->
+        <div id="ssd-hdd" class="comparison-content">
+            <div class="comparison-card">
+                <div class="card-header">
+                    <h3>SSD vs HDD</h3>
+                    <span>Side-by-side comparison</span>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>SSD</th>
+                                <th>HDD</th>
+                                <th class="winner-col">Winner</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="feature-col">Speed</td>
+                                <td class="data-col"><span class="badge badge-excellent">Very Fast</span></td>
+                                <td class="data-col">Slow</td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Price per GB</td>
+                                <td class="data-col">Higher</td>
+                                <td class="data-col"><span class="badge badge-excellent">Lower</span></td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Durability</td>
+                                <td class="data-col"><span class="badge badge-excellent">Excellent</span></td>
+                                <td class="data-col">Good</td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Noise Level</td>
+                                <td class="data-col"><span class="badge badge-excellent">Silent</span></td>
+                                <td class="data-col">Audible</td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Power Usage</td>
+                                <td class="data-col"><span class="badge badge-excellent">Lower</span></td>
+                                <td class="data-col">Higher</td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Capacity Options</td>
+                                <td class="data-col">Up to 8TB</td>
+                                <td class="data-col"><span class="badge badge-verygood">Up to 20TB+</span></td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Boot Time</td>
+                                <td class="data-col"><span class="badge badge-excellent">10-15 seconds</span></td>
+                                <td class="data-col">1-2 minutes</td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Lifespan</td>
+                                <td class="data-col"><span class="badge badge-verygood">5-10 years</span></td>
+                                <td class="data-col">3-5 years</td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="summary-grid">
+                <div class="summary-card side-a">
+                    <div class="summary-card-header">
+                        <div class="icon-box icon-blue"><i class="fa-solid fa-bolt"></i></div>
+                        <h4>SSD</h4>
+                    </div>
+                    <ul class="summary-list">
+                        <li><i class="fa-solid fa-check"></i> Best for Speed</li>
+                        <li><i class="fa-solid fa-check"></i> Best for Durability</li>
+                        <li><i class="fa-solid fa-check"></i> Best for Noise Level</li>
+                        <li><i class="fa-solid fa-check"></i> Best for Power Usage</li>
+                        <li><i class="fa-solid fa-check"></i> Best for Boot Time</li>
+                        <li><i class="fa-solid fa-check"></i> Best for Lifespan</li>
+                    </ul>
+                </div>
+                <div class="summary-card side-b">
+                    <div class="summary-card-header">
+                        <div class="icon-box icon-purple"><i class="fa-solid fa-hard-drive"></i></div>
+                        <h4>HDD</h4>
+                    </div>
+                    <ul class="summary-list">
+                        <li><i class="fa-solid fa-check"></i> Best for Price per GB</li>
+                        <li><i class="fa-solid fa-check"></i> Best for Capacity Options</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Intel vs AMD Section -->
+        <div id="intel-amd" class="comparison-content">
+            <div class="comparison-card">
+                <div class="card-header">
+                    <h3>Intel vs AMD (Ryzen)</h3>
+                    <span>Side-by-side comparison</span>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Intel Core</th>
+                                <th>AMD Ryzen</th>
+                                <th class="winner-col">Winner</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="feature-col">Single-Core Perf.</td>
+                                <td class="data-col"><span class="badge badge-excellent">Excellent</span></td>
+                                <td class="data-col">Very Good</td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Multi-Core Perf.</td>
+                                <td class="data-col">Very Good</td>
+                                <td class="data-col"><span class="badge badge-excellent">Excellent</span></td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Price to Performance</td>
+                                <td class="data-col">Good</td>
+                                <td class="data-col"><span class="badge badge-excellent">Excellent</span></td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Power Efficiency</td>
+                                <td class="data-col">Very Good</td>
+                                <td class="data-col"><span class="badge badge-excellent">Excellent</span></td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Gaming Perf.</td>
+                                <td class="data-col"><span class="badge badge-excellent">Excellent</span></td>
+                                <td class="data-col"><span class="badge badge-excellent">Excellent</span></td>
+                                <td class="winner-col"><i class="fa-solid fa-grip-lines winner-icon"
+                                        style="color: #64748b;"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Content Creation</td>
+                                <td class="data-col">Very Good</td>
+                                <td class="data-col"><span class="badge badge-excellent">Excellent</span></td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Integrated Graphics</td>
+                                <td class="data-col">Good</td>
+                                <td class="data-col"><span class="badge badge-excellent">Excellent</span></td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Platform Longevity</td>
+                                <td class="data-col">Good</td>
+                                <td class="data-col"><span class="badge badge-excellent">Excellent</span></td>
+                                <td class="winner-col"><i class="fa-solid fa-trophy winner-icon"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="summary-grid">
+                <div class="summary-card side-a">
+                    <div class="summary-card-header">
+                        <div class="icon-box icon-blue"><i class="fa-solid fa-microchip"></i></div>
+                        <h4>Intel</h4>
+                    </div>
+                    <ul class="summary-list">
+                        <li><i class="fa-solid fa-check"></i> Best for Single-Core Performance</li>
+                        <li><i class="fa-solid fa-check"></i> Best for Power Efficiency (Idle)</li>
+                    </ul>
+                </div>
+                <div class="summary-card side-b">
+                    <div class="summary-card-header">
+                        <div class="icon-box icon-purple"><i class="fa-solid fa-microchip"></i></div>
+                        <h4>AMD Ryzen</h4>
+                    </div>
+                    <ul class="summary-list">
+                        <li><i class="fa-solid fa-check"></i> Best for Multi-Core Performance</li>
+                        <li><i class="fa-solid fa-check"></i> Best for Price-to-Performance</li>
+                        <li><i class="fa-solid fa-check"></i> Best for Content Creation</li>
+                        <li><i class="fa-solid fa-check"></i> Best for Integrated Graphics</li>
+                        <li><i class="fa-solid fa-check"></i> Best for Platform Longevity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="decision-section">
+        <div class="container">
+            <h2>Quick Decision Guide</h2>
+            <div class="decision-grid">
+                <div class="decision-card green">
+                    <div class="d-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h3>Budget-Conscious</h3>
+                    <p>AMD Ryzen + SSD + Desktop for best value</p>
+                </div>
+                <div class="decision-card blue">
+                    <div class="d-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                    <h3>Mobile User</h3>
+                    <p>Intel Laptop + SSD for portability and efficiency</p>
+                </div>
+                <div class="decision-card purple">
+                    <div class="d-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                    <h3>Performance Seeker</h3>
+                    <p>Desktop + Latest CPU + Fast NVMe SSD for maximum power</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="logo footer-logo">
+                        <i class="fa-solid fa-desktop"></i>
+                        <div class="logo-text">
+                            <h3>Know Your PC</h3>
+                        </div>
+                    </div>
+                    <p class="tagline">Everything About Your PC in One Place</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="parts.html">Parts Explained</a></li>
+                        <li><a href="guide.html">Buying Guide</a></li>
+                        <li><a href="comparison.html">Comparisons</a></li>
+                        <li><a href="#">Budget Guide</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Budget Guide</a></li>
+                        <li><a href="#">Top Brands</a></li>
+                        <li><a href="#">FAQ & Glossary</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col newsletter-col">
+                    <h4>Connect</h4>
+                    <p>Stay updated with our latest guides and tips.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Know Your PC. All rights reserved. <span style="float: right;">Powered by Readdy</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function switchComparison(id) {
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Add active class to clicked button
+            const clickedBtn = event.currentTarget;
+            clickedBtn.classList.add('active');
+
+            // Hide all content and reset animations
+            document.querySelectorAll('.comparison-content').forEach(content => {
+                content.classList.remove('active');
+                // Force a reflow to restart animations
+                void content.offsetWidth;
+            });
+
+            // Show selected content
+            const targetContent = document.getElementById(id);
+            targetContent.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
