@@ -16,7 +16,7 @@ function filterBrands(category, btn) {
         let visibleCount = 0;
         cards.forEach(card => {
             if (card.getAttribute('data-category') === category || category === 'all') {
-                card.style.display = 'flex';
+                card.style.display = 'block'; // Changed from flex to block/grid item behavior
                 // Trigger staggered entrance
                 setTimeout(() => {
                     card.style.opacity = '1';
@@ -33,6 +33,7 @@ function filterBrands(category, btn) {
 
 // Initial Animation on Load
 document.addEventListener('DOMContentLoaded', () => {
+    // Animate Brand Cards
     const cards = document.querySelectorAll('.brand-card');
     cards.forEach((card, index) => {
         card.style.opacity = '0';
@@ -46,7 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Scroll reveal for sections
     const observerOptions = {
-        threshold: 0.1
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -55,13 +57,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
                 entry.target.style.transition = 'all 0.8s ease-out';
+                observer.unobserve(entry.target); // Only animate once
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.sold-grid, .choice-grid, .sold-card, .choice-box').forEach(el => {
+    // Elements to observe
+    document.querySelectorAll('.sold-card, .choice-box, .section-title').forEach(el => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(50px)';
+        el.style.transform = 'translateY(30px)';
         observer.observe(el);
     });
 });
