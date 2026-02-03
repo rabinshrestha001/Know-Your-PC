@@ -5,19 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top Brands - Know Your PC</title>
+    <!-- Preload fonts for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="../CSS/home.css">
     <link rel="stylesheet" href="../CSS/brand.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
 </head>
 
-<body>
+<body class="brand-body">
 
-    <nav class="navbar">
+    <!-- Background Ambient Glows -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <nav class="navbar glass-nav">
         <div class="container nav-container">
             <div class="logo">
-                <i class="fa-solid fa-desktop"></i>
+                <div class="logo-icon-box">
+                    <i class="fa-solid fa-desktop"></i>
+                </div>
                 <div class="logo-text">
                     <h3>Know Your PC</h3>
                     <span>Everything About Your PC</span>
@@ -35,476 +46,430 @@
 
     <header class="brand-hero">
         <div class="container">
-            <div class="hero-text">
-                <span class="badge">Trusted & Popular</span>
-                <h1>Top PC & Laptop Brands</h1>
-                <p>Discover the most popular and trusted computer brands worldwide and in Nepal. Find the perfect brand
-                    for your needs.</p>
+            <div class="hero-content">
+                <div class="badge-hero">
+                    <i class="fa-solid fa-award"></i> The Best of 2026
+                </div>
+                <h1>Top <span class="text-gradient">PC & Laptop</span> Brands</h1>
+                <p>Navigate the tech landscape with our curated guide to the world's most trusted manufacturers. Find
+                    your perfect match for gaming, work, or creation.</p>
             </div>
         </div>
     </header>
 
-    <section class="brand-filters">
+    <section class="filter-section sticky-filter">
         <div class="container">
-            <div class="filter-pills">
-                <button class="filter-btn active" onclick="filterBrands('all', this)">All Brands</button>
-                <button class="filter-btn" onclick="filterBrands('gaming', this)">Gaming</button>
-                <button class="filter-btn" onclick="filterBrands('office', this)">Office & Home</button>
-                <button class="filter-btn" onclick="filterBrands('budget', this)">Budget Friendly</button>
-                <button class="filter-btn" onclick="filterBrands('premium', this)">Premium</button>
+            <div class="filter-container glass-panel">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fa-solid fa-border-all"></i> All Brands
+                </button>
+                <button class="filter-btn" data-filter="gaming">
+                    <i class="fa-solid fa-gamepad"></i> Gaming
+                </button>
+                <button class="filter-btn" data-filter="office">
+                    <i class="fa-solid fa-briefcase"></i> Office & Home
+                </button>
+                <button class="filter-btn" data-filter="premium">
+                    <i class="fa-solid fa-gem"></i> Premium
+                </button>
+                <button class="filter-btn" data-filter="budget">
+                    <i class="fa-solid fa-piggy-bank"></i> Budget
+                </button>
             </div>
         </div>
     </section>
 
-    <section class="brands-list">
+    <section class="brands-grid-section">
         <div class="container grid-container" id="brandsGrid">
 
             <!-- Dell -->
-            <div class="brand-card" data-category="office">
+            <div class="brand-card glass-card" data-category="office">
+                <div class="card-glow"></div>
                 <div class="card-header">
-                    <div class="brand-logo dell">
-                        <i class="fa-brands fa-dell"></i>
+                    <div class="brand-logo-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Dell_Logo.svg" alt="Dell">
                     </div>
-                    <div class="rating">
+                    <div class="rating-badge">
                         <i class="fa-solid fa-star"></i> 4.5
                     </div>
                 </div>
-                <h2>Dell</h2>
-                <p class="brand-desc">Reliable PCs and Alienware for gaming.</p>
+                <div class="card-body">
+                    <h2>Dell</h2>
+                    <p class="tagline">Reliability meets Innovation.</p>
 
-                <div class="tags-group">
-                    <h5><i class="fa-regular fa-folder-open"></i> Popular Series</h5>
-                    <div class="tags">
-                        <span class="tag-pill">Inspiron</span>
-                        <span class="tag-pill">XPS</span>
-                        <span class="tag-pill">Alienware</span>
-                        <span class="tag-pill">Vostro</span>
+                    <div class="specs-list">
+                        <div class="spec-item">
+                            <span class="spec-label">Best For</span>
+                            <span class="spec-val">Business & Work</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Popular</span>
+                            <span class="spec-val">XPS, Inspiron</span>
+                        </div>
+                    </div>
+
+                    <div class="key-features">
+                        <span><i class="fa-solid fa-check"></i> Great Build</span>
+                        <span><i class="fa-solid fa-check"></i> Top Support</span>
+                        <span><i class="fa-solid fa-check"></i> Reliable</span>
                     </div>
                 </div>
-
-                <div class="strengths">
-                    <h5><i class="fa-regular fa-thumbs-up"></i> Key Strengths</h5>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> Robust performance</li>
-                        <li><i class="fa-solid fa-check"></i> Business-grade options</li>
-                        <li><i class="fa-solid fa-check"></i> Easy serviceability</li>
-                        <li><i class="fa-solid fa-check"></i> Good warranty support</li>
-                    </ul>
-                </div>
-
                 <div class="card-footer">
-                    <div class="meta">
-                        <span>Popular in</span>
-                        <strong><i class="fa-solid fa-location-dot"></i> Nepal</strong>
+                    <div class="price-range">
+                        <span class="currency">NPR</span> 40k - 300k
                     </div>
-                    <div class="meta">
-                        <span>Price Range</span>
-                        <strong><i class="fa-solid fa-tag"></i> NPR 55,000 - 400,000</strong>
-                    </div>
+                    <button class="view-btn"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
 
             <!-- HP -->
-            <div class="brand-card" data-category="office">
+            <div class="brand-card glass-card" data-category="office">
+                <div class="card-glow"></div>
                 <div class="card-header">
-                    <div class="brand-logo hp">
-                        <span>hp</span>
+                    <div class="brand-logo-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" alt="HP">
                     </div>
-                    <div class="rating">
+                    <div class="rating-badge">
                         <i class="fa-solid fa-star"></i> 4.3
                     </div>
                 </div>
-                <h2>HP</h2>
-                <p class="brand-desc">Office, home desktops, and printers.</p>
+                <div class="card-body">
+                    <h2>HP</h2>
+                    <p class="tagline">Versatile performance for everyone.</p>
 
-                <div class="tags-group">
-                    <h5><i class="fa-regular fa-folder-open"></i> Popular Series</h5>
-                    <div class="tags">
-                        <span class="tag-pill">Pavilion</span>
-                        <span class="tag-pill">Omen</span>
-                        <span class="tag-pill">Envy</span>
-                        <span class="tag-pill">Spectre</span>
+                    <div class="specs-list">
+                        <div class="spec-item">
+                            <span class="spec-label">Best For</span>
+                            <span class="spec-val">Students & Office</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Popular</span>
+                            <span class="spec-val">Pavilion, Spectre</span>
+                        </div>
+                    </div>
+
+                    <div class="key-features">
+                        <span><i class="fa-solid fa-check"></i> Stylish</span>
+                        <span><i class="fa-solid fa-check"></i> Affordable</span>
+                        <span><i class="fa-solid fa-check"></i> Touchscreens</span>
                     </div>
                 </div>
-
-                <div class="strengths">
-                    <h5><i class="fa-regular fa-thumbs-up"></i> Key Strengths</h5>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> Wide range of options</li>
-                        <li><i class="fa-solid fa-check"></i> Great for office use</li>
-                        <li><i class="fa-solid fa-check"></i> Stylish designs available</li>
-                        <li><i class="fa-solid fa-check"></i> Reliable performance</li>
-                    </ul>
-                </div>
-
                 <div class="card-footer">
-                    <div class="meta">
-                        <span>Popular in</span>
-                        <strong><i class="fa-solid fa-location-dot"></i> Nepal</strong>
+                    <div class="price-range">
+                        <span class="currency">NPR</span> 35k - 250k
                     </div>
-                    <div class="meta">
-                        <span>Price Range</span>
-                        <strong><i class="fa-solid fa-tag"></i> NPR 45,000 - 350,000</strong>
-                    </div>
+                    <button class="view-btn"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
 
             <!-- Lenovo -->
-            <div class="brand-card" data-category="budget">
+            <div class="brand-card glass-card" data-category="budget">
+                <div class="card-glow"></div>
                 <div class="card-header">
-                    <div class="brand-logo lenovo">
-                        <span>Lenovo</span>
+                    <div class="brand-logo-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Lenovo_logo_2015.svg"
+                            alt="Lenovo">
                     </div>
-                    <div class="rating">
+                    <div class="rating-badge">
                         <i class="fa-solid fa-star"></i> 4.6
                     </div>
                 </div>
-                <h2>Lenovo</h2>
-                <p class="brand-desc">ThinkCentre and IdeaCentre series.</p>
+                <div class="card-body">
+                    <h2>Lenovo</h2>
+                    <p class="tagline">Unmatched value and durability.</p>
 
-                <div class="tags-group">
-                    <h5><i class="fa-regular fa-folder-open"></i> Popular Series</h5>
-                    <div class="tags">
-                        <span class="tag-pill">IdeaPad</span>
-                        <span class="tag-pill">ThinkPad</span>
-                        <span class="tag-pill">Legion</span>
-                        <span class="tag-pill">Yoga</span>
+                    <div class="specs-list">
+                        <div class="spec-item">
+                            <span class="spec-label">Best For</span>
+                            <span class="spec-val">Budget & Durability</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Popular</span>
+                            <span class="spec-val">IdeaPad, Legion</span>
+                        </div>
+                    </div>
+
+                    <div class="key-features">
+                        <span><i class="fa-solid fa-check"></i> Rugged</span>
+                        <span><i class="fa-solid fa-check"></i> Best Value</span>
+                        <span><i class="fa-solid fa-check"></i> Great Keys</span>
                     </div>
                 </div>
-
-                <div class="strengths">
-                    <h5><i class="fa-regular fa-thumbs-up"></i> Key Strengths</h5>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> Excellent value</li>
-                        <li><i class="fa-solid fa-check"></i> Business reliability (ThinkPad)</li>
-                        <li><i class="fa-solid fa-check"></i> Great keyboards</li>
-                        <li><i class="fa-solid fa-check"></i> Innovative 2-in-1s</li>
-                    </ul>
-                </div>
-
                 <div class="card-footer">
-                    <div class="meta">
-                        <span>Popular in</span>
-                        <strong><i class="fa-solid fa-location-dot"></i> Nepal</strong>
+                    <div class="price-range">
+                        <span class="currency">NPR</span> 30k - 280k
                     </div>
-                    <div class="meta">
-                        <span>Price Range</span>
-                        <strong><i class="fa-solid fa-tag"></i> NPR 40,000 - 300,000</strong>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Acer -->
-            <div class="brand-card" data-category="budget">
-                <div class="card-header">
-                    <div class="brand-logo acer">
-                        <span>acer</span>
-                    </div>
-                    <div class="rating">
-                        <i class="fa-solid fa-star"></i> 4.1
-                    </div>
-                </div>
-                <h2>Acer</h2>
-                <p class="brand-desc">Budget-friendly and gaming laptops.</p>
-
-                <div class="tags-group">
-                    <h5><i class="fa-regular fa-folder-open"></i> Popular Series</h5>
-                    <div class="tags">
-                        <span class="tag-pill">Aspire</span>
-                        <span class="tag-pill">Nitro</span>
-                        <span class="tag-pill">Predator</span>
-                        <span class="tag-pill">Swift</span>
-                    </div>
-                </div>
-
-                <div class="strengths">
-                    <h5><i class="fa-regular fa-thumbs-up"></i> Key Strengths</h5>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> Affordable pricing</li>
-                        <li><i class="fa-solid fa-check"></i> Good for students</li>
-                        <li><i class="fa-solid fa-check"></i> Gaming options (Nitro)</li>
-                        <li><i class="fa-solid fa-check"></i> Decent specs for price</li>
-                    </ul>
-                </div>
-
-                <div class="card-footer">
-                    <div class="meta">
-                        <span>Popular in</span>
-                        <strong><i class="fa-solid fa-location-dot"></i> Nepal</strong>
-                    </div>
-                    <div class="meta">
-                        <span>Price Range</span>
-                        <strong><i class="fa-solid fa-tag"></i> NPR 35,000 - 250,000</strong>
-                    </div>
+                    <button class="view-btn"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
 
             <!-- Asus -->
-            <div class="brand-card" data-category="gaming">
+            <div class="brand-card glass-card" data-category="gaming">
+                <div class="card-glow"></div>
                 <div class="card-header">
-                    <div class="brand-logo asus">
-                        <span>ASUS</span>
+                    <div class="brand-logo-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/ASUS_Logo.svg" alt="Asus">
                     </div>
-                    <div class="rating">
-                        <i class="fa-solid fa-star"></i> 4.6
-                    </div>
-                </div>
-                <h2>Asus</h2>
-                <p class="brand-desc">ROG gaming and innovative styling.</p>
-
-                <div class="tags-group">
-                    <h5><i class="fa-regular fa-folder-open"></i> Popular Series</h5>
-                    <div class="tags">
-                        <span class="tag-pill">ROG Strix</span>
-                        <span class="tag-pill">TUF Gaming</span>
-                        <span class="tag-pill">ZenBook</span>
-                        <span class="tag-pill">VivoBook</span>
+                    <div class="rating-badge">
+                        <i class="fa-solid fa-star"></i> 4.7
                     </div>
                 </div>
+                <div class="card-body">
+                    <h2>Asus</h2>
+                    <p class="tagline">Republic of Gamers & Creators.</p>
 
-                <div class="strengths">
-                    <h5><i class="fa-regular fa-thumbs-up"></i> Key Strengths</h5>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> Premium gaming PCs</li>
-                        <li><i class="fa-solid fa-check"></i> Excellent cooling reviews</li>
-                        <li><i class="fa-solid fa-check"></i> OLED screens available</li>
-                        <li><i class="fa-solid fa-check"></i> High-end components</li>
-                    </ul>
+                    <div class="specs-list">
+                        <div class="spec-item">
+                            <span class="spec-label">Best For</span>
+                            <span class="spec-val">Gaming & OLED</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Popular</span>
+                            <span class="spec-val">ROG, ZenBook</span>
+                        </div>
+                    </div>
+
+                    <div class="key-features">
+                        <span><i class="fa-solid fa-check"></i> Innovation</span>
+                        <span><i class="fa-solid fa-check"></i> OLED Displays</span>
+                        <span><i class="fa-solid fa-check"></i> Powerful</span>
+                    </div>
                 </div>
-
                 <div class="card-footer">
-                    <div class="meta">
-                        <span>Popular in</span>
-                        <strong><i class="fa-solid fa-earth-asia"></i> Worldwide</strong>
+                    <div class="price-range">
+                        <span class="currency">NPR</span> 45k - 400k
                     </div>
-                    <div class="meta">
-                        <span>Price Range</span>
-                        <strong><i class="fa-solid fa-tag"></i> NPR 60,000 - 450,000</strong>
+                    <button class="view-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Acer -->
+            <div class="brand-card glass-card" data-category="budget">
+                <div class="card-glow"></div>
+                <div class="card-header">
+                    <div class="brand-logo-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Acer_2011.svg" alt="Acer">
                     </div>
+                    <div class="rating-badge">
+                        <i class="fa-solid fa-star"></i> 4.1
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h2>Acer</h2>
+                    <p class="tagline">Explore beyond limits for less.</p>
+
+                    <div class="specs-list">
+                        <div class="spec-item">
+                            <span class="spec-label">Best For</span>
+                            <span class="spec-val">Entry Level</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Popular</span>
+                            <span class="spec-val">Nitro, Aspire</span>
+                        </div>
+                    </div>
+
+                    <div class="key-features">
+                        <span><i class="fa-solid fa-check"></i> Cheap</span>
+                        <span><i class="fa-solid fa-check"></i> Lightweight</span>
+                        <span><i class="fa-solid fa-check"></i> Good Start</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="price-range">
+                        <span class="currency">NPR</span> 35k - 200k
+                    </div>
+                    <button class="view-btn"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
 
             <!-- Apple -->
-            <div class="brand-card" data-category="premium">
+            <div class="brand-card glass-card" data-category="premium">
+                <div class="card-glow"></div>
                 <div class="card-header">
-                    <div class="brand-logo apple">
-                        <i class="fa-brands fa-apple"></i>
+                    <div class="brand-logo-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple"
+                            style="width: 25px;">
                     </div>
-                    <div class="rating">
-                        <i class="fa-solid fa-star"></i> 4.8
-                    </div>
-                </div>
-                <h2>Apple</h2>
-                <p class="brand-desc">Premium MacBooks for creatives.</p>
-
-                <div class="tags-group">
-                    <h5><i class="fa-regular fa-folder-open"></i> Popular Series</h5>
-                    <div class="tags">
-                        <span class="tag-pill">MacBook Air</span>
-                        <span class="tag-pill">MacBook Pro</span>
-                        <span class="tag-pill">iMac</span>
-                        <span class="tag-pill">Mac Mini</span>
+                    <div class="rating-badge">
+                        <i class="fa-solid fa-star"></i> 4.9
                     </div>
                 </div>
+                <div class="card-body">
+                    <h2>Apple</h2>
+                    <p class="tagline">Think Different. Create Better.</p>
 
-                <div class="strengths">
-                    <h5><i class="fa-regular fa-thumbs-up"></i> Key Strengths</h5>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> Unmatched build quality</li>
-                        <li><i class="fa-solid fa-check"></i> Best-in-class performance</li>
-                        <li><i class="fa-solid fa-check"></i> macOS ecosystem</li>
-                        <li><i class="fa-solid fa-check"></i> High resale value</li>
-                    </ul>
+                    <div class="specs-list">
+                        <div class="spec-item">
+                            <span class="spec-label">Best For</span>
+                            <span class="spec-val">Creatives & Pros</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Popular</span>
+                            <span class="spec-val">MacBook Pro/Air</span>
+                        </div>
+                    </div>
+
+                    <div class="key-features">
+                        <span><i class="fa-solid fa-check"></i> Premium</span>
+                        <span><i class="fa-solid fa-check"></i> Ecosystem</span>
+                        <span><i class="fa-solid fa-check"></i> Fast</span>
+                    </div>
                 </div>
-
                 <div class="card-footer">
-                    <div class="meta">
-                        <span>Popular in</span>
-                        <strong><i class="fa-solid fa-earth-americas"></i> Worldwide</strong>
+                    <div class="price-range">
+                        <span class="currency">NPR</span> 120k+
                     </div>
-                    <div class="meta">
-                        <span>Price Range</span>
-                        <strong><i class="fa-solid fa-tag"></i> NPR 120,000 - 500,000+</strong>
-                    </div>
+                    <button class="view-btn"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
 
-            <!-- Custom -->
-            <div class="brand-card" data-category="gaming">
+            <!-- MSI -->
+            <div class="brand-card glass-card" data-category="gaming">
+                <div class="card-glow"></div>
                 <div class="card-header">
-                    <div class="brand-logo custom">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <div class="brand-logo-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/MSI_Logo_2019.svg" alt="MSI">
                     </div>
-                    <div class="rating">
-                        <i class="fa-solid fa-star"></i> 4.7
-                    </div>
-                </div>
-                <h2>Custom Builds</h2>
-                <p class="brand-desc">Many gaming PCs are custom-built.</p>
-
-                <div class="tags-group">
-                    <h5><i class="fa-regular fa-folder-open"></i> Popular Series</h5>
-                    <div class="tags">
-                        <span class="tag-pill">AMD Ryzen</span>
-                        <span class="tag-pill">Intel Core</span>
-                        <span class="tag-pill">NVIDIA RTX</span>
-                        <span class="tag-pill">Liquid Cooled</span>
+                    <div class="rating-badge">
+                        <i class="fa-solid fa-star"></i> 4.5
                     </div>
                 </div>
+                <div class="card-body">
+                    <h2>MSI</h2>
+                    <p class="tagline">True Gaming Performance.</p>
 
-                <div class="strengths">
-                    <h5><i class="fa-regular fa-thumbs-up"></i> Key Strengths</h5>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> Best price-to-performance</li>
-                        <li><i class="fa-solid fa-check"></i> Fully customizable</li>
-                        <li><i class="fa-solid fa-check"></i> Easy to upgrade</li>
-                        <li><i class="fa-solid fa-check"></i> Local support available</li>
-                    </ul>
+                    <div class="specs-list">
+                        <div class="spec-item">
+                            <span class="spec-label">Best For</span>
+                            <span class="spec-val">Hardcore Gaming</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Popular</span>
+                            <span class="spec-val">Raider, Stealth</span>
+                        </div>
+                    </div>
+
+                    <div class="key-features">
+                        <span><i class="fa-solid fa-check"></i> High FPS</span>
+                        <span><i class="fa-solid fa-check"></i> RGB</span>
+                        <span><i class="fa-solid fa-check"></i> Cooling</span>
+                    </div>
                 </div>
-
                 <div class="card-footer">
-                    <div class="meta">
-                        <span>Popular in</span>
-                        <strong><i class="fa-solid fa-users"></i> Enthusiasts</strong>
+                    <div class="price-range">
+                        <span class="currency">NPR</span> 90k - 500k
                     </div>
-                    <div class="meta">
-                        <span>Price Range</span>
-                        <strong><i class="fa-solid fa-tag"></i> Varies Widely</strong>
-                    </div>
+                    <button class="view-btn"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <section class="most-sold">
+    <section class="leaderboard-section">
         <div class="container">
-            <div class="section-title">
-                <span class="icon-header"><i class="fa-solid fa-chart-line"></i></span>
-                <h2>Most Sold Brands in Nepal</h2>
-                <p>These brands dominate the local market due to availability, value, and support.</p>
+            <div class="section-head">
+                <h2 class="gradient-title">Market Leaders in Nepal</h2>
+                <p>The dominating forces in the local tech industry.</p>
             </div>
 
-            <div class="sold-grid">
-                <!-- Lenovo -->
-                <div class="sold-card accent-yellow">
-                    <div class="rank">1</div>
-                    <div class="sold-logo">Lenovo</div>
-                    <h3>Lenovo</h3>
-                    <p>Best value for money, widely available in Nepal.</p>
-                    <div class="badge-mini"><i class="fa-solid fa-trophy"></i> Market Leader</div>
+            <div class="leaderboard-grid">
+
+                <!-- Rank 2 -->
+                <div class="leader-card rank-silver">
+                    <div class="crown"><i class="fa-solid fa-crown"></i></div>
+                    <div class="rank-badge">#2</div>
+                    <div class="leader-content">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" alt="HP"
+                            class="leader-logo">
+                        <h3>HP</h3>
+                        <p>Most Versatile</p>
+                        <div class="stat-bar">
+                            <div class="bar-fill" style="width: 85%">85% Popularity</div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- HP -->
-                <div class="sold-card accent-blue">
-                    <div class="rank">2</div>
-                    <div class="sold-logo">hp</div>
-                    <h3>HP</h3>
-                    <p>Popular for office and home use across Nepal.</p>
-                    <div class="badge-mini"><i class="fa-solid fa-thumbs-up"></i> Warranty</div>
+                <!-- Rank 1 -->
+                <div class="leader-card rank-gold">
+                    <div class="crown"><i class="fa-solid fa-crown"></i></div>
+                    <div class="rank-badge">#1</div>
+                    <div class="leader-content">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Lenovo_logo_2015.svg" alt="Lenovo"
+                            class="leader-logo">
+                        <h3>Lenovo</h3>
+                        <p>Market Champion</p>
+                        <div class="stat-bar">
+                            <div class="bar-fill" style="width: 95%">95% Popularity</div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Dell -->
-                <div class="sold-card accent-cyan">
-                    <div class="rank">3</div>
-                    <div class="sold-logo">Dell</div>
-                    <h3>Dell</h3>
-                    <p>Trusted for reliability, especially in business laptops.</p>
-                    <div class="badge-mini"><i class="fa-solid fa-shield"></i> Reliable</div>
+                <!-- Rank 3 -->
+                <div class="leader-card rank-bronze">
+                    <div class="crown"><i class="fa-solid fa-crown"></i></div>
+                    <div class="rank-badge">#3</div>
+                    <div class="leader-content">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Dell_Logo.svg" alt="Dell"
+                            class="leader-logo">
+                        <h3>Dell</h3>
+                        <p>Business Choice</p>
+                        <div class="stat-bar">
+                            <div class="bar-fill" style="width: 75%">75% Popularity</div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section class="how-to-choose">
+    <!-- How to Choose Section -->
+    <section class="choose-section">
         <div class="container">
-            <h2>How to Choose the Right Brand</h2>
-            <div class="choice-grid">
+            <div class="section-head">
+                <h2 class="gradient-title">How to Choose the Right Brand</h2>
+            </div>
 
-                <div class="choice-box">
-                    <div class="choice-icon c-blue"><i class="fa-solid fa-wallet"></i></div>
+            <div class="choose-grid">
+                <!-- Budget -->
+                <div class="choose-card">
+                    <div class="icon-box icon-blue">
+                        <i class="fa-solid fa-wallet"></i>
+                    </div>
                     <h3>Consider Your Budget</h3>
                     <p>Lenovo and Acer offer best value for budget buyers. Dell and HP are mid-range, Apple and MSI are
                         premium.</p>
                 </div>
 
-                <div class="choice-box">
-                    <div class="choice-icon c-purple"><i class="fa-solid fa-headset"></i></div>
+                <!-- Support -->
+                <div class="choose-card">
+                    <div class="icon-box icon-purple">
+                        <i class="fa-solid fa-wrench"></i>
+                    </div>
                     <h3>Check After-Sales Support</h3>
-                    <p>Ensure the brand has authorized service centers in Nepal. Dell, HP, and Lenovo have good local
-                        support networks.</p>
+                    <p>Ensure the brand has service centers in Nepal. Dell, HP, and Lenovo have good local support.</p>
                 </div>
 
-                <div class="choice-box">
-                    <div class="choice-icon c-green"><i class="fa-solid fa-star-half-stroke"></i></div>
+                <!-- Reviews -->
+                <div class="choose-card">
+                    <div class="icon-box icon-green">
+                        <i class="fa-regular fa-star"></i>
+                    </div>
                     <h3>Read Reviews</h3>
-                    <p>Check online reviews to see what other buyers say about their experience with specific models
-                        before buying.</p>
+                    <p>Check online reviews and ask friends about their experience with specific models before buying.
+                    </p>
                 </div>
-
             </div>
         </div>
     </section>
 
     <footer class="main-footer">
         <div class="container">
-            <div class="footer-top">
-                <div class="footer-grid">
-                    <!-- Brand Column -->
-                    <div class="footer-col brand-col">
-                        <div class="logo footer-logo">
-                            <i class="fa-solid fa-desktop"></i>
-                            <div class="logo-text">
-                                <h3>Know Your PC</h3>
-                            </div>
-                        </div>
-                        <p class="tagline">Everything About Your PC in One Place</p>
-                        <div class="social-icons">
-                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Quick Links -->
-                    <div class="footer-col">
-                        <h4>Quick Links</h4>
-                        <ul class="footer-links">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="parts.html">Parts Explained</a></li>
-                            <li><a href="guide.html">Buying Guide</a></li>
-                            <li><a href="#">Comparisons</a></li>
-                            <li><a href="#">Budget Guide</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Learn Directory -->
-                    <div class="footer-col">
-                        <h4>Learn</h4>
-                        <ul class="footer-links">
-                            <li><a href="#">CPU Basics</a></li>
-                            <li><a href="#">RAM Guide</a></li>
-                            <li><a href="#">GPU Explained</a></li>
-                            <li><a href="#">Storage Types</a></li>
-                            <li><a href="#">Display Guide</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Newsletter -->
-                    <div class="footer-col newsletter-col">
-                        <h4>Stay Updated</h4>
-                        <p>Get the latest PC tips and buying guides delivered to your inbox.</p>
-                        <form class="newsletter-form" onsubmit="event.preventDefault();">
-                            <input type="email" placeholder="Your email" required>
-                            <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
             <div class="footer-bottom">
-                <p>&copy; 2024 Know Your PC. All rights reserved.</p>
+                <p>&copy; 2024 Know Your PC. Crafted with <i class="fa-solid fa-heart" style="color: #ef4444;"></i> for
+                    Tech Lovers.</p>
             </div>
         </div>
     </footer>
