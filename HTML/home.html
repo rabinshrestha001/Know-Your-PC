@@ -4,467 +4,425 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Know Your PC - Master Computer Hardware</title>
+    <title>Know Your PC - Master Your Machine</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="../CSS/home.css">
 </head>
 
 <body>
-    <!-- Navigation -->
+
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="container nav-container">
-            <div class="logo">
-                <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
-                    <rect x="8" y="8" width="24" height="24" rx="4" stroke="currentColor" stroke-width="2" />
-                    <path d="M14 16h12M14 20h12M14 24h8" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" />
-                </svg>
-                <span class="logo-text">Know Your PC</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#parts" class="nav-link">Parts Explained</a></li>
-                <li><a href="#guide" class="nav-link">Buying Guide</a></li>
-                <li><a href="#comparisons" class="nav-link">Comparisons</a></li>
-                <li><a href="#budget" class="nav-link">Budget Guide</a></li>
-                <li><a href="#tips" class="nav-link">Top Brands</a></li>
-                <li><a href="#faq" class="nav-link">FAQ</a></li>
-            </ul>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <span>Know Your PC</span>
+            </a>
+
+            <button class="mobile-menu-toggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="parts.html" class="nav-link">Parts Explained</a></li>
+                <li><a href="brand.html" class="nav-link">Top Brands</a></li>
+                <li><a href="guide.html" class="nav-link">Buying Guide</a></li>
+                <li><a href="#comparisons" class="nav-link">Comparisons</a></li>
+                <li><button class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Get
+                        Started</button></li>
+            </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-background">
-            <div class="gradient-orb orb-1"></div>
-            <div class="gradient-orb orb-2"></div>
-            <div class="gradient-orb orb-3"></div>
-        </div>
+        <!-- Ambient Blobs -->
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
 
-        <div class="container hero-container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M8 1L10.5 6L16 6.75L12 10.5L13 16L8 13.25L3 16L4 10.5L0 6.75L5.5 6L8 1Z"
-                            fill="currentColor" />
-                    </svg>
-                    <span>Trusted by 100K+ Tech Enthusiasts</span>
-                </div>
-                <h1 class="hero-title">
-                    Learn PC & Laptop<br>
-                    <span class="gradient-text">Parts. Buy Smart.</span>
-                </h1>
-                <p class="hero-description">
-                    Master the world of computer components, compare specs, and make the
-                    right choice for your needs and budget.
-                </p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary">
-                        <span>Learn Parts</span>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </button>
-                    <button class="btn btn-secondary">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M10 3V17M10 17L15 12M10 17L5 12" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <span>Start Buying Guide</span>
-                    </button>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Components Covered</div>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <div class="stat-number">1000+</div>
-                        <div class="stat-label">Product Reviews</div>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">Free Support</div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="image-container">
-                    <div class="floating-card card-1">
-                        <div class="card-icon">💻</div>
-                        <div class="card-text">Gaming Ready</div>
-                    </div>
-                    <div class="floating-card card-2">
-                        <div class="card-icon">⚡</div>
-                        <div class="card-text">High Performance</div>
-                    </div>
-                    <div class="floating-card card-3">
-                        <div class="card-icon">🎯</div>
-                        <div class="card-text">Best Value</div>
-                    </div>
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230EA5E9;stop-opacity:0.3'/%3E%3Cstop offset='100%25' style='stop-color:%236366F1;stop-opacity:0.3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='%231e293b' width='800' height='600' rx='20'/%3E%3Crect x='50' y='50' width='700' height='400' rx='10' fill='url(%23grad1)'/%3E%3Crect x='80' y='80' width='200' height='120' rx='8' fill='%2306b6d4' opacity='0.6'/%3E%3Crect x='300' y='80' width='200' height='120' rx='8' fill='%238b5cf6' opacity='0.6'/%3E%3Crect x='520' y='80' width='200' height='120' rx='8' fill='%23ec4899' opacity='0.6'/%3E%3Crect x='80' y='220' width='640' height='200' rx='8' fill='%23334155' opacity='0.8'/%3E%3Ctext x='400' y='520' font-family='Arial' font-size='24' fill='%2394a3b8' text-anchor='middle'%3EPowered by Knowledge%3C/text%3E%3C/svg%3E"
-                        alt="PC Components Visualization" class="hero-laptop">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="parts">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Explore by Category</h2>
-                <p class="section-subtitle">Deep dive into every component of your computer</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 50 50" fill="none">
-                            <rect x="10" y="15" width="30" height="20" rx="2" stroke="currentColor" stroke-width="2" />
-                            <path d="M15 20h20M15 25h15M15 30h10" stroke="currentColor" stroke-width="1.5" />
-                        </svg>
+            <div class="hero-grid">
+                <!-- Text Content -->
+                <div class="hero-content reveal active">
+                    <div class="badge mb-4">
+                        <i class="fa-solid fa-bolt"></i> The Ultimate PC Guide 2026
                     </div>
-                    <h3 class="feature-title">Parts Explained</h3>
-                    <p class="feature-description">Understand CPU, RAM, SSD, and more—simplified for everyone.</p>
-                    <a href="#" class="feature-link">
-                        Explore Parts
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                        </svg>
-                    </a>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 50 50" fill="none">
-                            <path d="M25 10L30 20H20L25 10Z" stroke="currentColor" stroke-width="2" />
-                            <circle cx="25" cy="30" r="8" stroke="currentColor" stroke-width="2" />
-                            <path d="M25 30V38" stroke="currentColor" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Buying Guide</h3>
-                    <p class="feature-description">Step-by-step guide to help you buy the right PC parts.</p>
-                    <a href="#" class="feature-link">
-                        Start Guide
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                        </svg>
-                    </a>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 50 50" fill="none">
-                            <rect x="12" y="15" width="12" height="20" rx="1" stroke="currentColor" stroke-width="2" />
-                            <rect x="26" y="15" width="12" height="20" rx="1" stroke="currentColor" stroke-width="2" />
-                            <path d="M18 22L18 28M32 22L32 28" stroke="currentColor" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Comparisons</h3>
-                    <p class="feature-description">Compare CPUs, SSDs, motherboards, and more side-by-side.</p>
-                    <a href="#" class="feature-link">
-                        Compare Now
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                        </svg>
-                    </a>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 50 50" fill="none">
-                            <circle cx="25" cy="25" r="12" stroke="currentColor" stroke-width="2" />
-                            <path d="M25 19V25L29 29" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Budget Guide</h3>
-                    <p class="feature-description">Best laptops & PCs within different budgets.</p>
-                    <a href="#" class="feature-link">
-                        View Budgets
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Section -->
-    <section class="why-section">
-        <div class="container">
-            <div class="why-content">
-                <div class="why-text">
-                    <h2 class="why-title">Why Computers<br><span class="highlight">Matter</span></h2>
-                    <p class="why-description">
-                        Computers are essential in today's world. They help us work, learn,
-                        create, and connect—making everyday tasks efficient.
+                    <h1 class="hero-title">
+                        Everything About <br>
+                        <span class="text-gradient">Your Computer</span><br>
+                        In One Place.
+                    </h1>
+                    <p class="hero-subtitle">
+                        From understanding components to buying the perfect laptop. We simplify tech for everyone, plain
+                        and simple.
                     </p>
-                    <div class="why-features">
-                        <div class="why-feature-item">
-                            <div class="why-icon">
-                                <svg viewBox="0 0 24 24" fill="none">
-                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
-                                    <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h4>Everywhere</h4>
-                                <p>From homes to businesses, PCs power our daily work and entertainment.</p>
-                            </div>
+                    <div class="hero-buttons">
+                        <a href="parts.html" class="btn btn-primary">
+                            Explore Parts <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
+                        </a>
+                        <a href="guide.html" class="btn btn-secondary">
+                            View Buying Guide
+                        </a>
+                    </div>
+
+                    <div style="margin-top: 3rem; display: flex; gap: 2rem; align-items: center;">
+                        <div>
+                            <h4 style="font-size: 1.5rem; font-weight: 700; color: var(--text-main);">50+</h4>
+                            <span style="color: var(--text-muted); font-size: 0.9rem;">Components</span>
                         </div>
-                        <div class="why-feature-item">
-                            <div class="why-icon">
-                                <svg viewBox="0 0 24 24" fill="none">
-                                    <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z" stroke="currentColor" stroke-width="2"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h4>Fast Processing</h4>
-                                <p>Modern CPUs enable multitasking and lightning-fast computations.</p>
-                            </div>
-                        </div>
-                        <div class="why-feature-item">
-                            <div class="why-icon">
-                                <svg viewBox="0 0 24 24" fill="none">
-                                    <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor"
-                                        stroke-width="2" />
-                                    <path d="M3 9h18M9 3v18" stroke="currentColor" stroke-width="2" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h4>Endless Capabilities</h4>
-                                <p>From coding to gaming, design to data science—limitless possibilities.</p>
-                            </div>
+                        <div style="width: 1px; height: 40px; background: var(--border-light);"></div>
+                        <div>
+                            <h4 style="font-size: 1.5rem; font-weight: 700; color: var(--text-main);">10k+</h4>
+                            <span style="color: var(--text-muted); font-size: 0.9rem;">Readers</span>
                         </div>
                     </div>
                 </div>
-                <div class="why-image">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 500'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23f1f5f9'/%3E%3Cstop offset='100%25' style='stop-color:%23e2e8f0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23bg)' width='600' height='500' rx='20'/%3E%3Cg opacity='0.9'%3E%3Crect x='50' y='50' width='500' height='300' rx='15' fill='%23fff' stroke='%23cbd5e1' stroke-width='2'/%3E%3Crect x='80' y='80' width='150' height='100' rx='8' fill='%2306b6d4' opacity='0.2'/%3E%3Crect x='250' y='80' width='150' height='100' rx='8' fill='%238b5cf6' opacity='0.2'/%3E%3Crect x='80' y='200' width='320' height='120' rx='8' fill='%2364748b' opacity='0.1'/%3E%3Ccircle cx='470' cy='130' r='40' fill='%23ec4899' opacity='0.3'/%3E%3Cpath d='M 100 400 Q 300 350 500 400' stroke='%230ea5e9' stroke-width='3' fill='none' opacity='0.4'/%3E%3C/g%3E%3C/svg%3E"
-                        alt="Team collaboration">
+
+                <!-- 3D Visual -->
+                <div class="hero-visual reveal stagger-1 active">
+                    <div class="hero-card-stack">
+                        <!-- Main Card (Laptop/Dashboard) -->
+                        <div class="stack-card card-main">
+                            <!-- Dashboard UI Mockup -->
+                            <div
+                                style="width: 100%; height: 100%; background: #ffffff; border-radius: 12px; overflow: hidden; position: relative; display: flex; flex-direction: column;">
+                                <!-- Window Header -->
+                                <div
+                                    style="padding: 15px 20px; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center; background: #fff;">
+                                    <div style="display: flex; gap: 8px;">
+                                        <div
+                                            style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f56;">
+                                        </div>
+                                        <div
+                                            style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e;">
+                                        </div>
+                                        <div
+                                            style="width: 12px; height: 12px; border-radius: 50%; background: #27c93f;">
+                                        </div>
+                                    </div>
+                                    <div style="width: 100px; height: 8px; background: #f1f5f9; border-radius: 4px;">
+                                    </div>
+                                </div>
+                                <!-- Window Body -->
+                                <div
+                                    style="padding: 20px; flex: 1; background: #f8fafc; display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: 15px;">
+                                    <!-- Big Chart Area -->
+                                    <div
+                                        style="grid-row: span 2; background: white; border-radius: 12px; border: 1px solid #e2e8f0; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+                                        <div
+                                            style="width: 40%; height: 10px; background: #e0f2fe; border-radius: 4px; margin-bottom: 15px;">
+                                        </div>
+                                        <div
+                                            style="width: 100%; height: 60%; background: linear-gradient(180deg, #f0f9ff 0%, white 100%); border-radius: 8px; border: 1px dashed #bae6fd;">
+                                        </div>
+                                        <div style="display: flex; gap: 10px; margin-top: 15px;">
+                                            <div
+                                                style="height: 8px; width: 60%; background: #f1f5f9; border-radius: 4px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Small Stat Card 1 -->
+                                    <div
+                                        style="background: white; border-radius: 12px; border: 1px solid #e2e8f0; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+                                        <div
+                                            style="width: 30px; height: 30px; background: #fdf4ff; border-radius: 8px; margin-bottom: 10px;">
+                                        </div>
+                                        <div style="width: 60%; height: 8px; background: #f1f5f9; border-radius: 4px;">
+                                        </div>
+                                    </div>
+                                    <!-- Small Stat Card 2 -->
+                                    <div
+                                        style="background: white; border-radius: 12px; border: 1px solid #e2e8f0; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+                                        <div
+                                            style="width: 30px; height: 30px; background: #ecfeff; border-radius: 8px; margin-bottom: 10px;">
+                                        </div>
+                                        <div style="width: 60%; height: 8px; background: #f1f5f9; border-radius: 4px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badge 1 -->
+                        <div class="card-float float-1">
+                            <div class="icon-box icon-purple">
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+                            <div>
+                                <h5 style="margin: 0; font-size: 1rem;">Latest CPUs</h5>
+                                <span style="font-size: 0.8rem; color: var(--text-muted);">Updated 2026</span>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badge 2 -->
+                        <div class="card-float float-2">
+                            <div class="icon-box icon-blue">
+                                <i class="fa-solid fa-tags"></i>
+                            </div>
+                            <div>
+                                <h5 style="margin: 0; font-size: 1rem;">Best Deals</h5>
+                                <span style="font-size: 0.8rem; color: var(--text-muted);">Price Checked</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Components Section -->
-    <section class="components-section" id="guide">
+    <!-- Logo Marquee -->
+    <section class="logo-marquee">
+        <div class="marquee-content">
+            <!-- Duplicate content for smooth loop -->
+            <div class="brand-item"><i class="fa-brands fa-apple"></i> Apple</div>
+            <div class="brand-item"><i class="fa-brands fa-windows"></i> Microsoft</div>
+            <div class="brand-item"><i class="fa-solid fa-microchip"></i> Intel</div>
+            <div class="brand-item"><i class="fa-solid fa-memory"></i> NVIDIA</div>
+            <div class="brand-item"><i class="fa-brands fa-google"></i> Google</div>
+            <div class="brand-item"><i class="fa-solid fa-laptop"></i> Dell</div>
+            <div class="brand-item"><i class="fa-solid fa-desktop"></i> HP</div>
+            <div class="brand-item"><i class="fa-solid fa-gamepad"></i> MSI</div>
+            <!-- Repeat -->
+            <div class="brand-item"><i class="fa-brands fa-apple"></i> Apple</div>
+            <div class="brand-item"><i class="fa-brands fa-windows"></i> Microsoft</div>
+            <div class="brand-item"><i class="fa-solid fa-microchip"></i> Intel</div>
+            <div class="brand-item"><i class="fa-solid fa-memory"></i> NVIDIA</div>
+            <div class="brand-item"><i class="fa-brands fa-google"></i> Google</div>
+            <div class="brand-item"><i class="fa-solid fa-laptop"></i> Dell</div>
+            <div class="brand-item"><i class="fa-solid fa-desktop"></i> HP</div>
+            <div class="brand-item"><i class="fa-solid fa-gamepad"></i> MSI</div>
+        </div>
+    </section>
+
+    <!-- Bento Grid Section -->
+    <section class="section-padding bg-glass" id="features">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">First Things to Know About Computers</h2>
-                <p class="section-subtitle">Understanding key basics will help you make better decisions when buying
-                    your next computer</p>
+            <div class="section-header reveal">
+                <span
+                    style="text-transform: uppercase; letter-spacing: 2px; color: var(--primary); font-weight: 700; font-size: 0.9rem;">Explore</span>
+                <h2 class="section-title">What Do You Want To Know?</h2>
+                <p class="section-subtitle">We have organized everything into simple, easy-to-digest categories.</p>
             </div>
 
-            <div class="components-tabs">
-                <button class="tab-btn active" data-tab="essentials">⚡ Essentials</button>
-                <button class="tab-btn" data-tab="types">💾 Types</button>
-                <button class="tab-btn" data-tab="purpose">🎯 Purpose</button>
-            </div>
-
-            <div class="components-grid">
-                <div class="component-card">
-                    <div class="component-icon cpu-icon">
-                        <svg viewBox="0 0 60 60" fill="none">
-                            <rect x="15" y="15" width="30" height="30" rx="3" stroke="currentColor"
-                                stroke-width="2.5" />
-                            <rect x="22" y="22" width="16" height="16" rx="2" fill="currentColor" opacity="0.3" />
-                            <path
-                                d="M15 25h-5M15 30h-5M15 35h-5M45 25h5M45 30h5M45 35h5M25 15v-5M30 15v-5M35 15v-5M25 45v5M30 45v5M35 45v5"
-                                stroke="currentColor" stroke-width="2" />
-                        </svg>
+            <div class="bento-grid">
+                <!-- Large Card: Parts -->
+                <div class="bento-card bento-large reveal stagger-1">
+                    <div class="bento-icon">
+                        <i class="fa-solid fa-layer-group"></i>
                     </div>
-                    <h3 class="component-title">CPU</h3>
-                    <p class="component-subtitle">Brain of Computer</p>
-                    <p class="component-description">Handles all calculations and runs your apps smoothly.</p>
+                    <h3 class="bento-title">Parts Explained</h3>
+                    <p class="bento-desc">Deep dive into CPU, GPU, RAM, Storage, and Motherboards. Understand what each
+                        part does without the technical jargon.</p>
+                    <a href="parts.html" class="btn btn-secondary" style="margin-top: auto; width: fit-content;">Start
+                        Learning</a>
+
+                    <!-- Decor -->
+                    <i class="fa-solid fa-microchip"
+                        style="position: absolute; right: -20px; bottom: -20px; font-size: 10rem; color: rgba(14, 165, 233, 0.05); transform: rotate(-15deg);"></i>
                 </div>
 
-                <div class="component-card">
-                    <div class="component-icon ram-icon">
-                        <svg viewBox="0 0 60 60" fill="none">
-                            <rect x="10" y="20" width="40" height="20" rx="2" stroke="currentColor"
-                                stroke-width="2.5" />
-                            <path d="M18 25v10M26 25v10M34 25v10M42 25v10" stroke="currentColor" stroke-width="2.5"
-                                stroke-linecap="round" />
-                            <circle cx="18" cy="30" r="2" fill="currentColor" />
-                            <circle cx="26" cy="30" r="2" fill="currentColor" />
-                        </svg>
+                <!-- Tall Card: Buying Guide -->
+                <div class="bento-card bento-tall reveal stagger-2">
+                    <div class="bento-icon" style="background: #FDF4FF; color: var(--secondary);">
+                        <i class="fa-solid fa-basket-shopping"></i>
                     </div>
-                    <h3 class="component-title">RAM</h3>
-                    <p class="component-subtitle">Short-term Memory</p>
-                    <p class="component-description">More RAM means better multitasking capabilities.</p>
+                    <h3 class="bento-title">Buying Guide</h3>
+                    <p class="bento-desc" style="margin-bottom: 2rem;">Step-by-step guide to choosing the right computer
+                        for your specific needs.</p>
+
+                    <ul style="margin-bottom: 2rem; display: flex; flex-direction: column; gap: 1rem;">
+                        <li
+                            style="display: flex; gap: 10px; align-items: center; color: var(--text-muted); font-size: 0.9rem;">
+                            <i class="fa-solid fa-check-circle" style="color: var(--secondary);"></i> Determine Budget
+                        </li>
+                        <li
+                            style="display: flex; gap: 10px; align-items: center; color: var(--text-muted); font-size: 0.9rem;">
+                            <i class="fa-solid fa-check-circle" style="color: var(--secondary);"></i> Pick Form Factor
+                        </li>
+                        <li
+                            style="display: flex; gap: 10px; align-items: center; color: var(--text-muted); font-size: 0.9rem;">
+                            <i class="fa-solid fa-check-circle" style="color: var(--secondary);"></i> Choose Specs
+                        </li>
+                    </ul>
+                    <a href="guide.html" class="btn btn-primary" style="margin-top: auto; width: 100%;">Read Guide</a>
                 </div>
 
-                <div class="component-card">
-                    <div class="component-icon storage-icon">
-                        <svg viewBox="0 0 60 60" fill="none">
-                            <rect x="12" y="15" width="36" height="30" rx="2" stroke="currentColor"
-                                stroke-width="2.5" />
-                            <rect x="18" y="21" width="24" height="6" rx="1" fill="currentColor" opacity="0.3" />
-                            <rect x="18" y="30" width="24" height="6" rx="1" fill="currentColor" opacity="0.3" />
-                            <circle cx="21" cy="24" r="1.5" fill="currentColor" />
-                            <circle cx="21" cy="33" r="1.5" fill="currentColor" />
-                        </svg>
+                <!-- Card: Top Brands -->
+                <div class="bento-card reveal stagger-1">
+                    <div class="bento-icon" style="background: #FFF7ED; color: var(--gold);">
+                        <i class="fa-solid fa-star"></i>
                     </div>
-                    <h3 class="component-title">Storage</h3>
-                    <p class="component-subtitle">Holds Files and Data</p>
-                    <p class="component-description">SSDs are faster than traditional hard drives.</p>
+                    <h3 class="bento-title">Top Brands</h3>
+                    <p class="bento-desc">Best Laptop brands of 2026 ranked.</p>
+                    <a href="brand.html"
+                        style="color: var(--primary); font-weight: 600; margin-top: 1rem; display: inline-flex; align-items: center; gap: 5px;">View
+                        Ranking <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
-                <div class="component-card">
-                    <div class="component-icon gpu-icon">
-                        <svg viewBox="0 0 60 60" fill="none">
-                            <rect x="12" y="18" width="36" height="24" rx="2" stroke="currentColor"
-                                stroke-width="2.5" />
-                            <path d="M20 26h20M20 30h20M20 34h15" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" />
-                            <rect x="18" y="24" width="24" height="12" rx="1" fill="currentColor" opacity="0.2" />
-                        </svg>
+                <!-- Card: Comparisons -->
+                <div class="bento-card reveal stagger-2">
+                    <div class="bento-icon" style="background: #FDF2F8; color: var(--accent);">
+                        <i class="fa-solid fa-scale-balanced"></i>
                     </div>
-                    <h3 class="component-title">GPU</h3>
-                    <p class="component-subtitle">Graphics Processing</p>
-                    <p class="component-description">Essential for gaming, video editing, and visual work.</p>
-                </div>
-            </div>
-
-            <div class="quick-tip">
-                <div class="tip-icon">💡</div>
-                <div class="tip-content">
-                    <h4>Quick Tip</h4>
-                    <p>Always check CPU, RAM, storage, and purpose first before making any computer purchase decision.
-                    </p>
+                    <h3 class="bento-title">Comparisons</h3>
+                    <p class="bento-desc">Intel vs AMD. Mac vs PC. See the winner.</p>
+                    <a href="#comparisons"
+                        style="color: var(--primary); font-weight: 600; margin-top: 1rem; display: inline-flex; align-items: center; gap: 5px;">Compare
+                        Now <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Tips Section -->
-    <section class="tips-section" id="tips">
+    <!-- How It Works Section -->
+    <section class="section-padding steps-section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Top Tips for Buyers</h2>
-                <p class="section-subtitle">Quick insights to help you make smarter purchasing decisions</p>
+            <div class="section-header reveal">
+                <span
+                    style="text-transform: uppercase; letter-spacing: 2px; color: var(--primary); font-weight: 700; font-size: 0.9rem;">Process</span>
+                <h2 class="section-title">How To Use This Site</h2>
+                <p class="section-subtitle">We simplified the journey from confusion to your perfect PC.</p>
             </div>
 
-            <div class="tips-carousel">
-                <div class="tip-card">
-                    <div class="tip-quote">"</div>
-                    <p class="tip-text">For gaming, dedicated GPU is essential - integrated graphics won't cut it</p>
-                    <div class="tip-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
+            <div class="steps-grid reveal">
+                <!-- Step 1 -->
+                <div class="step-card">
+                    <div class="step-icon-box">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <div class="step-number">1</div>
                     </div>
-                </div>
-            </div>
-
-            <div class="tips-grid">
-                <div class="tip-item">
-                    <div class="tip-item-icon">
-                        <svg viewBox="0 0 24 24" fill="none">
-                            <path d="M12 2L15.5 8.5L22 9.5L17 14L18.5 21L12 17.5L5.5 21L7 14L2 9.5L8.5 8.5L12 2Z"
-                                stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <h4>Smart Buying</h4>
-                    <p>Make informed choices with our comprehensive guides</p>
+                    <h3 style="font-weight: 700; margin-bottom: 0.5rem;">Learn The Basics</h3>
+                    <p style="color: var(--text-muted);">Don't know what RAM is? Start with our <a href="parts.html"
+                            style="color: var(--primary); font-weight: 600;">Parts Explained</a> section to understand
+                        the jargon.</p>
                 </div>
 
-                <div class="tip-item">
-                    <div class="tip-item-icon">
-                        <svg viewBox="0 0 24 24" fill="none">
-                            <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2" />
-                            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                        </svg>
+                <!-- Step 2 -->
+                <div class="step-card">
+                    <div class="step-icon-box">
+                        <i class="fa-solid fa-compass"></i>
+                        <div class="step-number">2</div>
                     </div>
-                    <h4>Best Value</h4>
-                    <p>Find the balance between price and performance</p>
+                    <h3 style="font-weight: 700; margin-bottom: 0.5rem;">Follow The Guide</h3>
+                    <p style="color: var(--text-muted);">Use our interactive <a href="guide.html"
+                            style="color: var(--primary); font-weight: 600;">Buying Guide</a> to find recommendations
+                        based on your budget & needs.</p>
                 </div>
 
-                <div class="tip-item">
-                    <div class="tip-item-icon">
-                        <svg viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
-                            <path d="M12 6v6l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                        </svg>
+                <!-- Step 3 -->
+                <div class="step-card">
+                    <div class="step-icon-box">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <div class="step-number">3</div>
                     </div>
-                    <h4>Future-Proof</h4>
-                    <p>Choose specs that will last for years to come</p>
+                    <h3 style="font-weight: 700; margin-bottom: 0.5rem;">Buy With Confidence</h3>
+                    <p style="color: var(--text-muted);">Check our <a href="brand.html"
+                            style="color: var(--primary); font-weight: 600;">Top Brands</a> and comparison list to make
+                        the smart final choice.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Resources Section -->
-    <section class="resources-section">
+    <!-- Latest News Section -->
+    <section class="section-padding" style="background: #F8FAFC;">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">More Resources</h2>
-                <p class="section-subtitle">Explore additional guides to help you make the best decision</p>
+            <div class="section-header reveal">
+                <span
+                    style="text-transform: uppercase; letter-spacing: 2px; color: var(--primary); font-weight: 700; font-size: 0.9rem;">Updates</span>
+                <h2 class="section-title">Latest Tech Insights</h2>
+                <p class="section-subtitle">Stay updated with what's happening in the hardware world.</p>
             </div>
 
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <div class="resource-icon">
-                        <svg viewBox="0 0 50 50" fill="none">
-                            <path
-                                d="M25 10L30 20L40 21.5L32.5 28.5L34.5 38.5L25 33L15.5 38.5L17.5 28.5L10 21.5L20 20L25 10Z"
-                                stroke="currentColor" stroke-width="2" fill="currentColor" opacity="0.2" />
-                        </svg>
+            <div class="news-grid reveal">
+                <!-- Blog Card 1 -->
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?q=80&w=2670&auto=format&fit=crop"
+                            alt="Gaming Setup">
                     </div>
-                    <h3>Top Brands</h3>
-                    <p>Discover the most popular and trusted laptop and PC brands worldwide</p>
-                    <a href="#" class="resource-link">
-                        Explore Brands
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                            <path d="M6 13L11 9L6 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                        </svg>
-                    </a>
+                    <div class="news-content">
+                        <div class="news-tag">Guides</div>
+                        <div class="news-date">Feb 10, 2026</div>
+                        <h3 class="news-title">The Ultimate 1080p Gaming Build under NPR 80,000</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">We picked the
+                            best value components to play modern AAA games at high settings without breaking the bank.
+                        </p>
+                        <a href="#" class="news-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
 
-                <div class="resource-card">
-                    <div class="resource-icon">
-                        <svg viewBox="0 0 50 50" fill="none">
-                            <circle cx="25" cy="25" r="15" stroke="currentColor" stroke-width="2" />
-                            <path d="M25 18v7M25 30h.01" stroke="currentColor" stroke-width="2.5"
-                                stroke-linecap="round" />
-                        </svg>
+                <!-- Blog Card 2 -->
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2670&auto=format&fit=crop"
+                            alt="Cyberpunk Setup">
                     </div>
-                    <h3>FAQ & Glossary</h3>
-                    <p>Get quick answers to common questions and learn technical terms</p>
-                    <a href="#" class="resource-link">
-                        View FAQs
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                            <path d="M6 13L11 9L6 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                        </svg>
-                    </a>
+                    <div class="news-content">
+                        <div class="news-tag">News</div>
+                        <div class="news-date">Feb 08, 2026</div>
+                        <h3 class="news-title">NVIDIA RTX 50-Series: What We Know So Far</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Leaks suggest a
+                            massive performance jump. Here is everything we know about release dates and pricing.</p>
+                        <a href="#" class="news-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
+
+                <!-- Blog Card 3 -->
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?q=80&w=2564&auto=format&fit=crop"
+                            alt="Laptop Working">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-tag">Laptops</div>
+                        <div class="news-date">Feb 05, 2026</div>
+                        <h3 class="news-title">Laptop vs Desktop: Which One Do You Really Need?</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Portability or
+                            raw power? We break down the pros and cons for students and professionals.</p>
+                        <a href="#" class="news-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <button class="btn btn-secondary">View All Articles</button>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Ready to Find Your Perfect PC?</h2>
-                <p class="cta-description">Start your journey with our comprehensive guides and make an informed
-                    decision</p>
-                <div class="cta-buttons">
-                    <button class="btn btn-primary btn-large">Get Started Now</button>
-                    <button class="btn btn-secondary btn-large">Browse Guides</button>
-                </div>
+    <!-- Newsletter Section -->
+    <section class="newsletter-section reveal">
+        <div class="blob blob-1" style="top: -50%; left: -20%;"></div>
+        <div class="newsletter-content">
+            <div class="badge"
+                style="background: rgba(255,255,255,0.2); color: white; border: none; margin-bottom: 1rem;">
+                <i class="fa-solid fa-envelope"></i> Newsletter
             </div>
+            <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem;">Stay Ahead of the Tech Curve</h2>
+            <p style="opacity: 0.9; margin-bottom: 2rem;">Join 10,000+ readers getting the latest PC tips, deals, and
+                guides delivered to their inbox.</p>
+
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                <input type="email" class="newsletter-input" placeholder="Enter your email address..." required>
+                <button type="submit" class="newsletter-btn">Subscribe Free</button>
+            </form>
         </div>
     </section>
 
@@ -474,70 +432,56 @@
             <div class="footer-content">
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
-                            <rect x="8" y="8" width="24" height="24" rx="4" stroke="currentColor" stroke-width="2" />
-                            <path d="M14 16h12M14 20h12M14 24h8" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" />
-                        </svg>
+                        <div class="logo-icon">
+                            <i class="fa-solid fa-laptop"></i>
+                        </div>
                         <span>Know Your PC</span>
                     </div>
-                    <p class="footer-description">The complete guide to understanding computer hardware and making smart
-                        buying decisions.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-                            </svg></a>
-                        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
-                            </svg></a>
-                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="none" stroke="#fff"
-                                    stroke-width="2" />
-                                <path d="M17.5 6.5h.01" stroke="#fff" stroke-width="2" />
-                            </svg></a>
+                    <p class="footer-desc">
+                        The #1 Resource for understanding computer hardware and making smart buying decisions.
+                    </p>
+                    <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                        <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter fa-lg"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube fa-lg"></i></a>
                     </div>
                 </div>
 
                 <div class="footer-col">
-                    <h4>Quick Links</h4>
+                    <h4>Explore</h4>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Parts Explained</a></li>
-                        <li><a href="#">Buying Guide</a></li>
-                        <li><a href="#">Comparisons</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="parts.html">Parts Explained</a></li>
+                        <li><a href="guide.html">Buying Guide</a></li>
+                        <li><a href="brand.html">Top Brands</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="#">Budget Guide</a></li>
-                        <li><a href="#">Top Brands</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Glossary</a></li>
+                        <li><a href="#comparisons">Comparisons</a></li>
+                        <li><a href="#budget">Budget Guide</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#glossary">Glossary</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h4>Connect</h4>
+                    <h4>Legal</h4>
                     <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
                         <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Community</a></li>
-                        <li><a href="#">Newsletter</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
                 <p>&copy; 2026 Know Your PC. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Cookies</a>
-                </div>
+                <p>Designed with ❤️ for Tech Enthusiasts.</p>
             </div>
         </div>
     </footer>

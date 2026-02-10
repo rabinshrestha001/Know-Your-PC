@@ -1,587 +1,282 @@
-/* --- Global Variables & Theme --- */
-:root {
-    --bg-body: #ffffff;
-    --bg-alt: #f1f5f9;
-    --text-main: #1e293b;
-    /* Darker main text for better contrast */
-    --text-muted: #64748b;
-    --white: #ffffff;
+/* Parts Page Specific Styles - Extends home.css */
 
-    /* Theme Colors for Image Backgrounds & Cards */
-    /* CPU - Blue */
-    --t-blue-bg: #e0f2fe;
-    /* Light blue for image bg */
-    --t-blue-main: #0284c7;
-    /* Strong blue for text/icons */
+/* Note: Core variables, typography, navbar, and footer are inherited from home.css */
 
-    /* RAM - Green */
-    --t-green-bg: #dcfce7;
-    /* Light green for image bg */
-    --t-green-main: #16a34a;
-
-    /* Storage - Orange */
-    --t-orange-bg: #ffedd5;
-    --t-orange-main: #ea580c;
-
-    /* GPU - Pink */
-    --t-pink-bg: #fce7f3;
-    --t-pink-main: #db2777;
-
-    /* Display - Purple */
-    --t-purple-bg: #f3e8ff;
-    --t-purple-main: #9333ea;
-
-    /* Motherboard - Red */
-    --t-red-bg: #fee2e2;
-    --t-red-main: #dc2626;
-
-    /* PSU - Lime */
-    --t-lime-bg: #ecfccb;
-    --t-lime-main: #65a30d;
-
-    /* Cooling - Cyan */
-    --t-cyan-bg: #cffafe;
-    --t-cyan-main: #0891b2;
-
-    /* Battery - Bright Green */
-    --t-bright-bg: #d9f99d;
-    --t-bright-main: #4d7c0f;
-
-    /* Ports - Magenta */
-    --t-magenta-bg: #fae8ff;
-    --t-magenta-main: #c026d3;
-
-    /* Shadows */
-    --shadow-sm: 0 4px 6px -1px rgb(0 0 0 / 0.05);
-    --shadow-card: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.01);
-}
-
-/* --- Reset & Base --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    color: var(--text-main);
-    background-color: var(--bg-body);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-/* --- Navbar Styling --- */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.2rem 5%;
-    background: white;
-    /* Clean white navbar */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #e2e8f0;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo i {
-    font-size: 1.8rem;
-    color: #0ea5e9;
-}
-
-.logo-text h3 {
-    font-size: 1.2rem;
-    font-weight: 800;
-    color: #0f172a;
-    line-height: 1;
-}
-
-.logo-text span {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-}
-
-.nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-main);
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover,
-.nav-links a.active-link {
-    color: #0ea5e9;
-}
-
-/* --- Page Header (Dark Theme with Left Align Text) --- */
-/* User requested dark background for header logic */
-.page-header {
-    background: #0f172a;
-    /* Dark Blue/Black Background */
-    color: white;
-    padding: 8rem 5% 6rem;
-    text-align: left;
-    /* Aligned Left */
+/* --- Page Header (Custom for Parts) --- */
+.parts-header {
+    padding-top: calc(var(--header-height) + 4rem);
+    padding-bottom: 4rem;
     position: relative;
-    overflow: hidden;
-}
-
-.header-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
+    text-align: center;
+    background: radial-gradient(circle at 50% 0%, #F1F5F9 0%, transparent 70%);
 }
 
 .breadcrumbs {
-    font-size: 0.9rem;
-    color: #94a3b8;
-    margin-bottom: 1.5rem;
-    font-weight: 500;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: white;
+    border: 1px solid var(--border-light);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
 }
 
 .breadcrumbs i {
     font-size: 0.7rem;
-    color: #38bdf8;
+    color: var(--primary);
 }
 
-.page-header h1 {
-    font-size: 4rem;
+.header-title {
+    font-size: 3.5rem;
     font-weight: 800;
-    margin-bottom: 1.5rem;
-    line-height: 1.1;
-    color: white;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--text-main) 0%, var(--text-muted) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
 }
 
-.page-header p {
-    font-size: 1.25rem;
-    color: #cbd5e1;
-    /* Light grey text */
-    max-width: 700px;
+.header-desc {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
     line-height: 1.7;
 }
 
-/* Abstract shapes for header depth */
-.page-header::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -10%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-/* --- Main Sections Layout --- */
+/* --- Part Sections --- */
 .part-section {
-    padding: 6rem 5%;
-    background: white;
-    /* Clean white background for all sections */
-}
-
-/* Optional: Slight grey for alternate sections if desired, but user images show clean white */
-.part-section:nth-child(even) {
-    background: #fdfdfd;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.split-layout {
-    display: flex;
-    align-items: center;
-    gap: 5rem;
-    justify-content: space-between;
-}
-
-.reverse-layout {
-    flex-direction: row-reverse;
-}
-
-/* --- Image Side --- */
-.image-side {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 5rem 0;
     position: relative;
 }
 
-/* The colored background box for images */
-.image-bg-box {
-    width: fit-content;
-    margin: 0 auto;
-    height: auto;
-    border-radius: 24px;
+/* Alternating Backgrounds */
+.part-section:nth-child(even) {
+    background: white;
+}
+
+.part-section:nth-child(odd) {
+    background: #F8FAFC;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.reverse-layout .text-side {
+    order: 1;
+}
+
+.reverse-layout .image-side {
+    order: 2;
+}
+
+/* --- Image Side & Themed Boxes --- */
+.image-side {
     display: flex;
     justify-content: center;
-    align-items: center;
-    /* Background color will be set by specific theme classes below */
-    transition: transform 0.4s ease;
+    perspective: 1000px;
+}
+
+.image-bg-box {
+    position: relative;
+    border-radius: 24px;
+    padding: 3rem;
+    /* Increased padding for more breathing room */
+    transition: all 0.5s var(--ease-out-expo);
+    transform-style: preserve-3d;
+    animation: float 6s ease-in-out infinite;
+    /* Added floating animation */
 }
 
 .image-bg-box:hover {
-    transform: translateY(-5px);
+    transform: rotateY(5deg) rotateX(5deg) translateY(-10px);
+    box-shadow: var(--shadow-xl);
+    animation-play-state: paused;
+    /* Pause float on hover so tilt works smoothly */
 }
 
 .part-img {
     width: 100%;
-    max-width: 400px;
-    /* Control image size inside the box */
+    max-width: 520px;
+    /* Increased from 380px to make images bigger */
     height: auto;
-    object-fit: contain;
-    /* This makes the white background of the JPG transparent so it blends with the color */
+    filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.15));
+    /* Stronger shadow */
+    transform: translateZ(20px);
+    transition: transform 0.5s ease;
     mix-blend-mode: multiply;
-    /* Remove shadow/border from image itself to blend with box */
-    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.15));
-    /* Realistic shadow for the object */
 }
 
-/* --- Text Side --- */
-.text-side {
-    flex: 1;
+.image-bg-box:hover .part-img {
+    transform: translateZ(50px) scale(1.05);
 }
 
+/* --- Content Styling --- */
 .title-group h2 {
     font-size: 2.5rem;
     font-weight: 800;
-    color: #1e293b;
     margin-bottom: 0.5rem;
+    letter-spacing: -1px;
 }
 
 .italic-sub {
-    font-style: italic;
-    font-size: 1.1rem;
-    color: #64748b;
+    display: inline-block;
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--primary);
+    background: rgba(14, 165, 233, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
     margin-bottom: 1.5rem;
-    display: block;
 }
 
 .desc-text {
-    font-size: 1.05rem;
-    color: #334155;
+    font-size: 1.1rem;
+    color: var(--text-muted);
     margin-bottom: 2rem;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 .feature-list {
-    list-style: none;
+    display: grid;
+    gap: 1rem;
     margin-bottom: 2.5rem;
 }
 
 .feature-list li {
     display: flex;
     align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 0.8rem;
-    font-size: 1rem;
-    color: #334155;
+    gap: 0.75rem;
     font-weight: 500;
+    color: var(--text-main);
 }
 
-/* --- Check Box Styling --- */
-/* User requested solid vivid colors for the "Check" block, similar to images */
+.feature-list i {
+    color: var(--primary);
+    margin-top: 4px;
+}
+
+/* --- Check Box (Tips) --- */
 .check-box {
+    background: white;
+    border: 1px solid var(--border-light);
+    border-radius: 20px;
     padding: 2rem;
-    border-radius: 16px;
-    color: white;
-    /* Text matches theme color or white depending on contrast, let's go with White text on colored bg */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.check-box:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+/* Decorative colorful line on top */
+.check-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
 }
 
 .check-header {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 1rem;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    color: var(--text-main);
 }
 
-.check-header h4 {
-    font-size: 1.1rem;
-    font-weight: 700;
-}
-
-.check-list {
-    list-style: none;
+.check-header i {
+    color: var(--gold);
+    font-size: 1.25rem;
 }
 
 .check-list li {
-    margin-bottom: 0.6rem;
     display: flex;
-    gap: 10px;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
     font-size: 0.95rem;
-    line-height: 1.5;
+    color: var(--text-muted);
 }
 
-/* --- Scoped Themes (Apply Colors to Components) --- */
+.check-list i {
+    color: var(--secondary);
+    margin-top: 3px;
+}
 
-/* CPU: Blue */
+/* --- Scoped Themes (Modernized) --- */
+/* We keep the logic but use lighter, glass-like backgrounds */
+
 .theme-blue .image-bg-box {
-    background-color: var(--t-blue-bg);
+    background: linear-gradient(135deg, #E0F2FE 0%, #BAE6FD 100%);
 }
 
-.theme-blue .feature-list i {
-    color: var(--t-blue-main);
-}
-
-/* Tick text color */
-.theme-blue .check-box {
-    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-}
-
-/* Solid color block */
-.theme-blue .check-list li {
-    color: white;
-}
-
-.theme-blue .check-list li i {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* RAM: Green */
 .theme-green .image-bg-box {
-    background-color: var(--t-green-bg);
+    background: linear-gradient(135deg, #DCFCE7 0%, #86EFAC 100%);
 }
-
-.theme-green .feature-list i {
-    color: var(--t-green-main);
-}
-
-.theme-green .check-box {
-    background: linear-gradient(135deg, #22c55e 0%, #10b981 100%);
-}
-
-.theme-green .check-list li {
-    color: white;
-}
-
-.theme-green .check-list li i {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* Storage: Orange */
 
 .theme-orange .image-bg-box {
-    background-color: var(--t-orange-bg);
+    background: linear-gradient(135deg, #FFEDD5 0%, #FDBA74 100%);
 }
 
-.theme-orange .feature-list i {
-    color: var(--t-orange-main);
-}
-
-.theme-orange .check-box {
-    background: linear-gradient(135deg, #f97316 0%, #eab308 100%);
-}
-
-.theme-orange .check-list li {
-    color: white;
-}
-
-.theme-orange .check-list li i {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* GPU: Pink */
 .theme-pink .image-bg-box {
-    background-color: var(--t-pink-bg);
+    background: linear-gradient(135deg, #FCE7F3 0%, #F9A8D4 100%);
 }
 
-
-.theme-pink .feature-list i {
-    color: var(--t-pink-main);
-}
-
-.theme-pink .check-box {
-    background: linear-gradient(135deg, #d946ef 0%, #ec4899 100%);
-}
-
-.theme-pink .check-list li {
-    color: white;
-}
-
-.theme-pink .check-list li i {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* Display: Purple */
 .theme-purple .image-bg-box {
-    background-color: var(--t-purple-bg);
+    background: linear-gradient(135deg, #F3E8FF 0%, #D8B4FE 100%);
 }
 
-
-.theme-purple .feature-list i {
-    color: var(--t-purple-main);
-}
-
-.theme-purple .check-box {
-    background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
-}
-
-.theme-purple .check-list li {
-    color: white;
-}
-
-.theme-purple .check-list li i {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* Motherboard: Red */
 .theme-red .image-bg-box {
-    background-color: var(--t-red-bg);
-}
-
-
-.theme-red .feature-list i {
-    color: var(--t-red-main);
-}
-
-.theme-red .check-box {
-    background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
-}
-
-.theme-red .check-list li {
-    color: white;
-}
-
-.theme-red .check-list li i {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* PSU: Lime */
-
-
-.theme-lime .feature-list i {
-    color: var(--t-lime-main);
+    background: linear-gradient(135deg, #FEE2E2 0%, #FCA5A5 100%);
 }
 
 .theme-lime .image-bg-box {
-    background-color: var(--t-lime-bg);
+    background: linear-gradient(135deg, #ECFCCB 0%, #BEF264 100%);
 }
 
-.theme-lime .check-box {
-    background: linear-gradient(135deg, #84cc16 0%, #22c55e 100%);
-}
-
-.theme-lime .check-list li {
-    color: white;
-}
-
-.theme-lime .check-list li i {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* Cooling: Cyan */
 .theme-cyan .image-bg-box {
-    background-color: var(--t-cyan-bg);
+    background: linear-gradient(135deg, #CFFAFE 0%, #67E8F9 100%);
 }
 
-
-.theme-cyan .feature-list i {
-    color: var(--t-cyan-main);
-}
-
-.theme-cyan .check-box {
-    background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
-}
-
-.theme-cyan .check-list li {
-    color: white;
-}
-
-.theme-cyan .check-list li i {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* Battery: Bright Green */
 .theme-bright-green .image-bg-box {
-    background-color: var(--t-bright-bg);
+    background: linear-gradient(135deg, #D9F99D 0%, #A3E635 100%);
 }
 
-
-.theme-bright-green .feature-list i {
-    color: var(--t-bright-main);
-}
-
-.theme-bright-green .check-box {
-    background: linear-gradient(135deg, #65a30d 0%, #16a34a 100%);
-}
-
-.theme-bright-green .check-list li {
-    color: white;
-}
-
-.theme-bright-green .check-list li i {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* Ports: Magenta */
 .theme-magenta .image-bg-box {
-    background-color: var(--t-magenta-bg);
+    background: linear-gradient(135deg, #FAE8FF 0%, #E879F9 100%);
 }
 
-
-.theme-magenta .feature-list i {
-    color: var(--t-magenta-main);
-}
-
-.theme-magenta .check-box {
-    background: linear-gradient(135deg, #c026d3 0%, #7c3aed 100%);
-}
-
-.theme-magenta .check-list li {
-    color: white;
-}
-
-.theme-magenta .check-list li i {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-
-/* --- Table & Footer --- */
+/* --- Table Section --- */
 .table-section {
-    padding: 6rem 5%;
-    background: #f8fafc;
-}
-
-.table-section h2 {
-    text-align: center;
-    margin-bottom: 0.5rem;
-    font-size: 2.5rem;
-}
-
-.sub-center {
-    text-align: center;
-    color: #64748b;
-    margin-bottom: 3rem;
+    padding: 6rem 0;
+    background: white;
 }
 
 .table-container {
-    border-radius: 16px;
-    box-shadow: var(--shadow-card);
+    border-radius: 20px;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-xl);
     overflow: hidden;
-    border: 1px solid #e2e8f0;
-    background: white;
 }
 
 table {
@@ -590,93 +285,80 @@ table {
 }
 
 thead th {
-    background: #0f172a;
-    color: white;
+    background: #F8FAFC;
     padding: 1.5rem;
     text-align: left;
+    font-weight: 700;
+    color: var(--text-main);
+    border-bottom: 2px solid var(--border-light);
 }
 
 tbody td {
     padding: 1.5rem;
-    border-bottom: 1px solid #f1f5f9;
-    color: #475569;
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text-muted);
+    font-size: 0.95rem;
 }
 
-/* Badge colors update */
-.badge-red {
-    background: #fee2e2;
-    color: #dc2626;
-    border: 1px solid #fecaca;
+tbody tr:last-child td {
+    border-bottom: none;
 }
 
 .badge-green {
-    background: #dcfce7;
-    color: #16a34a;
-    border: 1px solid #bbf7d0;
+    background: #DCFCE7;
+    color: #16A34A;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.8rem;
 }
 
-footer {
-    background: #0f172a;
-    color: #94a3b8;
-    padding: 4rem 5% 2rem;
+.badge-red {
+    background: #FEE2E2;
+    color: #DC2626;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.8rem;
 }
 
-.footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 3rem;
-    margin-bottom: 3rem;
-}
+/* Animations inherited from home.css (.reveal) */
 
-.footer-col h3 {
-    color: white;
-    margin-bottom: 0.5rem;
-}
-
-.footer-col h4 {
-    color: white;
-    margin-bottom: 1rem;
-}
-
-.footer-col a {
-    color: #64748b;
-    text-decoration: none;
-}
-
-.copyright {
-    text-align: center;
-    border-top: 1px solid #1e293b;
-    padding-top: 2rem;
-}
-
-/* --- Scroll Animations --- */
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease-out;
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* --- Responsive --- */
+/* Responsive */
 @media (max-width: 968px) {
-
-    .split-layout,
-    .reverse-layout {
-        flex-direction: column !important;
+    .split-layout {
+        grid-template-columns: 1fr;
         gap: 3rem;
-        align-items: flex-start;
     }
 
-    .image-side {
-        width: 100%;
-        margin-bottom: 1rem;
+    .reverse-layout .text-side {
+        order: 2;
     }
 
-    .page-header h1 {
-        font-size: 2.8rem;
+    .reverse-layout .image-side {
+        order: 1;
+    }
+
+    .header-title {
+        font-size: 2.5rem;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+}
+
+/* Float Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
     }
 }
