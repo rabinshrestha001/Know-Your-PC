@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inside Your PC - Parts Explained</title>
-    <!-- CSS -->
+    <title>PC Parts Explained - Know Your PC</title>
     <link rel="stylesheet" href="../CSS/parts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
@@ -30,338 +30,400 @@
                 <a href="comparison.html">Comparisons</a>
                 <a href="brand.html">Brands</a>
             </div>
-            <!-- Mobile Toggle -->
-            <button class="mobile-menu-toggle">
-                <i class="fa-solid fa-bars"></i>
-            </button>
         </div>
     </nav>
 
-    <!-- Hero Section: Exploded View -->
+    <!-- Hero Section -->
     <header class="parts-hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content reveal active">
-            <div class="hero-text">
-                <span class="hero-badge">Interactive Learning</span>
-                <h1>Anatomy of a <br><span class="text-gradient">Modern Computer</span></h1>
-                <p>Explore the intricate components that power your digital life. Select a category below to dive deep
-                    into the hardware.</p>
-            </div>
-            <div class="hero-visual">
-                <!-- Using exploded view for tech feel -->
-                <img src="../image/hero-exploded.png" alt="Exploded PC View" class="hero-img float-animation">
+        <div class="hero-bg-accent"></div>
+        <div class="container hero-content text-center reveal active">
+            <span class="badge badge-pill">Hardware Anatomy 101</span>
+            <h1>Inside the <span class="text-gradient">Machine</span></h1>
+            <p>Explore the intricate components that power your digital life. Click on any part to dive deep into its
+                architecture.</p>
+        </div>
+
+        <!-- Interactive 3D Mockup Container (Visual Representation) -->
+        <div class="hero-visual-container reveal stagger-1">
+            <div class="pc-case-visual">
+                <img src="../image/hero-exploded.png" alt="Exploded PC View" class="exploded-img floating">
+                <!-- Interactive Hotspots could go here if we had coordinates -->
             </div>
         </div>
     </header>
 
-    <!-- Filter Navigation -->
-    <section class="filter-section sticky-filter">
+    <!-- Component Grid System -->
+    <section class="components-section">
         <div class="container">
-            <div class="filter-wrapper">
-                <button class="filter-btn active" data-filter="all">
-                    <i class="fa-solid fa-layer-group"></i> All Parts
-                </button>
-                <button class="filter-btn" data-filter="core">
-                    <i class="fa-solid fa-microchip"></i> Core Engine
-                </button>
-                <button class="filter-btn" data-filter="infrastructure">
-                    <i class="fa-solid fa-network-wired"></i> Infrastructure
-                </button>
-                <button class="filter-btn" data-filter="peripherals">
-                    <i class="fa-solid fa-keyboard"></i> Peripherals
-                </button>
+            <div class="component-filter reveal">
+                <button class="filter-btn active" data-filter="all">All Parts</button>
+                <button class="filter-btn" data-filter="core">Core</button>
+                <button class="filter-btn" data-filter="storage">Storage</button>
+                <button class="filter-btn" data-filter="visual">Visuals</button>
+                <button class="filter-btn" data-filter="power">Power</button>
+            </div>
+
+            <div class="component-grid">
+                <!-- CPU -->
+                <div class="component-card reveal" data-category="core" onclick="openModal('cpu')">
+                    <div class="card-image">
+                        <img src="../image/CPU.jpg" alt="CPU Processor">
+                        <div class="overlay-icon"><i class="fa-solid fa-microchip"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Processor (CPU)</h3>
+                        <p class="role">The Brain</p>
+                        <p class="desc">Executes instructions and calculations for everything the computer does.</p>
+                        <ul class="specs-preview">
+                            <li><i class="fa-solid fa-bolt"></i> Cores & Threads</li>
+                            <li><i class="fa-solid fa-gauge-high"></i> Clock Speed (GHz)</li>
+                        </ul>
+                    </div>
+                    <button class="btn-explore">Explore <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- GPU -->
+                <div class="component-card reveal stagger-1" data-category="visual" onclick="openModal('gpu')">
+                    <div class="card-image">
+                        <img src="../image/GPU.jpg" alt="Graphics Card">
+                        <div class="overlay-icon"><i class="fa-solid fa-image"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Graphics Card (GPU)</h3>
+                        <p class="role">The Artist</p>
+                        <p class="desc">Renders images, video, and 3D graphics for your display.</p>
+                        <ul class="specs-preview">
+                            <li><i class="fa-solid fa-memory"></i> VRAM (GB)</li>
+                            <li><i class="fa-solid fa-wand-magic-sparkles"></i> Ray Tracing</li>
+                        </ul>
+                    </div>
+                    <button class="btn-explore">Explore <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- RAM -->
+                <div class="component-card reveal stagger-2" data-category="core" onclick="openModal('ram')">
+                    <div class="card-image">
+                        <img src="../image/RAM.jpg" alt="RAM Memory">
+                        <div class="overlay-icon"><i class="fa-solid fa-memory"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Memory (RAM)</h3>
+                        <p class="role">Short-term Memory</p>
+                        <p class="desc">Stores active data for quick access by the CPU.</p>
+                        <ul class="specs-preview">
+                            <li><i class="fa-solid fa-ruler-horizontal"></i> Capacity (GB)</li>
+                            <li><i class="fa-solid fa-stopwatch"></i> Speed (MHz)</li>
+                        </ul>
+                    </div>
+                    <button class="btn-explore">Explore <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Motherboard -->
+                <div class="component-card reveal" data-category="core" onclick="openModal('mobo')">
+                    <div class="card-image">
+                        <img src="../image/Motherboard.jpg" alt="Motherboard">
+                        <div class="overlay-icon"><i class="fa-solid fa-network-wired"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Motherboard</h3>
+                        <p class="role">The Nervous System</p>
+                        <p class="desc">Connects all components and allows them to communicate.</p>
+                        <ul class="specs-preview">
+                            <li><i class="fa-solid fa-plug"></i> Socket Type</li>
+                            <li><i class="fa-solid fa-expand"></i> Form Factor</li>
+                        </ul>
+                    </div>
+                    <button class="btn-explore">Explore <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Storage (SSD) -->
+                <div class="component-card reveal stagger-1" data-category="storage" onclick="openModal('ssd')">
+                    <div class="card-image">
+                        <img src="../image/SSD.jpg" alt="SSD Storage">
+                        <div class="overlay-icon"><i class="fa-solid fa-database"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Storage (SSD/HDD)</h3>
+                        <p class="role">Long-term Memory</p>
+                        <p class="desc">Permanently stores your files, OS, and applications.</p>
+                        <ul class="specs-preview">
+                            <li><i class="fa-solid fa-tachograph-digital"></i> Read/Write Speed</li>
+                            <li><i class="fa-solid fa-box-archive"></i> Capacity (TB)</li>
+                        </ul>
+                    </div>
+                    <button class="btn-explore">Explore <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- PSU -->
+                <div class="component-card reveal stagger-2" data-category="power" onclick="openModal('psu')">
+                    <div class="card-image">
+                        <img src="../image/PSU.jpg" alt="Power Supply">
+                        <div class="overlay-icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Power Supply (PSU)</h3>
+                        <p class="role">The Heart</p>
+                        <p class="desc">Converts outlet power into usable energy for the PC.</p>
+                        <ul class="specs-preview">
+                            <li><i class="fa-solid fa-bolt"></i> Wattage (W)</li>
+                            <li><i class="fa-solid fa-leaf"></i> Efficiency Rating</li>
+                        </ul>
+                    </div>
+                    <button class="btn-explore">Explore <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Content Grid -->
-    <section class="parts-grid-section">
-        <div class="container parts-grid">
+    <!-- Detail Modals (Hidden by default) -->
+    <div id="modal-overlay" class="modal-overlay"></div>
 
-            <!-- CPU (Core) -->
-            <div class="part-card reveal" data-category="core">
-                <div class="card-visual">
-                    <div class="card-bg theme-blue"></div>
-                    <img src="../image/CPU.jpg" alt="CPU Processor" class="card-img">
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <i class="fa-solid fa-brain icon-box blue-icon"></i>
-                        <div>
-                            <h3>CPU (Processor)</h3>
-                            <span class="subtitle">The Brain</span>
-                        </div>
-                    </div>
-                    <p class="short-desc">Controls all instructions and calculations. Determines overall speed.</p>
-                    <div class="card-stats">
-                        <div class="stat">
-                            <span class="stat-label">Importance</span>
-                            <div class="progress-bar">
-                                <div class="fill blue-fill" style="width: 100%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn-view-details" data-part="cpu">View Specs <i
-                            class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </div>
-
-            <!-- GPU (Core) -->
-            <div class="part-card reveal stagger-1" data-category="core">
-                <div class="card-visual">
-                    <div class="card-bg theme-green"></div>
-                    <img src="../image/GPU.jpg" alt="Graphics Card" class="card-img">
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <i class="fa-solid fa-gamepad icon-box green-icon"></i>
-                        <div>
-                            <h3>GPU (Graphics)</h3>
-                            <span class="subtitle">Visual Power</span>
-                        </div>
-                    </div>
-                    <p class="short-desc">Renders images, video, and 3D graphics. Crucial for gaming.</p>
-                    <div class="card-stats">
-                        <div class="stat">
-                            <span class="stat-label">Gaming Impact</span>
-                            <div class="progress-bar">
-                                <div class="fill green-fill" style="width: 100%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn-view-details" data-part="gpu">View Specs <i
-                            class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </div>
-
-            <!-- RAM (Core) -->
-            <div class="part-card reveal stagger-2" data-category="core">
-                <div class="card-visual">
-                    <div class="card-bg theme-purple"></div>
-                    <img src="../image/RAM.jpg" alt="RAM Memory" class="card-img">
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <i class="fa-solid fa-memory icon-box purple-icon"></i>
-                        <div>
-                            <h3>RAM (Memory)</h3>
-                            <span class="subtitle">Multitasking</span>
-                        </div>
-                    </div>
-                    <p class="short-desc">Temporary storage for active programs. More RAM = more apps open.</p>
-                    <div class="card-stats">
-                        <div class="stat">
-                            <span class="stat-label">Speed Impact</span>
-                            <div class="progress-bar">
-                                <div class="fill purple-fill" style="width: 80%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn-view-details" data-part="ram">View Specs <i
-                            class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </div>
-
-            <!-- Motherboard (Infrastructure) -->
-            <div class="part-card reveal" data-category="infrastructure">
-                <div class="card-visual">
-                    <div class="card-bg theme-red"></div>
-                    <img src="../image/Motherboard.jpg" alt="Motherboard" class="card-img">
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <i class="fa-solid fa-city icon-box red-icon"></i>
-                        <div>
-                            <h3>Motherboard</h3>
-                            <span class="subtitle">The Backbone</span>
-                        </div>
-                    </div>
-                    <p class="short-desc">The main circuit board connecting all components together.</p>
-                    <div class="card-stats">
-                        <div class="stat">
-                            <span class="stat-label">Criticality</span>
-                            <div class="progress-bar">
-                                <div class="fill red-fill" style="width: 90%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn-view-details" data-part="mobo">View Specs <i
-                            class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </div>
-
-            <!-- Storage (Infrastructure) -->
-            <div class="part-card reveal stagger-1" data-category="infrastructure">
-                <div class="card-visual">
-                    <div class="card-bg theme-orange"></div>
-                    <img src="../image/SSD.jpg" alt="SSD Storage" class="card-img">
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <i class="fa-solid fa-database icon-box orange-icon"></i>
-                        <div>
-                            <h3>Storage (SSD)</h3>
-                            <span class="subtitle">Data Vault</span>
-                        </div>
-                    </div>
-                    <p class="short-desc">Where you save files, games, and the OS. NVMe SSDs are fastest.</p>
-                    <div class="card-stats">
-                        <div class="stat">
-                            <span class="stat-label">Load Times</span>
-                            <div class="progress-bar">
-                                <div class="fill orange-fill" style="width: 85%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn-view-details" data-part="storage">View Specs <i
-                            class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </div>
-
-            <!-- PSU (Infrastructure) -->
-            <div class="part-card reveal stagger-2" data-category="infrastructure">
-                <div class="card-visual">
-                    <div class="card-bg theme-yellow"></div>
-                    <img src="../image/PSU.jpg" alt="Power Supply" class="card-img">
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <i class="fa-solid fa-plug icon-box yellow-icon"></i>
-                        <div>
-                            <h3>Power Supply</h3>
-                            <span class="subtitle">The Heart</span>
-                        </div>
-                    </div>
-                    <p class="short-desc">Converts wall power to clean energy for your PC components.</p>
-                    <div class="card-stats">
-                        <div class="stat">
-                            <span class="stat-label">Stability</span>
-                            <div class="progress-bar">
-                                <div class="fill yellow-fill" style="width: 100%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn-view-details" data-part="psu">View Specs <i
-                            class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </div>
-
-            <!-- Cooling (Peripherals) -->
-            <div class="part-card reveal" data-category="peripherals">
-                <div class="card-visual">
-                    <div class="card-bg theme-cyan"></div>
-                    <img src="../image/Cololing.jpg" alt="Cooling Fan" class="card-img">
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <i class="fa-solid fa-fan icon-box cyan-icon"></i>
-                        <div>
-                            <h3>Cooling</h3>
-                            <span class="subtitle">Thermals</span>
-                        </div>
-                    </div>
-                    <p class="short-desc">Fans or liquid cooling to keep temperatures low and performance high.</p>
-                    <div class="card-stats">
-                        <div class="stat">
-                            <span class="stat-label">Longevity</span>
-                            <div class="progress-bar">
-                                <div class="fill cyan-fill" style="width: 70%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn-view-details" data-part="cooling">View Specs <i
-                            class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </div>
-
-            <!-- Screen (Peripherals) -->
-            <div class="part-card reveal stagger-1" data-category="peripherals">
-                <div class="card-visual">
-                    <div class="card-bg theme-pink"></div>
-                    <img src="../image/SCREEN.jpg" alt="Monitor" class="card-img">
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <i class="fa-solid fa-desktop icon-box pink-icon"></i>
-                        <div>
-                            <h3>Monitor</h3>
-                            <span class="subtitle">The View</span>
-                        </div>
-                    </div>
-                    <p class="short-desc">Your window to the digital world. High refresh rates mean smoother motion.</p>
-                    <div class="card-stats">
-                        <div class="stat">
-                            <span class="stat-label">Visuals</span>
-                            <div class="progress-bar">
-                                <div class="fill pink-fill" style="width: 95%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn-view-details" data-part="screen">View Specs <i
-                            class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </div>
-
-            <!-- Ports (Peripherals) -->
-            <div class="part-card reveal stagger-2" data-category="peripherals">
-                <div class="card-visual">
-                    <div class="card-bg theme-slate"></div>
-                    <img src="../image/PORT.jpg" alt="Ports" class="card-img">
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <i class="fa-brands fa-usb icon-box slate-icon"></i>
-                        <div>
-                            <h3>Ports / IO</h3>
-                            <span class="subtitle">Connectivity</span>
-                        </div>
-                    </div>
-                    <p class="short-desc">USB, HDMI, and Audio jacks. Connects external devices to your PC.</p>
-                    <div class="card-stats">
-                        <div class="stat">
-                            <span class="stat-label">Utility</span>
-                            <div class="progress-bar">
-                                <div class="fill slate-fill" style="width: 60%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn-view-details" data-part="ports">View Specs <i
-                            class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </div>
-
+    <!-- CPU Modal -->
+    <div id="modal-cpu" class="component-modal">
+        <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-header">
+            <div class="modal-icon"><i class="fa-solid fa-microchip"></i></div>
+            <h2>Central Processing Unit</h2>
+            <span class="badge badge-outline">The Brain</span>
         </div>
-    </section>
-
-    <!-- Modal for Detailed View -->
-    <div class="modal" id="part-modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-container">
-            <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
-            <div class="modal-header">
-                <h2 id="modal-title">Part Name</h2>
-                <span class="modal-subtitle" id="modal-subtitle">Subtitle</span>
+        <div class="modal-body">
+            <div class="modal-image">
+                <img src="../image/CPU.jpg" alt="CPU Detail">
             </div>
-            <div class="modal-body">
-                <p class="modal-desc" id="modal-desc">Description text goes here.</p>
+            <div class="modal-details">
+                <h3>Why it matters</h3>
+                <p>The CPU handles all instruction execution. A faster CPU means snappier system responsiveness and
+                    better performance in complex tasks like gaming or rendering.</p>
 
-                <div class="specs-box">
-                    <h4>Technical Specs</h4>
-                    <div id="modal-specs">
-                        <!-- JS injected specs -->
+                <div class="key-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Cores</span>
+                        <span class="spec-value">Physical processing units</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Threads</span>
+                        <span class="spec-value">Virtual cores for multitasking</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Clock Speed</span>
+                        <span class="spec-value">Cycles per second (GHz)</span>
                     </div>
                 </div>
 
-                <div class="protip-box">
+                <div class="pro-tip">
                     <i class="fa-solid fa-lightbulb"></i>
-                    <div>
-                        <strong>Pro Tip:</strong>
-                        <p id="modal-protip">Tip text goes here.</p>
-                    </div>
+                    <p><strong>Pro Tip:</strong> More cores aren't always better for gaming. Look for high single-core
+                        performance (clock speed) for most games.</p>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- GPU Modal -->
+    <div id="modal-gpu" class="component-modal">
+        <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-header">
+            <div class="modal-icon"><i class="fa-solid fa-image"></i></div>
+            <h2>Graphics Processing Unit</h2>
+            <span class="badge badge-outline">The Visulaizer</span>
+        </div>
+        <div class="modal-body">
+            <div class="modal-image">
+                <img src="../image/GPU.jpg" alt="GPU Detail">
+            </div>
+            <div class="modal-details">
+                <h3>Why it matters</h3>
+                <p>Crucial for gaming, video editing, and 3D rendering. It takes the heavy lifting of visual
+                    calculations off the CPU.</p>
+
+                <div class="key-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">VRAM</span>
+                        <span class="spec-value">Video Memory for textures</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">CUDA/Stream Processors</span>
+                        <span class="spec-value">Parallel processing units</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">TDP</span>
+                        <span class="spec-value">Power consumption (Watts)</span>
+                    </div>
+                </div>
+
+                <div class="pro-tip">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <p><strong>Pro Tip:</strong> Check the VRAM requirements of the games you want to play. 8GB is the
+                        new minimum for 1080p gaming.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RAM Modal -->
+    <div id="modal-ram" class="component-modal">
+        <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-header">
+            <div class="modal-icon"><i class="fa-solid fa-memory"></i></div>
+            <h2>Random Access Memory</h2>
+            <span class="badge badge-outline">Short-term Memory</span>
+        </div>
+        <div class="modal-body">
+            <div class="modal-image">
+                <img src="../image/RAM.jpg" alt="RAM Detail">
+            </div>
+            <div class="modal-details">
+                <h3>Why it matters</h3>
+                <p>RAM stores data that the CPU needs immediately. More RAM allows you to run more applications
+                    simultaneously without slowing down.</p>
+
+                <div class="key-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Capacity</span>
+                        <span class="spec-value">Total size (8GB, 16GB, 32GB)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Speed</span>
+                        <span class="spec-value">Data transfer rate (MHz/MT/s)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Latency (CL)</span>
+                        <span class="spec-value">Response delay (Lower is better)</span>
+                    </div>
+                </div>
+
+                <div class="pro-tip">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <p><strong>Pro Tip:</strong> Always use two sticks of RAM (Dual Channel) instead of one larger stick
+                        for significantly better performance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Motherboard Modal -->
+    <div id="modal-mobo" class="component-modal">
+        <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-header">
+            <div class="modal-icon"><i class="fa-solid fa-network-wired"></i></div>
+            <h2>Motherboard</h2>
+            <span class="badge badge-outline">The Foundation</span>
+        </div>
+        <div class="modal-body">
+            <div class="modal-image">
+                <img src="../image/Motherboard.jpg" alt="Motherboard Detail">
+            </div>
+            <div class="modal-details">
+                <h3>Why it matters</h3>
+                <p>It's the circuit board that connects all your hardware. It determines what CPU you can use, how much
+                    RAM you can add, and what ports you have.</p>
+
+                <div class="key-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Socket</span>
+                        <span class="spec-value">CPU physical interface (e.g. LGA1700, AM5)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Chipset</span>
+                        <span class="spec-value">Determines features (Z790, B650)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Form Factor</span>
+                        <span class="spec-value">Size (ATX, Micro-ATX, ITX)</span>
+                    </div>
+                </div>
+
+                <div class="pro-tip">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <p><strong>Pro Tip:</strong> Ensure your motherboard has built-in Wi-Fi if you can't use an ethernet
+                        cable.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Storage Modal -->
+    <div id="modal-ssd" class="component-modal">
+        <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-header">
+            <div class="modal-icon"><i class="fa-solid fa-database"></i></div>
+            <h2>Storage (SSD/NVMe)</h2>
+            <span class="badge badge-outline">The Vault</span>
+        </div>
+        <div class="modal-body">
+            <div class="modal-image">
+                <img src="../image/SSD.jpg" alt="Storage Detail">
+            </div>
+            <div class="modal-details">
+                <h3>Why it matters</h3>
+                <p>Storage determines how many games, photos, and files you can keep. An NVMe SSD is crucial for fast
+                    boot times and loading screens.</p>
+
+                <div class="key-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Interface</span>
+                        <span class="spec-value">NVMe (Fastest) vs SATA (Slower)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Generation</span>
+                        <span class="spec-value">PCIe Gen 3, 4, or 5 (Speed tier)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Endurance (TBW)</span>
+                        <span class="spec-value">Total Bytes Written (Lifespan)</span>
+                    </div>
+                </div>
+
+                <div class="pro-tip">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <p><strong>Pro Tip:</strong> Keep your OS on a fast NVMe SSD and use cheaper SATA SSDs or HDDs for
+                        bulk storage like movies.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PSU Modal -->
+    <div id="modal-psu" class="component-modal">
+        <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-header">
+            <div class="modal-icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+            <h2>Power Supply Unit</h2>
+            <span class="badge badge-outline">The Lifeline</span>
+        </div>
+        <div class="modal-body">
+            <div class="modal-image">
+                <img src="../image/PSU.jpg" alt="PSU Detail">
+            </div>
+            <div class="modal-details">
+                <h3>Why it matters</h3>
+                <p>A bad PSU can destroy your entire PC. A good one provides stable power and protects components from
+                    surges.</p>
+
+                <div class="key-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Efficiency</span>
+                        <span class="spec-value">80+ Bronze, Gold, Platinum</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Modularity</span>
+                        <span class="spec-value">Detachable cables for cable management</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Headroom</span>
+                        <span class="spec-value">Extra wattage for upgrades</span>
+                    </div>
+                </div>
+
+                <div class="pro-tip">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <p><strong>Pro Tip:</strong> Never cheap out on the PSU. Look for "80+ Gold" ratings from reputable
+                        brands like Corsair, Seasonic, or EVGA.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Footer -->
     <footer class="main-footer">
@@ -422,8 +484,7 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="../JS/home.js"></script>
+    <!-- External Script -->
     <script src="../JS/parts.js"></script>
 </body>
 
