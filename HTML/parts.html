@@ -37,18 +37,14 @@
     <header class="parts-hero">
         <div class="hero-bg-accent"></div>
         <div class="container hero-content text-center reveal active">
+            <div class="breadcrumbs">
+                <i class="fa-solid fa-house"></i> Home &nbsp;/&nbsp; Parts Explained
+            </div>
+            <br>
             <span class="badge badge-pill">Hardware Anatomy 101</span>
             <h1>Inside the <span class="text-gradient">Machine</span></h1>
             <p>Explore the intricate components that power your digital life. Click on any part to dive deep into its
                 architecture.</p>
-        </div>
-
-        <!-- Interactive 3D Mockup Container (Visual Representation) -->
-        <div class="hero-visual-container reveal stagger-1">
-            <div class="pc-case-visual">
-                <img src="../image/hero-exploded.png" alt="Exploded PC View" class="exploded-img floating">
-                <!-- Interactive Hotspots could go here if we had coordinates -->
-            </div>
         </div>
     </header>
 
@@ -167,6 +163,78 @@
                         <ul class="specs-preview">
                             <li><i class="fa-solid fa-bolt"></i> Wattage (W)</li>
                             <li><i class="fa-solid fa-leaf"></i> Efficiency Rating</li>
+                        </ul>
+                    </div>
+                    <button class="btn-explore">Explore <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Cooling -->
+                <div class="component-card reveal stagger-2" data-category="core" onclick="openModal('cooling')">
+                    <div class="card-image">
+                        <img src="../image/Cololing.jpg" alt="Cooling System">
+                        <div class="overlay-icon"><i class="fa-solid fa-fan"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Cooling System</h3>
+                        <p class="role">The Climate Control</p>
+                        <p class="desc">Prevents overheating and maintains performance.</p>
+                        <ul class="specs-preview">
+                            <li><i class="fa-solid fa-wind"></i> Fan Speed</li>
+                            <li><i class="fa-solid fa-volume-off"></i> Noise Level</li>
+                        </ul>
+                    </div>
+                    <button class="btn-explore">Explore <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Screen -->
+                <div class="component-card reveal stagger-1" data-category="visual" onclick="openModal('screen')">
+                    <div class="card-image">
+                        <img src="../image/SCREEN.jpg" alt="Display Screen">
+                        <div class="overlay-icon"><i class="fa-solid fa-desktop"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Display / Screen</h3>
+                        <p class="role">The Window</p>
+                        <p class="desc">The visual interface where you interact with the computer's output.</p>
+                        <ul class="specs-preview">
+                            <li><i class="fa-solid fa-expand"></i> Resolution</li>
+                            <li><i class="fa-solid fa-stopwatch"></i> Refresh Rate</li>
+                        </ul>
+                    </div>
+                    <button class="btn-explore">Explore <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Ports -->
+                <div class="component-card reveal" data-category="core" onclick="openModal('ports')">
+                    <div class="card-image">
+                        <img src="../image/PORT.jpg" alt="Ports IO">
+                        <div class="overlay-icon"><i class="fa-brands fa-usb"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Ports & I/O</h3>
+                        <p class="role">The Bridges</p>
+                        <p class="desc">Interfaces for connecting peripherals like mice, keyboards, and drives.</p>
+                        <ul class="specs-preview">
+                            <li><i class="fa-solid fa-plug"></i> Type (USB/HDMI)</li>
+                            <li><i class="fa-solid fa-gauge-simple-high"></i> Speed</li>
+                        </ul>
+                    </div>
+                    <button class="btn-explore">Explore <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Battery -->
+                <div class="component-card reveal stagger-1" data-category="power" onclick="openModal('battery')">
+                    <div class="card-image">
+                        <img src="../image/Battery.jpg" alt="Battery">
+                        <div class="overlay-icon"><i class="fa-solid fa-battery-full"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Battery</h3>
+                        <p class="role">The Fuel Tank</p>
+                        <p class="desc">Provides power to laptops when not plugged into an outlet.</p>
+                        <ul class="specs-preview">
+                            <li><i class="fa-solid fa-bolt"></i> Capacity (Wh)</li>
+                            <li><i class="fa-solid fa-layer-group"></i> Cell Count</li>
                         </ul>
                     </div>
                     <button class="btn-explore">Explore <i class="fa-solid fa-arrow-right"></i></button>
@@ -419,6 +487,172 @@
                     <i class="fa-solid fa-lightbulb"></i>
                     <p><strong>Pro Tip:</strong> Never cheap out on the PSU. Look for "80+ Gold" ratings from reputable
                         brands like Corsair, Seasonic, or EVGA.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cooling Modal -->
+    <div id="modal-cooling" class="component-modal">
+        <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-header">
+            <div class="modal-icon"><i class="fa-solid fa-fan"></i></div>
+            <h2>Cooling System</h2>
+            <span class="badge badge-outline">The Climate Control</span>
+        </div>
+        <div class="modal-body">
+            <div class="modal-image">
+                <img src="../image/Cololing.jpg" alt="Cooling Detail">
+            </div>
+            <div class="modal-details">
+                <h3>Why it matters</h3>
+                <p>Electronics generate heat. Without proper cooling (fans, heatsinks, liquid cooling), your PC will
+                    slow
+                    down (throttle) or even shut off to prevent damage.</p>
+
+                <div class="key-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Type</span>
+                        <span class="spec-value">Air or Liquid (AIO)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Fan Size</span>
+                        <span class="spec-value">120mm / 140mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">RPM</span>
+                        <span class="spec-value">Revolutions Per Minute</span>
+                    </div>
+                </div>
+
+                <div class="pro-tip">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <p><strong>Pro Tip:</strong> Keep your fans dust-free. Dust buildup acts as an insulator and makes
+                        your cooling significantly less effective.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen Modal -->
+    <div id="modal-screen" class="component-modal">
+        <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-header">
+            <div class="modal-icon"><i class="fa-solid fa-desktop"></i></div>
+            <h2>Display / Screen</h2>
+            <span class="badge badge-outline">The Window</span>
+        </div>
+        <div class="modal-body">
+            <div class="modal-image">
+                <img src="../image/SCREEN.jpg" alt="Screen Detail">
+            </div>
+            <div class="modal-details">
+                <h3>Why it matters</h3>
+                <p>The screen is the only way you see what your computer is doing. A good screen makes everything look
+                    sharper, smoother, and more vibrant.</p>
+
+                <div class="key-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Resolution</span>
+                        <span class="spec-value">1080p, 1440p, 4K</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Refresh Rate</span>
+                        <span class="spec-value">60Hz vs 144Hz+ (Smoother)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Panel Type</span>
+                        <span class="spec-value">IPS (Colors) vs TN (Speed)</span>
+                    </div>
+                </div>
+
+                <div class="pro-tip">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <p><strong>Pro Tip:</strong> For gaming, prioritize Refresh Rate (Hz). For creative work, prioritize
+                        Resolution and Color Accuracy (IPS).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ports Modal -->
+    <div id="modal-ports" class="component-modal">
+        <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-header">
+            <div class="modal-icon"><i class="fa-brands fa-usb"></i></div>
+            <h2>Ports & I/O</h2>
+            <span class="badge badge-outline">The Bridges</span>
+        </div>
+        <div class="modal-body">
+            <div class="modal-image">
+                <img src="../image/PORT.jpg" alt="Ports Detail">
+            </div>
+            <div class="modal-details">
+                <h3>Why it matters</h3>
+                <p>Ports allow you to connect external devices. Having the right ports means you don't need to carry
+                    around a bag full of dongles and adapters.</p>
+
+                <div class="key-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">USB-C / Thunderbolt</span>
+                        <span class="spec-value">Data, Video & Power</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">HDMI / DP</span>
+                        <span class="spec-value">Video Output</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Ethernet</span>
+                        <span class="spec-value">Wired Internet</span>
+                    </div>
+                </div>
+
+                <div class="pro-tip">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <p><strong>Pro Tip:</strong> Thunderbolt 4 ports are extremely versatile—they can charge your
+                        laptop,
+                        connect to monitors, and transfer data at blazing speeds simultaneously.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Battery Modal -->
+    <div id="modal-battery" class="component-modal">
+        <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-header">
+            <div class="modal-icon"><i class="fa-solid fa-battery-full"></i></div>
+            <h2>Battery</h2>
+            <span class="badge badge-outline">The Fuel Tank</span>
+        </div>
+        <div class="modal-body">
+            <div class="modal-image">
+                <img src="../image/Battery.jpg" alt="Battery Detail">
+            </div>
+            <div class="modal-details">
+                <h3>Why it matters</h3>
+                <p>For laptops, the battery dictates how long you can work untethered. Capacity degrades over time, so
+                    starting with a good one is key.</p>
+
+                <div class="key-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Capacity</span>
+                        <span class="spec-value">Watt-hours (Wh)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Cells</span>
+                        <span class="spec-value">3-cell, 6-cell, etc.</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Cycles</span>
+                        <span class="spec-value">Lifespan Rating</span>
+                    </div>
+                </div>
+
+                <div class="pro-tip">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <p><strong>Pro Tip:</strong> To extend battery lifespan, try not to keep it at 100% or 0% for long
+                        periods. The sweet spot for longevity is between 20% and 80%.</p>
                 </div>
             </div>
         </div>
