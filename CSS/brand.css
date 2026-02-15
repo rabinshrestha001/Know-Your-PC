@@ -242,11 +242,11 @@ h3 {
     border: 1px solid var(--glass-border);
     padding: 8px;
     border-radius: 20px;
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
+    width: max-content;
+    margin: 0 auto;
     gap: 8px;
-    left: 50%;
-    position: relative;
-    transform: translateX(-50%);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
     /* Stronger shadow for floating effect */
 }
@@ -679,6 +679,154 @@ h3 {
     }
 }
 
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 24px;
+    padding: 2.5rem;
+    position: relative;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: #f1f5f9;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.close-modal:hover {
+    background: #e2e8f0;
+    color: var(--text-primary);
+    transform: rotate(90deg);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.modal-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    padding: 10px;
+    border: 1px solid var(--border-light, #e2e8f0);
+    border-radius: 16px;
+}
+
+.modal-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.modal-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 16px;
+}
+
+.info-box h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--text-muted, #64748b);
+    margin-bottom: 0.5rem;
+}
+
+.info-box p {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.modal-tagline {
+    font-size: 1.1rem;
+    color: var(--accent-blue, #0ea5e9);
+    font-weight: 600;
+}
+
+/* Leaderboard Animations */
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--target-width);
+    }
+}
+
+.bar-fill {
+    transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+    width: 0;
+}
+
+.leader-card:hover {
+    transform: translateY(-15px);
+}
+
+.leader-card:hover .crown {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, -10px);
+    }
+}
+
 @media (max-width: 768px) {
     .brand-hero h1 {
         font-size: 2.5rem;
@@ -702,153 +850,4 @@ h3 {
         padding-bottom: 2rem;
     }
 
-    /* Modal Styles */
-    .modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(15, 23, 42, 0.6);
-        backdrop-filter: blur(8px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 1000;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-    }
-
-    .modal-overlay.active {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .modal-content {
-        background: white;
-        width: 90%;
-        max-width: 600px;
-        border-radius: 24px;
-        padding: 2.5rem;
-        position: relative;
-        transform: translateY(20px);
-        transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    }
-
-    .modal-overlay.active .modal-content {
-        transform: translateY(0);
-    }
-
-    .close-modal {
-        position: absolute;
-        top: 1.5rem;
-        right: 1.5rem;
-        background: #f1f5f9;
-        border: none;
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        cursor: pointer;
-        color: var(--text-secondary);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: 0.3s;
-    }
-
-    .close-modal:hover {
-        background: #e2e8f0;
-        color: var(--text-primary);
-        transform: rotate(90deg);
-    }
-
-    .modal-header {
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        margin-bottom: 2rem;
-    }
-
-    .modal-logo {
-        width: 80px;
-        height: 80px;
-        object-fit: contain;
-        padding: 10px;
-        border: 1px solid var(--border-light, #e2e8f0);
-        border-radius: 16px;
-    }
-
-    .modal-header h2 {
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 0.5rem;
-    }
-
-    .modal-info-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1.5rem;
-        margin: 2rem 0;
-        background: #f8fafc;
-        padding: 1.5rem;
-        border-radius: 16px;
-    }
-
-    .info-box h4 {
-        font-size: 0.85rem;
-        text-transform: uppercase;
-        color: var(--text-muted, #64748b);
-        margin-bottom: 0.5rem;
-    }
-
-    .info-box p {
-        font-weight: 600;
-        color: var(--text-primary);
-    }
-
-    .modal-tagline {
-        font-size: 1.1rem;
-        color: var(--primary, #0ea5e9);
-        font-weight: 600;
-    }
-
-    /* Leaderboard Animations */
-    @keyframes fillBar {
-        from {
-            width: 0;
-        }
-
-        to {
-            width: var(--target-width);
-        }
-    }
-
-    .bar-fill {
-        transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1);
-        width: 0;
-        /* Default closed */
-    }
-
-    .leader-card:hover {
-        transform: translateY(-15px);
-    }
-
-    .leader-card:hover .crown {
-        animation: bounce 1s infinite;
-    }
-
-    @keyframes bounce {
-
-        0%,
-        100% {
-            transform: translate(-50%, 0);
-        }
-
-        50% {
-            transform: translate(-50%, -10px);
-        }
-    }
-}
 }
