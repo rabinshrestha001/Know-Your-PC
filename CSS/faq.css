@@ -1,0 +1,292 @@
+/* CSS for FAQ Page */
+
+/* Hero Section */
+.faq-hero {
+    padding-top: calc(var(--header-height) + 4rem);
+    padding-bottom: 4rem;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(14, 165, 233, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.hero-content-center {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-title-center {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--text-main) 0%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+}
+
+.hero-subtitle-center {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* Category Headers */
+.faq-category {
+    margin-bottom: 4rem;
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.category-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.category-header h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.icon-blue {
+    background: var(--primary);
+}
+
+.icon-green {
+    background: #10B981;
+}
+
+.icon-purple {
+    background: var(--secondary);
+}
+
+.icon-orange {
+    background: var(--gold);
+}
+
+/* FAQ Accordion Items */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.faq-item {
+    background: white;
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: var(--shadow-sm);
+}
+
+.faq-item:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    border-color: var(--primary);
+}
+
+.faq-header {
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.faq-header span {
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--text-main);
+    padding-right: 2rem;
+}
+
+.faq-toggle {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    background: #F0F9FF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.faq-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    background: #F8FAFC;
+    border-top: 1px solid transparent;
+}
+
+.faq-content {
+    padding: 1.5rem 2rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* Active State */
+.faq-item.active {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-lg);
+}
+
+.faq-item.active .faq-toggle {
+    background: var(--primary);
+    color: white;
+    transform: rotate(45deg);
+    /* Rotates plus to X */
+}
+
+.faq-item.active .faq-body {
+    border-top-color: var(--border-light);
+    /* Max height is handled by JS for smooth animation, 
+       but we set a high value here just in case JS fails 
+       or for initial state if pre-opened (not likely here) */
+}
+
+/* Glossary Section */
+.glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.glossary-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.glossary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--secondary);
+}
+
+.glossary-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-light);
+    opacity: 0.5;
+    background: #F1F5F9;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.glossary-card h3 {
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.glossary-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* CTA Box */
+.cta-box {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+    border-radius: 24px;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    box-shadow: var(--shadow-color);
+}
+
+.cta-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-secondary-outline {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-secondary-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title-center {
+        font-size: 2.5rem;
+    }
+
+    .faq-header {
+        padding: 1.25rem;
+    }
+
+    .faq-header span {
+        font-size: 1rem;
+        padding-right: 1rem;
+    }
+
+    .cta-box {
+        padding: 3rem 1.5rem;
+    }
+}
