@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNOW YOUR PC - Brand Identity System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0A1F44;
+            --primary-red: #C4001A;
+            --neutral-black: #111111;
+            --neutral-white: #FFFFFF;
+            --bg-light: #F8F9FA;
+            --bg-dark: #050D1A;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--neutral-black);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        header {
+            margin-bottom: 5rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: 900;
+            font-size: 3rem;
+            letter-spacing: -0.05em;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        p.subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #E5E7EB;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+        }
+
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .logo-card {
+            background: var(--neutral-white);
+            border-radius: 24px;
+            padding: 4rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .logo-card.dark {
+            background: var(--bg-dark);
+            box-shadow: 0 20px 40px rgba(10,31,68,0.15);
+        }
+
+        .logo-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-label {
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #888;
+        }
+
+        .logo-card.dark .card-label {
+            color: #666;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .color-card {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .color-swatch {
+            height: 150px;
+            width: 100%;
+        }
+
+        .color-info {
+            padding: 1.5rem;
+            background: var(--neutral-white);
+        }
+
+        .color-name {
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+        }
+
+        .color-hex {
+            font-family: monospace;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .typography {
+            background: var(--neutral-white);
+            padding: 4rem;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            margin-bottom: 4rem;
+        }
+
+        .type-sample {
+            font-weight: 900;
+            font-size: 4rem;
+            letter-spacing: -0.05em;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            color: var(--primary-blue);
+        }
+
+        .type-details {
+            font-size: 1.2rem;
+            color: #666;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .small-icons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .icon-box {
+            width: 120px;
+            height: 120px;
+            background: var(--neutral-white);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            .logo-grid {
+                grid-template-columns: 1fr;
+            }
+            .type-sample {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Brand Identity</h1>
+        <p class="subtitle">A world-class minimalist corporate identity utilizing perfect geometry and Swiss design principles to create a highly iconic digital platform presence.</p>
+    </header>
+
+    <h2 class="section-title">Main Logotype Lockups</h2>
+    <div class="logo-grid">
+        <!-- Main Primary Blue horizontally locked logo -->
+        <div class="logo-card">
+            <!-- SVG Logo Code -->
+            <svg viewBox="0 0 400 100" width="100%" height="auto" style="max-height: 80px;" xmlns="http://www.w3.org/2000/svg">
+                <!-- Abstract Vector Symbol -->
+                <g transform="translate(0, 5)">
+                    <rect x="10" y="10" width="70" height="70" rx="20" fill="none" stroke="#0A1F44" stroke-width="12" stroke-linejoin="round"/>
+                    <path d="M10 45 L30 45 L38 25 L48 65 L56 45 L80 45" fill="none" stroke="#0A1F44" stroke-width="12" stroke-linejoin="round"/>
+                </g>
+                <!-- Lockup Typography -->
+                <text x="105" y="66" font-family="'Inter', sans-serif" font-size="44" font-weight="900" fill="#0A1F44" letter-spacing="-0.03em">KNOW YOUR PC</text>
+            </svg>
+            <div class="card-label">Primary horizontal / Deep Blue</div>
+        </div>
+
+        <!-- Main Bold Red horizontally locked logo -->
+        <div class="logo-card">
+            <!-- SVG Logo Code -->
+            <svg viewBox="0 0 400 100" width="100%" height="auto" style="max-height: 80px;" xmlns="http://www.w3.org/2000/svg">
+                <!-- Abstract Vector Symbol -->
+                <g transform="translate(0, 5)">
+                    <rect x="10" y="10" width="70" height="70" rx="20" fill="none" stroke="#C4001A" stroke-width="12" stroke-linejoin="round"/>
+                    <path d="M10 45 L30 45 L38 25 L48 65 L56 45 L80 45" fill="none" stroke="#C4001A" stroke-width="12" stroke-linejoin="round"/>
+                </g>
+                <!-- Lockup Typography -->
+                <text x="105" y="66" font-family="'Inter', sans-serif" font-size="44" font-weight="900" fill="#C4001A" letter-spacing="-0.03em">KNOW YOUR PC</text>
+            </svg>
+            <div class="card-label">Accent horizontal / Bold Red</div>
+        </div>
+
+        <!-- Premium Negative/Dark locked logo -->
+        <div class="logo-card dark">
+            <!-- SVG Logo Code -->
+            <svg viewBox="0 0 400 100" width="100%" height="auto" style="max-height: 80px;" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#FFFFFF" />
+                        <stop offset="50%" stop-color="#E2E8F0" />
+                        <stop offset="100%" stop-color="#94A3B8" />
+                    </linearGradient>
+                </defs>
+                <!-- Abstract Vector Symbol -->
+                <g transform="translate(0, 5)">
+                    <rect x="10" y="10" width="70" height="70" rx="20" fill="none" stroke="url(#metal)" stroke-width="12" stroke-linejoin="round"/>
+                    <path d="M10 45 L30 45 L38 25 L48 65 L56 45 L80 45" fill="none" stroke="url(#metal)" stroke-width="12" stroke-linejoin="round"/>
+                </g>
+                <!-- Lockup Typography -->
+                <text x="105" y="66" font-family="'Inter', sans-serif" font-size="44" font-weight="900" fill="url(#metal)" letter-spacing="-0.03em">KNOW YOUR PC</text>
+            </svg>
+            <div class="card-label">Premium Metallic / Dark Mode</div>
+        </div>
+
+        <!-- Solid Inverse lockup -->
+        <div class="logo-card dark" style="background-color: var(--primary-blue);">
+            <!-- SVG Logo Code -->
+            <svg viewBox="0 0 400 100" width="100%" height="auto" style="max-height: 80px;" xmlns="http://www.w3.org/2000/svg">
+                <!-- Abstract Vector Symbol -->
+                <g transform="translate(0, 5)">
+                    <rect x="10" y="10" width="70" height="70" rx="20" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linejoin="round"/>
+                    <path d="M10 45 L30 45 L38 25 L48 65 L56 45 L80 45" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linejoin="round"/>
+                </g>
+                <!-- Lockup Typography -->
+                <text x="105" y="66" font-family="'Inter', sans-serif" font-size="44" font-weight="900" fill="#FFFFFF" letter-spacing="-0.03em">KNOW YOUR PC</text>
+            </svg>
+            <div class="card-label" style="color: rgba(255,255,255,0.7);">Negative White / Primary Blue</div>
+        </div>
+    </div>
+
+    <h2 class="section-title">Standalone Iconography & Favicon</h2>
+    <div class="logo-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+        <div class="logo-card">
+            <svg viewBox="0 0 100 100" width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="10" width="80" height="80" rx="24" fill="none" stroke="#0A1F44" stroke-width="14" stroke-linejoin="round"/>
+                <path d="M10 50 L30 50 L38 28 L48 72 L56 50 L90 50" fill="none" stroke="#0A1F44" stroke-width="14" stroke-linejoin="round"/>
+            </svg>
+            <div class="card-label">Square Icon Version</div>
+        </div>
+
+        <!-- Solid Favicon Container -->
+        <div class="logo-card" style="background-color: var(--primary-blue);">
+            <svg viewBox="0 0 100 100" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100" height="100" rx="25" fill="#C4001A"/>
+                <path d="M15 50 L30 50 L38 28 L48 72 L56 50 L85 50" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"/>
+            </svg>
+            <div class="card-label" style="color: rgba(255,255,255,0.7);">App Icon / Favicon (Red)</div>
+        </div>
+        
+        <div class="logo-card">
+            <!-- Simplest version for < 32px favicons -->
+            <svg viewBox="0 0 100 100" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+                <!-- Extremely heavy stroke for tiny 16px/32px sizes -->
+                <rect width="100" height="100" rx="20" fill="#0A1F44"/>
+                <path d="M15 50 L30 50 L40 25 L50 75 L60 50 L85 50" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linejoin="miter" stroke-linecap="square"/>
+            </svg>
+            <div class="card-label">Micro Favicon (16px scaled)</div>
+        </div>
+    </div>
+
+    <h2 class="section-title">Design Philosophy & Construction</h2>
+    <div class="typography">
+        <h3 style="margin-bottom: 2rem; color: var(--primary-blue); font-weight: 900;">Geometric Symbol Construction</h3>
+        <p style="margin-bottom: 2rem; color: #444; max-width: 800px; font-size: 1.1rem;">
+            The central abstract mark represents the fusion of a technical CPU/Hardware frame with a digital pulse waveform indicating "knowledge, health, and state". 
+            Built on a perfect mathematical grid, it scales flawlessly from global billboard to identical 16x16 pixel micro-favicon. 
+            The strokes align perfectly to center coordinates avoiding any awkward vector intersections, satisfying clean vector flat design and bold negative space.
+        </p>
+        
+        <h3 style="margin-top: 3rem; margin-bottom: 1rem; color: var(--primary-blue); font-weight: 900;">Typography Foundation</h3>
+        <div class="type-sample">KNOW YOUR PC</div>
+        <div class="type-sample" style="font-weight: 400; font-size: 2rem; letter-spacing: -0.02em;">KNOW YOUR PC</div>
+        
+        <div class="type-details">
+            <div>
+                <strong>Primary Font:</strong> Inter (Black 900)<br>
+                <strong>Tracking:</strong> -3% (Perfect tight kerning)
+            </div>
+            <div>
+                <strong>Alternative:</strong> Inter (Regular 400)<br>
+                <strong>Origin:</strong> Swiss Minimalist Typography Profile
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-title">Color System</h2>
+    <div class="color-grid">
+        <div class="color-card">
+            <div class="color-swatch" style="background: #0A1F44;"></div>
+            <div class="color-info">
+                <div class="color-name">Primary Deep Blue</div>
+                <div class="color-hex">#0A1F44</div>
+            </div>
+        </div>
+        <div class="color-card">
+            <div class="color-swatch" style="background: #C4001A;"></div>
+            <div class="color-info">
+                <div class="color-name">Action Bold Red</div>
+                <div class="color-hex">#C4001A</div>
+            </div>
+        </div>
+        <div class="color-card">
+            <div class="color-swatch" style="background: #111111;"></div>
+            <div class="color-info">
+                <div class="color-name">Neutral Black Space</div>
+                <div class="color-hex">#111111</div>
+            </div>
+        </div>
+        <div class="color-card">
+            <div class="color-swatch" style="background: #FFFFFF; border: 1px solid #eee;"></div>
+            <div class="color-info">
+                <div class="color-name">Pure Negative White</div>
+                <div class="color-hex">#FFFFFF</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
