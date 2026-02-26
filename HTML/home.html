@@ -25,19 +25,27 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
-                <div class="logo-icon"
-                    style="display: flex; align-items: center; justify-content: center; color: var(--primary);">
-                    <svg viewBox="0 0 100 100" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="10" y="10" width="80" height="80" rx="20" fill="none" stroke="currentColor"
-                            stroke-width="12" stroke-linejoin="round" />
-                        <path d="M10 50 L30 50 L38 28 L48 72 L56 50 L90 50" fill="none" stroke="currentColor"
-                            stroke-width="12" stroke-linejoin="round" />
-                    </svg>
-                </div>
+            <a href="home.html" class="logo"
+                style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                <svg viewBox="0 0 100 100" width="38" height="38" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="var(--primary)" />
+                            <stop offset="100%" stop-color="var(--secondary)" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="5" y="5" width="90" height="90" rx="24" fill="url(#brandGrad)" opacity="0.1" />
+                    <path d="M 32 25 L 32 75" fill="none" stroke="url(#brandGrad)" stroke-width="10"
+                        stroke-linecap="round" />
+                    <path d="M 68 25 L 32 50 L 68 75" fill="none" stroke="url(#brandGrad)" stroke-width="10"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <circle cx="32" cy="50" r="4" fill="var(--primary)" />
+                    <circle cx="68" cy="25" r="4" fill="var(--secondary)" />
+                    <circle cx="68" cy="75" r="4" fill="var(--secondary)" />
+                </svg>
                 <span
-                    style="font-family: 'Inter', system-ui, sans-serif; font-weight: 900; letter-spacing: -0.03em; text-transform: uppercase; font-size: 1.2rem;">KNOW
-                    YOUR PC</span>
+                    style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.02em; background: linear-gradient(135deg, var(--text-main) 0%, var(--primary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;">Know
+                    Your PC</span>
             </a>
 
             <button class="mobile-menu-toggle">
@@ -407,10 +415,61 @@
                         <a href="#" class="news-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
+
+                <!-- Blog Card 4 (Hidden Initially) -->
+                <div class="news-card hidden-article">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?q=80&w=2642&auto=format&fit=crop"
+                            alt="PC Build Guide">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-tag">Guides</div>
+                        <div class="news-date">Feb 02, 2026</div>
+                        <h3 class="news-title">How To Clean Your PC Like a Pro</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Dust is the enemy
+                            of performance. Learn the safe and effective way to clean your rig without damaging
+                            components.</p>
+                        <a href="#" class="news-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Blog Card 5 (Hidden Initially) -->
+                <div class="news-card hidden-article">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=2574&auto=format&fit=crop"
+                            alt="Mac vs PC">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-tag">Comparisons</div>
+                        <div class="news-date">Jan 28, 2026</div>
+                        <h3 class="news-title">MacBook Pro M4 vs Custom PC</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">The latest Apple
+                            silicon is powerful, but does it match a high-end desktop running Windows? We put them to
+                            the test.</p>
+                        <a href="#" class="news-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Blog Card 6 (Hidden Initially) -->
+                <div class="news-card hidden-article">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?q=80&w=2600&auto=format&fit=crop"
+                            alt="GPU comparison">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-tag">News</div>
+                        <div class="news-date">Jan 25, 2026</div>
+                        <h3 class="news-title">AMD Unveils New Budget GPUs</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Great news for
+                            budget gamers as new affordable graphics cards hit the market with stellar
+                            price-to-performance ratios.</p>
+                        <a href="#" class="news-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
-                <button class="btn btn-secondary">View All Articles</button>
+                <button id="viewAllBtn" class="btn btn-secondary">View All Articles</button>
             </div>
         </div>
     </section>
@@ -439,69 +498,98 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <div class="footer-logo"
-                        style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
-                        <div class="logo-icon"
-                            style="display: flex; align-items: center; justify-content: center; color: var(--primary);">
-                            <svg viewBox="0 0 100 100" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="10" y="10" width="80" height="80" rx="20" fill="none" stroke="currentColor"
-                                    stroke-width="12" stroke-linejoin="round" />
-                                <path d="M10 50 L30 50 L38 28 L48 72 L56 50 L90 50" fill="none" stroke="currentColor"
-                                    stroke-width="12" stroke-linejoin="round" />
-                            </svg>
-                        </div>
+                    <div class="logo footer-logo"
+                        style="display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem;">
+                        <svg viewBox="0 0 100 100" width="38" height="38" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="var(--primary)" />
+                                    <stop offset="100%" stop-color="var(--secondary)" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="5" y="5" width="90" height="90" rx="24" fill="url(#brandGrad)" opacity="0.1" />
+                            <path d="M 32 25 L 32 75" fill="none" stroke="url(#brandGrad)" stroke-width="10"
+                                stroke-linecap="round" />
+                            <path d="M 68 25 L 32 50 L 68 75" fill="none" stroke="url(#brandGrad)" stroke-width="10"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <circle cx="32" cy="50" r="4" fill="var(--primary)" />
+                            <circle cx="68" cy="25" r="4" fill="var(--secondary)" />
+                            <circle cx="68" cy="75" r="4" fill="var(--secondary)" />
+                        </svg>
                         <span
-                            style="font-family: 'Inter', system-ui, sans-serif; font-weight: 900; letter-spacing: -0.03em; text-transform: uppercase; font-size: 1.2rem; color: var(--text-main);">KNOW
-                            YOUR PC</span>
+                            style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.02em; background: linear-gradient(135deg, var(--text-main) 0%, var(--primary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;">Know
+                            Your PC</span>
                     </div>
-                    <p class="footer-desc">
-                        The #1 Resource for understanding computer hardware and making smart buying decisions.
-                    </p>
-                    <div style="display: flex; gap: 1rem; margin-top: 2rem;">
-                        <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter fa-lg"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
-                        <a href="#"><i class="fa-brands fa-youtube fa-lg"></i></a>
-                    </div>
+                    <span
+                        style="font-family: 'Inter', system-ui, sans-serif; font-weight: 900; letter-spacing: -0.03em; text-transform: uppercase; font-size: 1.2rem; color: var(--text-main);">KNOW
+                        YOUR PC</span>
                 </div>
-
-                <div class="footer-col">
-                    <h4>Explore</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="parts.html">Parts Explained</a></li>
-                        <li><a href="guide.html">Buying Guide</a></li>
-                        <li><a href="brand.html">Top Brands</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#comparisons">Comparisons</a></li>
-                        <li><a href="#budget">Budget Guide</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="#glossary">Glossary</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
+                <p class="footer-desc">
+                    The #1 Resource for understanding computer hardware and making smart buying decisions.
+                </p>
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter fa-lg"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube fa-lg"></i></a>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2026 Know Your PC. All rights reserved.</p>
-                <p>Designed with ❤️ for Tech Enthusiasts.</p>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="parts.html">Parts Explained</a></li>
+                    <li><a href="guide.html">Buying Guide</a></li>
+                    <li><a href="brand.html">Top Brands</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#comparisons">Comparisons</a></li>
+                    <li><a href="#budget">Budget Guide</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="#glossary">Glossary</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
             </div>
         </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Know Your PC. All rights reserved.</p>
+            <p>Designed with ❤️ for Tech Enthusiasts.</p>
+        </div>
+        </div>
     </footer>
+
+    <!-- Article Modal Overlay -->
+    <div class="article-modal" id="articleModal">
+        <div class="article-modal-content">
+            <span class="close-modal" id="closeModalBtn"><i class="fa-solid fa-xmark"></i></span>
+            <div class="modal-image" id="modalImage">
+                <img src="" alt="Article Image">
+            </div>
+            <div class="modal-body">
+                <span class="modal-tag" id="modalTag">Tag</span>
+                <span class="modal-date" id="modalDate">Date</span>
+                <h2 class="modal-title" id="modalTitle">Article Title</h2>
+                <div class="modal-text" id="modalText">
+                    <p>Loading content...</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="../JS/home.js"></script>
 </body>
