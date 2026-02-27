@@ -95,70 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ===== Article Modal and View All Functionality =====
-    const newsCards = document.querySelectorAll('.news-card');
-    const articleModal = document.getElementById('articleModal');
-    const closeModalBtn = document.getElementById('closeModalBtn');
-
-    // Modal Elements
-    const modalImage = document.getElementById('modalImage')?.querySelector('img');
-    const modalTag = document.getElementById('modalTag');
-    const modalDate = document.getElementById('modalDate');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalText = document.getElementById('modalText');
-
-    if (newsCards.length > 0 && articleModal && closeModalBtn) {
-        newsCards.forEach(card => {
-            card.addEventListener('click', (e) => {
-                // Prevent click if hitting the "Read Article" link directly
-                if (e.target.tagName.toLowerCase() === 'a' || e.target.closest('a')) {
-                    e.preventDefault();
-                }
-
-                // Get data from the card
-                const imgNode = card.querySelector('.news-image img');
-                const tagNode = card.querySelector('.news-tag');
-                const dateNode = card.querySelector('.news-date');
-                const titleNode = card.querySelector('.news-title');
-                const pNodes = card.querySelectorAll('p');
-
-                if (imgNode && modalImage) modalImage.src = imgNode.src;
-                if (tagNode && modalTag) modalTag.textContent = tagNode.textContent;
-                if (dateNode && modalDate) modalDate.textContent = dateNode.textContent;
-                if (titleNode && modalTitle) modalTitle.textContent = titleNode.textContent;
-
-                if (pNodes.length > 0 && modalText) {
-                    modalText.innerHTML = '';
-                    pNodes.forEach(p => {
-                        const clone = p.cloneNode(true);
-                        clone.style.color = ''; // Remove inline style for modal
-                        clone.style.fontSize = '';
-                        clone.style.marginBottom = '';
-                        modalText.appendChild(clone);
-                    });
-                }
-
-                articleModal.classList.add('active');
-                document.body.style.overflow = 'hidden'; // Stop background scrolling
-            });
-        });
-
-        // Close modal
-        closeModalBtn.addEventListener('click', () => {
-            articleModal.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-
-        // Click outside to close
-        articleModal.addEventListener('click', (e) => {
-            if (e.target === articleModal) {
-                articleModal.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        });
-    }
-
-    // View All button functionality
+    // ===== View All button functionality =====
     const viewAllBtn = document.getElementById('viewAllBtn');
     const extraArticles = document.querySelectorAll('.news-card.hidden-article');
 

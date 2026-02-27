@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Detail - Know Your PC</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/article-detail.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar scrolled">
+        <div class="container nav-container">
+            <a href="home.html" class="logo"
+                style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                <svg viewBox="0 0 100 100" width="38" height="38" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="var(--primary)" />
+                            <stop offset="100%" stop-color="var(--secondary)" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="5" y="5" width="90" height="90" rx="24" fill="url(#brandGrad)" opacity="0.1" />
+                    <path d="M 32 25 L 32 75" fill="none" stroke="url(#brandGrad)" stroke-width="10"
+                        stroke-linecap="round" />
+                    <path d="M 68 25 L 32 50 L 68 75" fill="none" stroke="url(#brandGrad)" stroke-width="10"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <circle cx="32" cy="50" r="4" fill="var(--primary)" />
+                    <circle cx="68" cy="25" r="4" fill="var(--secondary)" />
+                    <circle cx="68" cy="75" r="4" fill="var(--secondary)" />
+                </svg>
+                <span
+                    style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.02em; background: linear-gradient(135deg, var(--text-main) 0%, var(--primary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;">Know
+                    Your PC</span>
+            </a>
+
+            <button class="mobile-menu-toggle">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="home.html" class="nav-link">Home</a></li>
+                <li><a href="parts.html" class="nav-link">Parts Explained</a></li>
+                <li><a href="brand.html" class="nav-link">Top Brands</a></li>
+                <li><a href="guide.html" class="nav-link">Buying Guide</a></li>
+                <li><a href="home.html#comparisons" class="nav-link">Comparisons</a></li>
+                <li><button class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Get
+                        Started</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <main class="article-detail-page section-padding" style="margin-top: 80px;">
+        <div class="container article-container">
+            <a href="home.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Articles</a>
+
+            <div id="loading" style="text-align: center; padding: 50px;">
+                <i class="fa-solid fa-circle-notch fa-spin" style="font-size: 2rem; color: var(--primary);"></i>
+                <p style="margin-top: 10px;">Loading Article...</p>
+            </div>
+
+            <div id="articleContent" class="hidden">
+                <div class="article-header">
+                    <span id="articleTag" class="badge"
+                        style="background: var(--bg-secondary); color: var(--primary); font-weight: 600;">Technology</span>
+                    <span id="articleDate"
+                        style="color: var(--text-muted); font-size: 0.9rem; margin-left: 15px;">Date</span>
+                </div>
+
+                <h1 id="articleTitle" class="article-title">Article Title</h1>
+
+                <div class="article-hero-image">
+                    <img id="articleImage" src="" alt="Article cover image">
+                </div>
+
+                <div id="articleBody" class="article-body">
+                    <!-- Content injected via JS -->
+                </div>
+            </div>
+
+            <div id="errorState" class="hidden text-center" style="padding: 50px;">
+                <i class="fa-solid fa-circle-exclamation"
+                    style="font-size: 3rem; color: #ef4444; margin-bottom: 20px;"></i>
+                <h2>Article Not Found</h2>
+                <p>We couldn't find the article you're looking for. It might have been removed or the link is incorrect.
+                </p>
+                <a href="home.html" class="btn btn-primary" style="margin-top: 20px;">Return to Home</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Know Your PC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/article-detail.js"></script>
+</body>
+
+</html>
