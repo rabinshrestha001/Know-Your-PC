@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Guide - Know Your PC</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../CSS/home.css">
+
+    <!-- Page Specific CSS -->
+    <link rel="stylesheet" href="../CSS/budget.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar scrolled">
+        <div class="container nav-container">
+            <a href="home.html" class="logo"
+                style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="../image/logo.jpg" alt="Know Your PC Logo" width="40" height="40"
+                    style="object-fit: cover; border-radius: 8px;">
+                <span
+                    style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.02em; background: linear-gradient(135deg, var(--text-main) 0%, var(--primary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;">Know
+                    Your PC</span>
+            </a>
+
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="home.html" class="nav-link">Home</a></li>
+                <li><a href="parts.html" class="nav-link">Parts Explained</a></li>
+                <li><a href="brand.html" class="nav-link">Top Brands</a></li>
+                <li><a href="guide.html" class="nav-link">Buying Guide</a></li>
+                <li><a href="comparison.html" class="nav-link">Comparisons</a></li>
+                <li><a href="budget.html" class="nav-link active">Budget Guide</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Ambient Background Glows (Matching Brand Page) -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <!-- Page Header (Matching Brand Hero Style) -->
+    <header class="budget-hero-new">
+        <div class="container">
+            <div class="hero-content reveal active">
+                <div class="badge-hero">
+                    <i class="fa-solid fa-calculator"></i> Smart Buying Guide 2026
+                </div>
+                <h1>Perfect PC <span class="text-gradient">For Your Budget</span></h1>
+                <p>We've analyzed the Nepal market to bring you the best value hardware. Find the ideal balance of
+                    performance and price.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="budget-section section-padding bg-body">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Select Your Budget</h2>
+                <p class="section-subtitle">Choose your price range to see the best recommendations</p>
+            </div>
+
+            <!-- Budget Selector Tabs -->
+            <div class="budget-tabs reveal stagger-1">
+                <div class="budget-tab active" data-budget="50k">
+                    <div class="tab-icon" style="background: linear-gradient(135deg, #10B981, #34D399);"><i
+                            class="fa-solid fa-graduation-cap"></i></div>
+                    <span class="tab-text">Under NPR 50K</span>
+                </div>
+                <div class="budget-tab" data-budget="80k">
+                    <div class="tab-icon" style="background: linear-gradient(135deg, #3B82F6, #60A5FA);"><i
+                            class="fa-solid fa-briefcase"></i></div>
+                    <span class="tab-text">Under NPR 80K</span>
+                </div>
+                <div class="budget-tab" data-budget="120k">
+                    <div class="tab-icon" style="background: linear-gradient(135deg, #A855F7, #D946EF);"><i
+                            class="fa-solid fa-gamepad"></i></div>
+                    <span class="tab-text">Under NPR 120K</span>
+                </div>
+                <div class="budget-tab" data-budget="160k">
+                    <div class="tab-icon" style="background: linear-gradient(135deg, #F97316, #FB923C);"><i
+                            class="fa-solid fa-fire"></i></div>
+                    <span class="tab-text">Under NPR 160K+</span>
+                </div>
+            </div>
+
+            <!-- Dynamic Content Area -->
+            <div class="budget-content reveal stagger-2" id="budgetContent">
+                <!-- Injected via JS -->
+            </div>
+
+            <!-- Comparison Matrix -->
+            <div class="matrix-section reveal stagger-3" style="margin-top: 5rem;">
+                <div class="section-header">
+                    <h2 class="section-title" style="font-size: 2rem;">Budget Comparison Matrix</h2>
+                    <p class="section-subtitle">Compare specifications across different price ranges (Estimated for
+                        Nepal market)</p>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="matrix-table">
+                        <thead>
+                            <tr>
+                                <th>Budget Range</th>
+                                <th>CPU</th>
+                                <th>RAM</th>
+                                <th>Storage</th>
+                                <th>GPU</th>
+                                <th>Best For</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Under NPR 50,000</td>
+                                <td>Intel Core i3 / AMD Ryzen 3</td>
+                                <td>8GB</td>
+                                <td>256GB - 512GB SSD</td>
+                                <td><span class="badge badge-integrated">Integrated</span></td>
+                                <td>Students, Basic Office, Browsing</td>
+                            </tr>
+                            <tr>
+                                <td>Under NPR 80,000</td>
+                                <td>Intel Core i5 / AMD Ryzen 5</td>
+                                <td>8GB - 16GB</td>
+                                <td>512GB SSD</td>
+                                <td><span class="badge badge-integrated">Intel Iris / Radeon</span></td>
+                                <td>Professionals, Light Multitasking</td>
+                            </tr>
+                            <tr>
+                                <td>Under NPR 120,000</td>
+                                <td>Intel Core i5/i7 / Ryzen 5/7 (H-Series)</td>
+                                <td>16GB</td>
+                                <td>512GB - 1TB SSD</td>
+                                <td><span class="badge badge-gpu">RTX 3050 / 4050</span></td>
+                                <td>Gaming, Content Creation, Coding</td>
+                            </tr>
+                            <tr>
+                                <td>Under NPR 160,000</td>
+                                <td>Intel Core i7/i9 / Ryzen 7/9</td>
+                                <td>16GB - 32GB</td>
+                                <td>1TB SSD</td>
+                                <td><span class="badge badge-gpu-high">RTX 4060+</span></td>
+                                <td>Enthusiasts, Heavy Rendering, 2K+ Gaming</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="logo footer-logo"
+                        style="display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem;">
+                        <img src="../image/logo.jpg" alt="Know Your PC Logo" width="40" height="40"
+                            style="object-fit: cover; border-radius: 8px;">
+                        <span
+                            style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.02em; background: linear-gradient(135deg, var(--text-main) 0%, var(--primary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;">Know
+                            Your PC</span>
+                    </div>
+                    <span
+                        style="font-family: 'Inter', system-ui, sans-serif; font-weight: 900; letter-spacing: -0.03em; text-transform: uppercase; font-size: 1.2rem; color: var(--text-main);">KNOW
+                        YOUR PC</span>
+                </div>
+                <p class="footer-desc">
+                    The #1 Resource for understanding computer hardware and making smart buying decisions.
+                </p>
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter fa-lg"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube fa-lg"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="parts.html">Parts Explained</a></li>
+                    <li><a href="guide.html">Buying Guide</a></li>
+                    <li><a href="comparison.html">Comparisons</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="budget.html">Budget Guide</a></li>
+                    <li><a href="brand.html">Top Brands</a></li>
+                    <li><a href="faq.html">FAQ & Glossary</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Know Your PC. All rights reserved.</p>
+            <p>Powered by Readily</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../JS/home.js"></script>
+    <script src="../JS/budget.js"></script>
+</body>
+
+</html>

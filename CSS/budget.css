@@ -1,0 +1,368 @@
+/* ===== Budget Guide Page CSS - Realignment with Site Theme ===== */
+
+:root {
+    --bg-body: #f8fafc;
+    --card-bg: #ffffff;
+    --glass-border: #e2e8f0;
+    --text-primary: #0f172a;
+    --text-secondary: #64748b;
+    --accent-blue: #0ea5e9;
+    --accent-purple: #8b5cf6;
+}
+
+body {
+    background-color: var(--bg-body);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-primary);
+}
+
+/* Ambient Background Glows - Matching Brand Page */
+.ambient-glow {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+    filter: blur(100px);
+    opacity: 0.4;
+}
+
+.glow-1 {
+    top: -100px;
+    left: -100px;
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.1), transparent 70%);
+}
+
+.glow-2 {
+    bottom: -100px;
+    right: -100px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.1), transparent 70%);
+}
+
+/* Hero Section - Matching Brand/Parts Hero */
+.budget-hero-new {
+    padding: 8rem 0 3rem;
+    text-align: center;
+}
+
+.badge-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: white;
+    border: 1px solid var(--glass-border);
+    border-radius: 50px;
+    color: var(--accent-blue);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.budget-hero-new h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.budget-hero-new p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Budget Selector Tabs - Realigned to "Glass Panel" style */
+.budget-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem 0 5rem;
+}
+
+.budget-tab {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    padding: 12px 24px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.budget-tab .tab-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: white;
+}
+
+.budget-tab:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border-color: var(--accent-blue);
+}
+
+.budget-tab.active {
+    background: white;
+    box-shadow: 0 10px 30px rgba(14, 165, 233, 0.15);
+    border-color: var(--accent-blue);
+    color: var(--text-primary);
+}
+
+/* Product Cards - Realigned with Industry/Brand Card Look */
+.product-card {
+    background: white;
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 2.5rem;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    transition: 0.4s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(14, 165, 233, 0.08);
+    border-color: var(--accent-blue);
+}
+
+.product-image-box {
+    background: #f8fafc;
+    border-radius: 20px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image-box img {
+    max-width: 90%;
+    transition: 0.3s;
+}
+
+/* Content Layout inside Card */
+.product-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.tier-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    background: #eff6ff;
+    color: var(--accent-blue);
+}
+
+.selected-budget-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.selected-budget-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.selected-budget-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.spec-header {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.spec-header i {
+    color: var(--accent-blue);
+}
+
+.specs-list {
+    list-style: none;
+    padding: 0;
+}
+
+.specs-list li {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.specs-list li i {
+    color: #10b981;
+    font-size: 0.8rem;
+}
+
+/* Use Pillars */
+.use-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.use-pill {
+    padding: 4px 14px;
+    background: #f1f5f9;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+/* Advisor Box - Realigned */
+.pro-tips-premium {
+    grid-column: span 2;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: #f8fafc;
+    border: 1px dashed var(--glass-border);
+}
+
+.tip-header {
+    font-weight: 800;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-primary);
+}
+
+.tips-list {
+    list-style: none;
+    padding: 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.tips-list li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.tips-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-blue);
+}
+
+/* Section Matrix (Black/Dark Realignment) */
+.matrix-section {
+    padding: 5rem 4rem;
+    background: #0f172a;
+    border-radius: 24px;
+    color: white;
+    margin-top: 5rem;
+}
+
+.matrix-section h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.matrix-section .section-subtitle {
+    color: #94a3b8;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.table-responsive {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.matrix-table th {
+    padding: 1.25rem;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.05);
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.matrix-table td {
+    padding: 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.9rem;
+}
+
+/* Animations (Matching reveal) */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 992px) {
+    .product-card {
+        grid-template-columns: 1fr;
+    }
+
+    .product-details {
+        grid-template-columns: 1fr;
+    }
+
+    .budget-tabs {
+        flex-wrap: wrap;
+    }
+}
