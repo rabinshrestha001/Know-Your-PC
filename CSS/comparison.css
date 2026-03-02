@@ -529,45 +529,6 @@ img {
     color: var(--text-main);
 }
 
-/* ===== Footer ===== */
-.main-footer {
-    background: #0F172A;
-    color: #94A3B8;
-    padding: 4rem 0 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
-    gap: 3rem;
-    margin-bottom: 3rem;
-}
-
-.logo.footer-logo {
-    color: white;
-    margin-bottom: 1.5rem;
-}
-
-.logo.footer-logo h3 {
-    color: white;
-    margin: 0;
-}
-
-.footer-col h4 {
-    color: white;
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-}
-
-.footer-links li {
-    margin-bottom: 0.8rem;
-}
-
-.footer-links a:hover {
-    color: var(--primary);
-}
-
 /* Animations - Reuse from Parts */
 .reveal {
     opacity: 0;

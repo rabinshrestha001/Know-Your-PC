@@ -1055,9 +1055,7 @@ img {
 }
 
 .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
     padding-top: 2rem;
     border-top: 1px solid var(--border-light);
     color: var(--text-muted);

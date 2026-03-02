@@ -1,0 +1,117 @@
+/* ===== Shared Footer — Matches Home Page Design Exactly ===== */
+
+footer.footer {
+    background: #ffffff !important;
+    border-top: 1px solid #E2E8F0 !important;
+    padding: 6rem 0 2rem !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 16px !important;
+    /* base reset */
+}
+
+footer.footer .footer-content {
+    display: grid !important;
+    grid-template-columns: 2fr 1fr 1fr 1fr !important;
+    gap: 4rem !important;
+    margin-bottom: 4rem !important;
+}
+
+/* Column headings */
+footer.footer .footer-col h4 {
+    color: #0F172A !important;
+    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 1.5rem !important;
+    font-family: 'Outfit', sans-serif !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    line-height: 1.4 !important;
+}
+
+/* List reset */
+footer.footer .footer-col ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+footer.footer .footer-col ul li {
+    margin-bottom: 0.75rem !important;
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+}
+
+/* All links in footer */
+footer.footer .footer-col a {
+    color: #64748B !important;
+    text-decoration: none !important;
+    font-size: 0.9rem !important;
+    font-weight: 400 !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    line-height: 1.5 !important;
+    transition: color 0.3s ease !important;
+    -webkit-text-fill-color: #64748B !important;
+    background: none !important;
+    background-clip: unset !important;
+    -webkit-background-clip: unset !important;
+}
+
+footer.footer .footer-col a:hover {
+    color: #0EA5E9 !important;
+    -webkit-text-fill-color: #0EA5E9 !important;
+}
+
+/* Brand description text */
+footer.footer .footer-desc {
+    color: #64748B !important;
+    margin-top: 1rem !important;
+    max-width: 300px !important;
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+/* Logo wrapper */
+footer.footer .footer-col .footer-logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Social icons */
+footer.footer .brand-col>div[style] a {
+    color: #64748B !important;
+    font-size: 1.1rem !important;
+    -webkit-text-fill-color: #64748B !important;
+    background: none !important;
+}
+
+footer.footer .brand-col>div[style] a:hover {
+    color: #0EA5E9 !important;
+    -webkit-text-fill-color: #0EA5E9 !important;
+}
+
+/* Copyright bar */
+footer.footer .footer-bottom {
+    text-align: center !important;
+    padding-top: 2rem !important;
+    border-top: 1px solid #E2E8F0 !important;
+    color: #64748B !important;
+    font-size: 0.85rem !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+footer.footer .footer-bottom p {
+    font-size: 0.85rem !important;
+    color: #64748B !important;
+    margin: 0 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    footer.footer .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+}
