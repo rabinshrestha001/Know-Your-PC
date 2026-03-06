@@ -1,117 +1,133 @@
 /* ===== Shared Footer — Matches Home Page Design Exactly ===== */
 
-footer.footer {
-    background: #ffffff !important;
-    border-top: 1px solid #E2E8F0 !important;
-    padding: 6rem 0 2rem !important;
-    font-family: 'Plus Jakarta Sans', sans-serif !important;
-    font-size: 16px !important;
-    /* base reset */
+.footer {
+    background: white;
+    border-top: 1px solid var(--border-light);
+    padding: 6rem 0 2rem;
 }
 
-footer.footer .footer-content {
-    display: grid !important;
-    grid-template-columns: 2fr 1fr 1fr 1fr !important;
-    gap: 4rem !important;
-    margin-bottom: 4rem !important;
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
 }
 
-/* Column headings */
-footer.footer .footer-col h4 {
-    color: #0F172A !important;
-    font-size: 0.9rem !important;
-    font-weight: 700 !important;
-    margin-bottom: 1.5rem !important;
-    font-family: 'Outfit', sans-serif !important;
-    letter-spacing: 0 !important;
-    text-transform: none !important;
-    line-height: 1.4 !important;
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
 }
 
-/* List reset */
-footer.footer .footer-col ul {
-    list-style: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
+.footer-logo span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
 }
 
-footer.footer .footer-col ul li {
-    margin-bottom: 0.75rem !important;
-    font-size: 0.9rem !important;
-    line-height: 1.5 !important;
+.footer-desc {
+    color: var(--text-muted);
+    margin-top: 1rem;
+    max-width: 300px;
 }
 
-/* All links in footer */
-footer.footer .footer-col a {
-    color: #64748B !important;
-    text-decoration: none !important;
-    font-size: 0.9rem !important;
-    font-weight: 400 !important;
-    font-family: 'Plus Jakarta Sans', sans-serif !important;
-    line-height: 1.5 !important;
-    transition: color 0.3s ease !important;
-    -webkit-text-fill-color: #64748B !important;
-    background: none !important;
-    background-clip: unset !important;
-    -webkit-background-clip: unset !important;
+.footer-col h4 {
+    margin-bottom: 1.5rem;
+    font-weight: 700;
 }
 
-footer.footer .footer-col a:hover {
-    color: #0EA5E9 !important;
-    -webkit-text-fill-color: #0EA5E9 !important;
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Brand description text */
-footer.footer .footer-desc {
-    color: #64748B !important;
-    margin-top: 1rem !important;
-    max-width: 300px !important;
-    font-size: 0.9rem !important;
-    line-height: 1.6 !important;
-    font-family: 'Plus Jakarta Sans', sans-serif !important;
+.footer-col ul li {
+    margin-bottom: 0.75rem;
 }
 
-/* Logo wrapper */
-footer.footer .footer-col .footer-logo {
-    display: flex !important;
-    align-items: center !important;
-    gap: 10px !important;
-    margin-bottom: 1.5rem !important;
+.footer-col a {
+    color: var(--text-muted);
+    transition: 0.3s;
 }
 
-/* Social icons */
-footer.footer .brand-col>div[style] a {
-    color: #64748B !important;
-    font-size: 1.1rem !important;
-    -webkit-text-fill-color: #64748B !important;
-    background: none !important;
+.footer-col a:hover {
+    color: var(--primary);
 }
 
-footer.footer .brand-col>div[style] a:hover {
-    color: #0EA5E9 !important;
-    -webkit-text-fill-color: #0EA5E9 !important;
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-light);
+    color: var(--text-muted);
+    font-size: 0.875rem;
 }
 
-/* Copyright bar */
-footer.footer .footer-bottom {
-    text-align: center !important;
-    padding-top: 2rem !important;
-    border-top: 1px solid #E2E8F0 !important;
-    color: #64748B !important;
-    font-size: 0.85rem !important;
-    font-family: 'Plus Jakarta Sans', sans-serif !important;
-}
-
-footer.footer .footer-bottom p {
-    font-size: 0.85rem !important;
-    color: #64748B !important;
-    margin: 0 !important;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
-    footer.footer .footer-content {
-        grid-template-columns: 1fr !important;
-        gap: 2rem !important;
+    .footer-content {
+        grid-template-columns: 1fr;
     }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+
+/* ===== Newsletter Section ===== */
+.newsletter-section {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    padding: 5rem 0;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.newsletter-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.newsletter-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 1rem 1.5rem;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+.newsletter-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.newsletter-btn {
+    background: white;
+    color: var(--primary);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.newsletter-btn:hover {
+    transform: scale(1.05);
 }
