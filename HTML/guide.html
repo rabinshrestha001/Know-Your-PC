@@ -4,22 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimate Buying Guide - Know Your PC</title>
-    <link rel="stylesheet" href="../CSS/guide.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../CSS/footer.css">
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Ultimate PC and Laptop Buying Guide in Nepal. Read our expert recommendations, specs, comparisons, and latest NRS prices for students, gaming, office, and creative workflows.">
+    <meta name="keywords"
+        content="PC buying guide, Laptop price in Nepal, Best laptops for students, Gaming PC Nepal, NRS prices, know your pc, laptop specs">
+    <title>Ultimate Buying Guide & Recommendations - Know Your PC</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/guide.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
     <link rel="stylesheet" href="../CSS/navbar.css">
 </head>
 
 <body>
-
     <!-- Navigation -->
-        <!-- Navigation -->
     <nav class="navbar" id="main-navbar">
         <div class="container nav-container">
             <a href="home.html" class="logo">
@@ -37,7 +46,7 @@
                 <li class="nav-item">
                     <a href="home.html" class="nav-link ">Home</a>
                 </li>
-                
+
                 <li class="nav-item has-dropdown">
                     <a href="#" class="nav-link ">Learn <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
                     <div class="dropdown-menu">
@@ -61,7 +70,8 @@
                 </li>
 
                 <li class="nav-item has-dropdown">
-                    <a href="#" class="nav-link active">Buying Advice <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                    <a href="#" class="nav-link active">Buying Advice <i
+                            class="fa-solid fa-chevron-down dropdown-icon"></i></a>
                     <div class="dropdown-menu">
                         <div class="dropdown-content">
                             <a href="guide.html" class="dropdown-item">
@@ -83,7 +93,8 @@
                 </li>
 
                 <li class="nav-item has-dropdown">
-                    <a href="#" class="nav-link ">Reviews & Compare <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                    <a href="#" class="nav-link ">Reviews & Compare <i
+                            class="fa-solid fa-chevron-down dropdown-icon"></i></a>
                     <div class="dropdown-menu">
                         <div class="dropdown-content">
                             <a href="comparison.html" class="dropdown-item">
@@ -104,294 +115,610 @@
                     </div>
                 </li>
             </ul>
-            
+
             <div class="nav-actions">
                 <a href="budget.html" class="btn btn-primary nav-btn">Build Your PC</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Header -->
+    <!-- Modern Header -->
     <header class="guide-header">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
 
-        <div class="container header-grid reveal active">
+        <div class="container header-grid animate-fade-in">
             <div class="header-content">
-                <div class="breadcrumbs">
-                    <i class="fa-solid fa-house"></i> Home &nbsp;/&nbsp; Buying Guide
-                </div>
-                <h1>Your Digital <br><span class="text-gradient">PC Buying Guide</span></h1>
-                <p>Navigate the complex world of computer hardware with our interactive 4-step guide. We simplify the
-                    tech specs so you can focus on what matters.</p>
-                <div class="hero-actions">
-                    <button class="btn btn-primary" onclick="scrollToSection('step1')">Start Guide</button>
-                    <a href="parts.html" class="btn btn-outline">Learn Parts</a>
+                <div class="badge mb-4"><i class="fa-solid fa-map"></i> Updated Daily for Nepal Market</div>
+                <h1 class="font-heading">
+                    The Ultimate <br>
+                    <span class="text-gradient">Buying Guide</span>
+                </h1>
+                <p class="subtitle">
+                    Cut through the marketing noise. Discover the exact laptops and PC builds we recommend for your
+                    daily workflow, along with current market prices in NRS.
+                </p>
+
+                <div class="action-buttons">
+                    <a href="#recommendations" class="btn btn-primary btn-icon">
+                        See Recommendations <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+                    <a href="#matrix" class="btn btn-outline">
+                        View Spec Matrix
+                    </a>
                 </div>
             </div>
-            <div class="header-visual">
-                <img src="../image/hero-modern.png" alt="Modern PC Setup" class="hero-img float-animation">
+
+            <div class="header-images">
+                <div class="hero-image-stack">
+                    <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&q=80&w=600"
+                        alt="Sleek desktop setup" class="main-img float-animation">
+                    <div class="price-float float-1">
+                        <div class="icon-box-small green"><i class="fa-solid fa-tags"></i></div>
+                        <div>
+                            <span>Current NRS Prices</span>
+                            <h4>Market Verified</h4>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Steps Control Panel (HUD) -->
-    <div class="steps-hud reveal stagger-1">
-        <div class="steps-track">
-            <div class="step-item active" onclick="scrollToSection('step1')">
-                <div class="step-circle"><i class="fa-solid fa-crosshairs"></i></div>
-                <span class="step-label">Purpose</span>
-            </div>
-            <div class="step-connector"></div>
-            <div class="step-item" onclick="scrollToSection('step2')">
-                <div class="step-circle">2</div>
-                <span class="step-label">Specs</span>
-            </div>
-            <div class="step-connector"></div>
-            <div class="step-item" onclick="scrollToSection('step3')">
-                <div class="step-circle">3</div>
-                <span class="step-label">Type</span>
-            </div>
-            <div class="step-connector"></div>
-            <div class="step-item" onclick="scrollToSection('step4')">
-                <div class="step-circle">4</div>
-                <span class="step-label">Checklist</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Step 1: Purpose -->
-    <section id="step1" class="guide-section reveal">
+    <!-- Interactive Top Recommendations Section -->
+    <section id="recommendations" class="section-padding bg-slate">
         <div class="container">
-            <div class="section-badge"><span>Step 01</span></div>
-            <div class="section-title-wrapper">
-                <h2>Define Your Purpose</h2>
-                <p>Select your primary use case to understand what hardware you really need.</p>
+            <div class="text-center mb-5">
+                <h2 class="section-title">Top Recommendations <span>(2026 Edition)</span></h2>
+                <p class="section-desc">Select your primary use case to find our expert-vetted picks.</p>
             </div>
 
-            <div class="purpose-grid">
-                <!-- Student -->
-                <div class="purpose-card card-green">
-                    <div class="icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <h3>Student</h3>
-                    <p>Everyday browsing, documents, and online classes.</p>
-                    <ul class="mini-list">
-                        <li><i class="fa-solid fa-check-circle"></i> Portable Lightweight</li>
-                        <li><i class="fa-solid fa-check-circle"></i> Long Battery Life</li>
-                        <li><i class="fa-solid fa-check-circle"></i> Budget Friendly</li>
-                    </ul>
-                </div>
-
-                <!-- Office -->
-                <div class="purpose-card card-blue">
-                    <div class="icon-box"><i class="fa-solid fa-briefcase"></i></div>
-                    <h3>Office / Work</h3>
-                    <p>Productivity, multitasking, and reliable performance.</p>
-                    <ul class="mini-list">
-                        <li><i class="fa-solid fa-check-circle"></i> Fast Processing</li>
-                        <li><i class="fa-solid fa-check-circle"></i> Reliable Storage</li>
-                        <li><i class="fa-solid fa-check-circle"></i> Sharp Display</li>
-                    </ul>
-                </div>
-
-                <!-- Gaming -->
-                <div class="purpose-card card-red">
-                    <div class="icon-box"><i class="fa-solid fa-gamepad"></i></div>
-                    <h3>Gaming</h3>
-                    <p>High-performance gaming with immersive graphics.</p>
-                    <ul class="mini-list">
-                        <li><i class="fa-solid fa-check-circle"></i> Powerful GPU</li>
-                        <li><i class="fa-solid fa-check-circle"></i> High Refresh Rate</li>
-                        <li><i class="fa-solid fa-check-circle"></i> Advanced Cooling</li>
-                    </ul>
-                </div>
-
-                <!-- Creative -->
-                <div class="purpose-card card-purple">
-                    <div class="icon-box"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                    <h3>Creative / Pro</h3>
-                    <p>Video editing, 3D modelling, and heavy multitasking.</p>
-                    <ul class="mini-list">
-                        <li><i class="fa-solid fa-check-circle"></i> High RAM Capacity</li>
-                        <li><i class="fa-solid fa-check-circle"></i> Color Accurate</li>
-                        <li><i class="fa-solid fa-check-circle"></i> Multi-core CPU</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Step 2: Specs Table -->
-    <section id="step2" class="guide-section reveal">
-        <div class="container">
-            <div class="section-badge"><span>Step 02</span></div>
-            <div class="section-title-wrapper">
-                <h2>Minimum Specs Matrix</h2>
-                <p>The baseline specifications recommended for 2024-2025 longevity.</p>
+            <!-- Category Filter Tabs -->
+            <div class="use-case-tabs">
+                <button class="tab-btn active" data-target="student">
+                    <i class="fa-solid fa-graduation-cap"></i> Student
+                </button>
+                <button class="tab-btn" data-target="office">
+                    <i class="fa-solid fa-briefcase"></i> Office & Work
+                </button>
+                <button class="tab-btn" data-target="gaming">
+                    <i class="fa-solid fa-gamepad"></i> Gaming
+                </button>
+                <button class="tab-btn" data-target="creative">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Creative Pro
+                </button>
             </div>
 
-            <div class="table-wrapper">
-                <table class="guide-table">
-                    <thead>
-                        <tr>
-                            <th>User Profile</th>
-                            <th>Processor (CPU)</th>
-                            <th>Memory (RAM)</th>
-                            <th>Storage</th>
-                            <th>Graphics (GPU)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Student</strong></td>
-                            <td>i3 (12th Gen+) / Ryzen 3</td>
-                            <td>8GB DDR4</td>
-                            <td>256GB SSD</td>
-                            <td><span class="badge badge-red">Integrated</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Office</strong></td>
-                            <td>i5 (12th Gen+) / Ryzen 5</td>
-                            <td>16GB DDR4/5</td>
-                            <td>512GB NVMe</td>
-                            <td><span class="badge badge-red">Integrated</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Gaming</strong></td>
-                            <td>i5 (H-Series) / Ryzen 5</td>
-                            <td>16GB DDR5</td>
-                            <td>1TB NVMe</td>
-                            <td><span class="badge badge-green">RTX 4050 / RX 7600</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Creative</strong></td>
-                            <td>i7 / Ryzen 7 / M2 Pro</td>
-                            <td>32GB DDR5</td>
-                            <td>1TB Gen4 SSD</td>
-                            <td><span class="badge badge-green">RTX 4060+ / Pro GPU</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
+            <!-- Content Area for Tabs -->
+            <div class="recommendation-content" id="rec-cards">
 
-    <!-- Step 3: Laptop vs Desktop -->
-    <section id="step3" class="guide-section reveal">
-        <div class="container">
-            <div class="section-badge"><span>Step 03</span></div>
-            <div class="section-title-wrapper">
-                <h2>Form Factor Battle</h2>
-                <p>Choose the right physical format for your lifestyle.</p>
-            </div>
+                <!-- Student Category -->
+                <div class="rec-tab-pane active fade-in" id="student_pane">
+                    <div class="grid-2">
+                        <!-- Laptop -->
+                        <div class="product-card">
+                            <div class="product-badge">Top Laptop Pick</div>
+                            <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?auto=format&fit=crop&q=80&w=600"
+                                alt="Lenovo IdeaPad Slim 3" class="product-img">
+                            <div class="product-content">
+                                <h3>Lenovo IdeaPad Slim 3</h3>
+                                <div class="price-tag">NPR 65,000 <span>est.</span></div>
+                                <p class="product-summary">The undisputed king of budget value. Perfect for campus
+                                    mobility, writing essays, and browser multitasking.</p>
 
-            <div class="compare-container">
-                <!-- Laptop -->
-                <div class="compare-box">
-                    <div class="compare-icon"><i class="fa-solid fa-laptop"></i></div>
-                    <h3>Laptop</h3>
-                    <p class="text-muted">Portability & Convenience</p>
+                                <div class="specs-grid">
+                                    <div class="spec-row"><i class="fa-solid fa-microchip"></i> Intel Core i3 13th Gen
+                                    </div>
+                                    <div class="spec-row"><i class="fa-solid fa-memory"></i> 8GB LPDDR5 RAM</div>
+                                    <div class="spec-row"><i class="fa-solid fa-hard-drive"></i> 512GB PCIe Gen4 NVMe
+                                    </div>
+                                    <div class="spec-row"><i class="fa-solid fa-battery-full"></i> 8 Hours Battery</div>
+                                </div>
 
-                    <div class="compare-features">
-                        <div class="feature-item">
-                            <i class="fa-solid fa-wifi"></i>
-                            <div><strong>Work Anywhere:</strong> - Freedom to move between home, office, and cafe.</div>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fa-solid fa-plug"></i>
-                            <div><strong>All-in-One:</strong> - Includes screen, keyboard, and trackpad.</div>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fa-solid fa-battery-full"></i>
-                            <div><strong>Battery Power:</strong> - Use it without being tethered to a wall.</div>
-                        </div>
-                    </div>
-                </div>
+                                <div class="pros-cons">
+                                    <div class="pros">
+                                        <h4><i class="fa-solid fa-plus-circle text-green"></i> Pros</h4>
+                                        <ul>
+                                            <li>Incredible battery life</li>
+                                            <li>Lightweight & portable</li>
+                                        </ul>
+                                    </div>
+                                    <div class="cons">
+                                        <h4><i class="fa-solid fa-minus-circle text-red"></i> Cons</h4>
+                                        <ul>
+                                            <li>RAM is not upgradable</li>
+                                            <li>Not for heavy gaming</li>
+                                        </ul>
+                                    </div>
+                                </div>
 
-                <div class="vs-badge-large">VS</div>
-
-                <!-- Desktop -->
-                <div class="compare-box">
-                    <div class="compare-icon"><i class="fa-solid fa-desktop"></i></div>
-                    <h3>Desktop PC</h3>
-                    <p class="text-muted">Power & Expandability</p>
-
-                    <div class="compare-features">
-                        <div class="feature-item">
-                            <i class="fa-solid fa-rocket"></i>
-                            <div><strong>More Power:</strong> - Better cooling allows for higher sustained performance.
+                                <div class="card-actions">
+                                    <button class="btn btn-primary w-100">Find Deals</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="feature-item">
-                            <i class="fa-solid fa-screwdriver-wrench"></i>
-                            <div><strong>Upgradable:</strong> - Easily swap out components to extend lifespan.</div>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fa-solid fa-dollar-sign"></i>
-                            <div><strong>Better Value:</strong> - Typically more performance per dollar.</div>
+
+                        <!-- Desktop -->
+                        <div class="product-card">
+                            <div class="product-badge blue">Top Desktop Pick</div>
+                            <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&q=80&w=600"
+                                alt="Ryzen 5 APU Build" class="product-img">
+                            <div class="product-content">
+                                <h3>The Entry APU Build</h3>
+                                <div class="price-tag">NPR 55,000 <span>est.</span></div>
+                                <p class="product-summary">A remarkably fast home-station template that handles all
+                                    assignments flawlessly, with room for a future GPU.</p>
+
+                                <div class="specs-grid">
+                                    <div class="spec-row"><i class="fa-solid fa-microchip"></i> AMD Ryzen 5 5600G</div>
+                                    <div class="spec-row"><i class="fa-solid fa-memory"></i> 16GB DDR4 (Dual Channel)
+                                    </div>
+                                    <div class="spec-row"><i class="fa-solid fa-hard-drive"></i> 512GB NVMe M.2</div>
+                                    <div class="spec-row"><i class="fa-solid fa-desktop"></i> Requires Monitor</div>
+                                </div>
+
+                                <div class="pros-cons">
+                                    <div class="pros">
+                                        <h4><i class="fa-solid fa-plus-circle text-green"></i> Pros</h4>
+                                        <ul>
+                                            <li>Excellent CPU performance</li>
+                                            <li>Easily upgradable</li>
+                                        </ul>
+                                    </div>
+                                    <div class="cons">
+                                        <h4><i class="fa-solid fa-minus-circle text-red"></i> Cons</h4>
+                                        <ul>
+                                            <li>Can't be carried to class</li>
+                                            <li>Uses desk space</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="card-actions">
+                                    <a href="budget.html" class="btn btn-outline w-100">Compare Parts</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Office Category -->
+                <div class="rec-tab-pane fade-in" id="office_pane" style="display: none;">
+                    <div class="grid-2">
+                        <!-- Laptop -->
+                        <div class="product-card">
+                            <div class="product-badge">Top Laptop Pick</div>
+                            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=600"
+                                alt="Acer Swift Go 14" class="product-img">
+                            <div class="product-content">
+                                <h3>Acer Swift Go 14 OLED</h3>
+                                <div class="price-tag">NPR 110,000 <span>est.</span></div>
+                                <p class="product-summary">A spectacular business-class machine. The OLED screen ensures
+                                    eye comfort during long spreadsheet sessions.</p>
+
+                                <div class="specs-grid">
+                                    <div class="spec-row"><i class="fa-solid fa-microchip"></i> Intel Core i5 13500H
+                                    </div>
+                                    <div class="spec-row"><i class="fa-solid fa-display"></i> 14" OLED 2.8K Display
+                                    </div>
+                                    <div class="spec-row"><i class="fa-solid fa-memory"></i> 16GB LPDDR5</div>
+                                    <div class="spec-row"><i class="fa-solid fa-camera"></i> 1440p QHD Webcam</div>
+                                </div>
+
+                                <div class="pros-cons">
+                                    <div class="pros">
+                                        <h4><i class="fa-solid fa-plus-circle text-green"></i> Pros</h4>
+                                        <ul>
+                                            <li>Stunning display quality</li>
+                                            <li>Great webcam for meetings</li>
+                                        </ul>
+                                    </div>
+                                    <div class="cons">
+                                        <h4><i class="fa-solid fa-minus-circle text-red"></i> Cons</h4>
+                                        <ul>
+                                            <li>H-series CPU drains battery fast</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="card-actions">
+                                    <button class="btn btn-primary w-100">Find Deals</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Desktop -->
+                        <div class="product-card">
+                            <div class="product-badge blue">Top Desktop Pick</div>
+                            <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&q=80&w=600"
+                                alt="Intel Office Station" class="product-img">
+                            <div class="product-content">
+                                <h3>Intel Core i5 Workspace</h3>
+                                <div class="price-tag">NPR 95,000 <span>est.</span></div>
+                                <p class="product-summary">Built for extreme multitasking. Never lag when running heavy
+                                    enterprise CRM software alongside dozens of tabs.</p>
+
+                                <div class="specs-grid">
+                                    <div class="spec-row"><i class="fa-solid fa-microchip"></i> Intel Core i5 13400
+                                    </div>
+                                    <div class="spec-row"><i class="fa-solid fa-memory"></i> 16GB DDR5 4800MHz</div>
+                                    <div class="spec-row"><i class="fa-solid fa-hard-drive"></i> 1TB Gen4 NVMe</div>
+                                    <div class="spec-row"><i class="fa-solid fa-wifi"></i> Built-in WiFi 6E</div>
+                                </div>
+
+                                <div class="pros-cons">
+                                    <div class="pros">
+                                        <h4><i class="fa-solid fa-plus-circle text-green"></i> Pros</h4>
+                                        <ul>
+                                            <li>Massive storage space</li>
+                                            <li>Very silent operation</li>
+                                        </ul>
+                                    </div>
+                                    <div class="cons">
+                                        <h4><i class="fa-solid fa-minus-circle text-red"></i> Cons</h4>
+                                        <ul>
+                                            <li>Power cuts require separate UPS</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="card-actions">
+                                    <a href="budget.html" class="btn btn-outline w-100">Compare Parts</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gaming Category -->
+                <div class="rec-tab-pane fade-in" id="gaming_pane" style="display: none;">
+                    <div class="grid-2">
+                        <!-- Laptop -->
+                        <div class="product-card">
+                            <div class="product-badge">Top Laptop Pick</div>
+                            <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&q=80&w=600"
+                                alt="Lenovo LOQ 15" class="product-img">
+                            <div class="product-content">
+                                <h3>Lenovo LOQ 15 (2025)</h3>
+                                <div class="price-tag">NPR 135,000 <span>est.</span></div>
+                                <p class="product-summary">The ultimate value gaming laptop. Combines NVIDIA's DLSS 3
+                                    frame generation with solid thermals.</p>
+
+                                <div class="specs-grid">
+                                    <div class="spec-row"><i class="fa-solid fa-gamepad"></i> NVIDIA RTX 4050 6GB (95W)
+                                    </div>
+                                    <div class="spec-row"><i class="fa-solid fa-microchip"></i> Intel Core i5 13420H
+                                    </div>
+                                    <div class="spec-row"><i class="fa-solid fa-display"></i> 15.6" 144Hz FHD</div>
+                                    <div class="spec-row"><i class="fa-solid fa-memory"></i> 16GB DDR5 Dual Channel
+                                    </div>
+                                </div>
+
+                                <div class="pros-cons">
+                                    <div class="pros">
+                                        <h4><i class="fa-solid fa-plus-circle text-green"></i> Pros</h4>
+                                        <ul>
+                                            <li>Frame Generation technology</li>
+                                            <li>Excellent cooling system</li>
+                                        </ul>
+                                    </div>
+                                    <div class="cons">
+                                        <h4><i class="fa-solid fa-minus-circle text-red"></i> Cons</h4>
+                                        <ul>
+                                            <li>Heavy power adapter</li>
+                                            <li>Screen color accuracy is average</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="card-actions">
+                                    <button class="btn btn-primary w-100">Find Deals</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Desktop -->
+                        <div class="product-card">
+                            <div class="product-badge blue">Top Desktop Pick</div>
+                            <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&q=80&w=600"
+                                alt="1440p Sweet Spot Build" class="product-img">
+                            <div class="product-content">
+                                <h3>The 1440p Sweet Spot</h3>
+                                <div class="price-tag">NPR 165,000 <span>est.</span></div>
+                                <p class="product-summary">A beastly tower engineered to crush AAA titles at 1440p max
+                                    settings. Maximum performance-per-rupee ratio.</p>
+
+                                <div class="specs-grid">
+                                    <div class="spec-row"><i class="fa-solid fa-gamepad"></i> NVIDIA RTX 4060 8GB</div>
+                                    <div class="spec-row"><i class="fa-solid fa-microchip"></i> AMD Ryzen 5 7600X</div>
+                                    <div class="spec-row"><i class="fa-solid fa-memory"></i> 32GB DDR5 6000MHz CL30
+                                    </div>
+                                    <div class="spec-row"><i class="fa-solid fa-network-wired"></i> B650 AM5 Motherboard
+                                    </div>
+                                </div>
+
+                                <div class="pros-cons">
+                                    <div class="pros">
+                                        <h4><i class="fa-solid fa-plus-circle text-green"></i> Pros</h4>
+                                        <ul>
+                                            <li>Future-proof AM5 platform</li>
+                                            <li>Unbeatable gaming frames</li>
+                                        </ul>
+                                    </div>
+                                    <div class="cons">
+                                        <h4><i class="fa-solid fa-minus-circle text-red"></i> Cons</h4>
+                                        <ul>
+                                            <li>Requires a high-end 1440p monitor to fully utilize</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="card-actions">
+                                    <a href="budget.html" class="btn btn-outline w-100">View in Budget Tool</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Creative Pro Category -->
+                <div class="rec-tab-pane fade-in" id="creative_pane" style="display: none;">
+                    <div class="grid-2">
+                        <!-- Laptop -->
+                        <div class="product-card">
+                            <div class="product-badge">Top Laptop Pick</div>
+                            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=600"
+                                alt="MacBook Pro 14 M3" class="product-img">
+                            <div class="product-content">
+                                <h3>Apple MacBook Pro 14" (M3 Pro)</h3>
+                                <div class="price-tag">NPR 320,000 <span>est.</span></div>
+                                <p class="product-summary">The industry standard for creators. Breathtaking screen,
+                                    unparalleled battery life, and monstrous performance on battery.</p>
+
+                                <div class="specs-grid">
+                                    <div class="spec-row"><i class="fa-solid fa-microchip"></i> Apple M3 Pro Chip</div>
+                                    <div class="spec-row"><i class="fa-solid fa-display"></i> Liquid Retina XDR Display
+                                    </div>
+                                    <div class="spec-row"><i class="fa-solid fa-memory"></i> 18GB Unified Memory</div>
+                                    <div class="spec-row"><i class="fa-solid fa-battery-full"></i> 18+ Hours Battery
+                                    </div>
+                                </div>
+
+                                <div class="pros-cons">
+                                    <div class="pros">
+                                        <h4><i class="fa-solid fa-plus-circle text-green"></i> Pros</h4>
+                                        <ul>
+                                            <li>Best-in-class Mini-LED screen</li>
+                                            <li>No performance drop on battery</li>
+                                        </ul>
+                                    </div>
+                                    <div class="cons">
+                                        <h4><i class="fa-solid fa-minus-circle text-red"></i> Cons</h4>
+                                        <ul>
+                                            <li>Extremely expensive repairs</li>
+                                            <li>Not suitable for modern PC gaming</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="card-actions">
+                                    <button class="btn btn-primary w-100">Find Deals</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Desktop -->
+                        <div class="product-card">
+                            <div class="product-badge blue">Top Desktop Pick</div>
+                            <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&q=80&w=600"
+                                alt="4K Rendering Station" class="product-img">
+                            <div class="product-content">
+                                <h3>The 4K Rendering Titan</h3>
+                                <div class="price-tag">NPR 380,000 <span>est.</span></div>
+                                <p class="product-summary">A workstation designed to melt through 4K video timelines,
+                                    dense 3D models, and massive dataset compilations.</p>
+
+                                <div class="specs-grid">
+                                    <div class="spec-row"><i class="fa-solid fa-microchip"></i> Intel Core i7 14700K
+                                    </div>
+                                    <div class="spec-row"><i class="fa-solid fa-gamepad"></i> NVIDIA RTX 4070 Ti Super
+                                        16GB</div>
+                                    <div class="spec-row"><i class="fa-solid fa-memory"></i> 64GB DDR5 Memory</div>
+                                    <div class="spec-row"><i class="fa-solid fa-fan"></i> 360mm Liquid AIO Cooling</div>
+                                </div>
+
+                                <div class="pros-cons">
+                                    <div class="pros">
+                                        <h4><i class="fa-solid fa-plus-circle text-green"></i> Pros</h4>
+                                        <ul>
+                                            <li>Massive 16GB VRAM for 3D/AI</li>
+                                            <li>Renders videos in seconds</li>
+                                        </ul>
+                                    </div>
+                                    <div class="cons">
+                                        <h4><i class="fa-solid fa-minus-circle text-red"></i> Cons</h4>
+                                        <ul>
+                                            <li>High heat and power draw</li>
+                                            <li>Expensive upfront investment</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="card-actions">
+                                    <a href="budget.html" class="btn btn-outline w-100">Build Yours Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Step 4: Final Checklist -->
-    <section id="step4" class="guide-section reveal">
+    <!-- Specs Matrix -->
+    <section id="matrix" class="section-padding">
         <div class="container">
-            <div class="section-badge"><span>Step 04</span></div>
-            <div class="section-title-wrapper">
-                <h2>Pre-Purchase Checklist</h2>
-                <p>Don't spend a dime until you've verified these critical points.</p>
+            <div class="text-center mb-5">
+                <h2 class="section-title">Baseline Hardware Matrix</h2>
+                <p class="section-desc">If you ignore specific models, just ensure your purchase meets these minimum
+                    specs for 2026 longevity.</p>
             </div>
 
-            <div class="checklist-grid">
-                <div class="check-item">
-                    <i class="fa-solid fa-microchip"></i>
-                    <div>
-                        <h4>Generation Matters</h4>
-                        <p>Ensure the CPU is from the latest 2 generations (e.g., Intel 13th/14th Gen or Ryzen
-                            7000/8000).</p>
-                    </div>
-                </div>
-                <div class="check-item">
-                    <i class="fa-solid fa-memory"></i>
-                    <div>
-                        <h4>Expandability</h4>
-                        <p>Check if RAM and SSD are soldered or if there are empty slots for future upgrades.</p>
-                    </div>
-                </div>
-                <div class="check-item">
-                    <i class="fa-solid fa-display"></i>
-                    <div>
-                        <h4>Screen Quality</h4>
-                        <p>Look for IPS panels with at least 300 nits brightness and 100% sRGB coverage for good colors.
-                        </p>
-                    </div>
-                </div>
-                <div class="check-item">
-                    <i class="fa-solid fa-headset"></i>
-                    <div>
-                        <h4>After-Sales Support</h4>
-                        <p>Verify that the brand has authorized service centers accessible in your region.</p>
-                    </div>
+            <div class="table-card">
+                <div class="table-responsive">
+                    <table class="premium-table">
+                        <thead>
+                            <tr>
+                                <th>Target User</th>
+                                <th>Processor (CPU)</th>
+                                <th>Memory (RAM)</th>
+                                <th>Storage SSD</th>
+                                <th>Graphics (GPU)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="font-weight-600 text-blue"><i class="fa-solid fa-graduation-cap"></i>
+                                        Student Core</div>
+                                </td>
+                                <td>i3 (12th Gen+) / Ryzen 3</td>
+                                <td>8GB Min, 16GB Rec.</td>
+                                <td>256GB - 512GB</td>
+                                <td>Integrated (UHD/Vega)</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="font-weight-600 text-indigo"><i class="fa-solid fa-briefcase"></i>
+                                        Office Pro</div>
+                                </td>
+                                <td>i5 (13th Gen) / Ryzen 5</td>
+                                <td>16GB DDR4/DDR5</td>
+                                <td>512GB Minimum</td>
+                                <td>Integrated (Iris Xe / RDNA)</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="font-weight-600 text-red"><i class="fa-solid fa-gamepad"></i> 1080p
+                                        Gamer</div>
+                                </td>
+                                <td>i5 (H-series) / Ryzen 5</td>
+                                <td>16GB DDR5</td>
+                                <td>1TB NVMe</td>
+                                <td><span class="badge badge-green">RTX 4050 / 4060</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="font-weight-600 text-purple"><i
+                                            class="fa-solid fa-wand-magic-sparkles"></i> 3D / Creator</div>
+                                </td>
+                                <td>i7 / Ryzen 7 / Apple M3 Pro</td>
+                                <td>32GB+ DDR5</td>
+                                <td>1TB+ Gen4 NVMe</td>
+                                <td><span class="badge badge-green">RTX 4070+ / Pro GPU</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="container reveal">
-        <div class="cta-banner">
-            <h2>Ready to Choose?</h2>
-            <p>Dive into our detailed brand comparisons or set your budget.</p>
-            <div class="cta-buttons">
-                <a href="comparison.html" class="btn btn-white">
-                    Compare Models
-                </a>
-                <a href="budget.html" class="btn btn-outline-white">
-                    Check Budget Guide
-                </a>
+    <!-- Laptop vs Desktop Section -->
+    <section id="compare" class="section-padding bg-slate">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Form Factor Battle</h2>
+                <p class="section-desc">Desktop vs Laptop: Making the critical first decision.</p>
+            </div>
+
+            <div class="compare-grid">
+                <!-- Laptop Card -->
+                <div class="compare-card">
+                    <div class="compare-icon-badge"><i class="fa-solid fa-laptop"></i></div>
+                    <h3 class="mb-3">The Laptop</h3>
+                    <p class="text-muted mb-4">Ultimate portability and convenience over raw power.</p>
+                    <ul class="compare-list">
+                        <li><i class="fa-solid fa-check text-green"></i> <strong>Mobility:</strong> Work from cafes,
+                            bed, or campus.</li>
+                        <li><i class="fa-solid fa-check text-green"></i> <strong>Battery Included:</strong> Built-in UPS
+                            for load shedding.</li>
+                        <li><i class="fa-solid fa-check text-green"></i> <strong>All-in-one:</strong> Has screen,
+                            keyboard, webcam built-in.</li>
+                        <li><i class="fa-solid fa-xmark text-red"></i> <strong>Price/Performance:</strong> More
+                            expensive for the same speed.</li>
+                        <li><i class="fa-solid fa-xmark text-red"></i> <strong>Upgrades:</strong> Often limited to RAM
+                            and Storage only.</li>
+                    </ul>
+                </div>
+
+                <div class="vs-circle">VS</div>
+
+                <!-- Desktop Card -->
+                <div class="compare-card desktop-card">
+                    <div class="compare-icon-badge blue"><i class="fa-solid fa-desktop"></i></div>
+                    <h3 class="mb-3">The Desktop PC</h3>
+                    <p class="text-muted mb-4">Unmatched power, cooling, and modular upgradability.</p>
+                    <ul class="compare-list">
+                        <li><i class="fa-solid fa-check text-green"></i> <strong>Raw Power:</strong> Full desktop
+                            components draw more wattage for higher FPS.</li>
+                        <li><i class="fa-solid fa-check text-green"></i> <strong>Longevity:</strong> You can replace
+                            individual dead parts easily.</li>
+                        <li><i class="fa-solid fa-check text-green"></i> <strong>Cooling:</strong> Superior airflow
+                            means longer lifespan.</li>
+                        <li><i class="fa-solid fa-xmark text-red"></i> <strong>Immobile:</strong> Stuck at your desk
+                            permanently.</li>
+                        <li><i class="fa-solid fa-xmark text-red"></i> <strong>Requires Peripherals:</strong> Need to
+                            buy Monitor, Keyboard, Mouse, UPS.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checklist -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="buy-checklist">
+                <div class="checklist-header">
+                    <h2><i class="fa-solid fa-clipboard-check"></i> Final Pre-Purchase Checklist</h2>
+                    <p>Don't hand over your cash until you've verified these 4 rules.</p>
+                </div>
+                <div class="checklist-items">
+                    <div class="check-item">
+                        <div class="check-box"><i class="fa-solid fa-circle-check"></i></div>
+                        <div>
+                            <h4>Generation Check</h4>
+                            <p>CPUs age fast. Ensure you are getting Intel 12th Gen+ or Ryzen 5000+ series as a minimum.
+                                Avoid sneaky old stock.</p>
+                        </div>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-box"><i class="fa-solid fa-circle-check"></i></div>
+                        <div>
+                            <h4>The RAM Trap</h4>
+                            <p>If buying a laptop, confirm if the RAM is "Soldered" (un-upgradable) or has a "SODIMM
+                                Slot". If soldered, buy 16GB minimum.</p>
+                        </div>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-box"><i class="fa-solid fa-circle-check"></i></div>
+                        <div>
+                            <h4>Display Quality</h4>
+                            <p>Never settle for a "TN" panel in 2026. Demand an "IPS" or "OLED" panel with at least 300
+                                nits brightness.</p>
+                        </div>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-box"><i class="fa-solid fa-circle-check"></i></div>
+                        <div>
+                            <h4>Authorized Warranty</h4>
+                            <p>Grey market units are cheaper but lack warranty. Ensure you get official warranty cards
+                                valid in Nepal.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -400,7 +727,6 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <!-- Brand Column -->
                 <div class="footer-col brand-col">
                     <div class="logo footer-logo"
                         style="display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem;">
@@ -410,9 +736,8 @@
                             style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.02em; background: linear-gradient(135deg, var(--text-main) 0%, var(--primary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;">Know
                             Your PC</span>
                     </div>
-                    <p class="footer-desc">
-                        The #1 Resource for understanding computer hardware and making smart buying decisions.
-                    </p>
+                    <p class="footer-desc">The #1 Resource for understanding computer hardware and making smart buying
+                        decisions.</p>
                     <div style="display: flex; gap: 1rem; margin-top: 2rem;">
                         <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
                         <a href="#"><i class="fa-brands fa-twitter fa-lg"></i></a>
@@ -420,8 +745,6 @@
                         <a href="#"><i class="fa-brands fa-youtube fa-lg"></i></a>
                     </div>
                 </div>
-
-                <!-- Explore Column -->
                 <div class="footer-col">
                     <h4>Explore</h4>
                     <ul>
@@ -431,8 +754,6 @@
                         <li><a href="brand.html">Top Brands</a></li>
                     </ul>
                 </div>
-
-                <!-- Resources Column -->
                 <div class="footer-col">
                     <h4>Resources</h4>
                     <ul>
@@ -442,8 +763,6 @@
                         <li><a href="faq.html#glossary">Tech Glossary</a></li>
                     </ul>
                 </div>
-
-                <!-- Legal Column -->
                 <div class="footer-col">
                     <h4>Legal</h4>
                     <ul>
@@ -454,14 +773,13 @@
                     </ul>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p>&copy; 2026 Know Your PC. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- External Script -->
+    <!-- Scripts -->
     <script src="../JS/guide.js"></script>
     <script src="../JS/navbar.js"></script>
 </body>

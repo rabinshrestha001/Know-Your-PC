@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budget Guide - Know Your PC</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Budget PC and Laptop Guide for Nepal. Find the best low, mid, and high-end computers in NRS. Plan your build with our interactive budget calculator.">
+    <meta name="keywords"
+        content="PCs under NRS, budget laptops in Nepal, cheap PC build Nepal, mid-range gaming PC, high-end PC build, NRS prices">
+    <title>Budget Guide & Calculator - Know Your PC</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,19 +21,14 @@
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="../CSS/home.css">
-
-    <!-- Page Specific CSS (Matches Parts style) -->
+    <!-- CSS -->
     <link rel="stylesheet" href="../CSS/budget.css">
     <link rel="stylesheet" href="../CSS/footer.css">
     <link rel="stylesheet" href="../CSS/navbar.css">
 </head>
 
 <body>
-
     <!-- Navigation -->
-        <!-- Navigation -->
     <nav class="navbar" id="main-navbar">
         <div class="container nav-container">
             <a href="home.html" class="logo">
@@ -46,7 +46,7 @@
                 <li class="nav-item">
                     <a href="home.html" class="nav-link ">Home</a>
                 </li>
-                
+
                 <li class="nav-item has-dropdown">
                     <a href="#" class="nav-link ">Learn <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
                     <div class="dropdown-menu">
@@ -70,7 +70,8 @@
                 </li>
 
                 <li class="nav-item has-dropdown">
-                    <a href="#" class="nav-link active">Buying Advice <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                    <a href="#" class="nav-link active">Buying Advice <i
+                            class="fa-solid fa-chevron-down dropdown-icon"></i></a>
                     <div class="dropdown-menu">
                         <div class="dropdown-content">
                             <a href="guide.html" class="dropdown-item">
@@ -80,7 +81,7 @@
                                     <span class="item-desc">Step-by-step buyer's manual</span>
                                 </div>
                             </a>
-                            <a href="budget.html" class="dropdown-item">
+                            <a href="budget.html" class="dropdown-item active-link">
                                 <div class="icon-wrapper"><i class="fa-solid fa-wallet"></i></div>
                                 <div class="item-details">
                                     <span class="item-title">Budget Guide</span>
@@ -92,7 +93,8 @@
                 </li>
 
                 <li class="nav-item has-dropdown">
-                    <a href="#" class="nav-link ">Reviews & Compare <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                    <a href="#" class="nav-link ">Reviews & Compare <i
+                            class="fa-solid fa-chevron-down dropdown-icon"></i></a>
                     <div class="dropdown-menu">
                         <div class="dropdown-content">
                             <a href="comparison.html" class="dropdown-item">
@@ -113,566 +115,244 @@
                     </div>
                 </li>
             </ul>
-            
+
             <div class="nav-actions">
-                <a href="budget.html" class="btn btn-primary nav-btn">Build Your PC</a>
+                <a href="#calculator" class="btn btn-primary nav-btn">Plan Budget</a>
             </div>
         </div>
     </nav>
 
-    <!-- Clean Hero Section (Matching Parts) -->
-    <header class="budget-hero parts-hero">
-        <div class="hero-bg-accent"></div>
-        <div class="container hero-content text-center reveal active">
-            <div class="breadcrumbs">
-                <i class="fa-solid fa-house"></i> Home &nbsp;/&nbsp; Budget Guide
+    <!-- Hero Section -->
+    <header class="budget-hero">
+        <div class="container hero-content text-center">
+            <div class="badge mb-4"><i class="fa-solid fa-tag"></i> NRS Market Updated: March 2026</div>
+            <h1 class="font-heading text-gradient">Master Your Budget</h1>
+            <p class="subtitle">
+                Stop overpaying. Discover the exact performance you get for your Nepalese Rupees. Explore our segmented
+                guide for Low, Mid, and High-end tiers across the Nepali market.
+            </p>
+            <div class="action-buttons justify-center">
+                <a href="#calculator" class="btn btn-primary">Start Budget Calculator</a>
+                <a href="#segments" class="btn btn-outline">Explore Segments</a>
             </div>
-            <br>
-            <span class="badge badge-pill">NRS Market</span>
-            <h1>Value <span class="text-gradient">Engineered</span></h1>
-            <p>Explore the best value hardware configurations. Click on any build to dive deep into its architecture and
-                specifications.</p>
         </div>
     </header>
 
-    <!-- Component Grid System (Identical Structure to parts.html) -->
-    <section class="components-section">
+    <!-- Interactive Budget Calculator Section -->
+    <section id="calculator" class="section-padding bg-slate">
         <div class="container">
-
-            <!-- Standard Filter Buttons -->
-            <div class="component-filter reveal">
-                <button class="filter-btn active" data-filter="all">All Budgets</button>
-                <button class="filter-btn" data-filter="50k">Rs. 50K Tier</button>
-                <button class="filter-btn" data-filter="80k">Rs. 80K Tier</button>
-                <button class="filter-btn" data-filter="120k">Rs. 120K Tier</button>
-                <button class="filter-btn" data-filter="160k">Rs. 160K+ Tier</button>
-            </div>
-
-            <div class="component-grid" id="budget-grid">
-
-                <!-- 50K Laptop -->
-                <div class="component-card reveal" data-category="50k" onclick="openModal('laptop-50k')">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?auto=format&fit=crop&q=80&w=600"
-                            alt="Core Laptop">
-                        <div class="overlay-icon"><i class="fa-solid fa-laptop"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3>Everyday Core Laptop</h3>
-                        <p class="role">Rs. 50,000</p>
-                        <p class="desc">The perfect starting point for students and general home users without
-                            sacrificing reliability.</p>
-                        <ul class="specs-preview">
-                            <li><i class="fa-solid fa-microchip"></i> 12th Gen i3 / Ryzen 3</li>
-                            <li><i class="fa-solid fa-memory"></i> 8GB DDR4 RAM</li>
-                        </ul>
-                    </div>
-                    <button class="btn-explore">Explore <i class="fa-solid fa-arrow-right"></i></button>
+            <div class="calc-wrapper">
+                <div class="calc-text">
+                    <h2 class="section-title">Budget Calculator</h2>
+                    <p class="section-desc mb-4">Drag the slider to define your budget limit and instantly see the
+                        recommended tier and expectable performance.</p>
                 </div>
 
-                <!-- 50K Desktop -->
-                <div class="component-card reveal stagger-1" data-category="50k" onclick="openModal('desktop-50k')">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&q=80&w=600"
-                            alt="Home Office PC">
-                        <div class="overlay-icon"><i class="fa-solid fa-desktop"></i></div>
+                <div class="calc-tool box-shadow-glass">
+                    <div class="slider-container">
+                        <label for="budget-slider" class="slider-label">Your Maximum Budget (NRS)</label>
+                        <input type="range" id="budget-slider" class="range-slider" min="30000" max="400000" step="5000"
+                            value="80000">
+                        <div class="slider-value">Rs. <span id="budget-output">80,000</span></div>
                     </div>
-                    <div class="card-content">
-                        <h3>Home Office Workstation</h3>
-                        <p class="role">Rs. 50,000</p>
-                        <p class="desc">A reliable, APU-powered custom desktop perfect for multitasking and home office
-                            use.</p>
-                        <ul class="specs-preview">
-                            <li><i class="fa-solid fa-microchip"></i> Ryzen 5 4600G</li>
-                            <li><i class="fa-solid fa-gamepad"></i> Built-in Vega 7</li>
-                        </ul>
-                    </div>
-                    <button class="btn-explore">Explore <i class="fa-solid fa-arrow-right"></i></button>
-                </div>
 
-                <!-- 80K Laptop -->
-                <div class="component-card reveal" data-category="80k" onclick="openModal('laptop-80k')">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=600"
-                            alt="Productivity Masterbook">
-                        <div class="overlay-icon"><i class="fa-solid fa-laptop"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3>Productivity Masterbook</h3>
-                        <p class="role">Rs. 80,000</p>
-                        <p class="desc">The sweet spot for heavy multitasking, coding, and light photo editing. Pure
-                            price-to-performance.</p>
-                        <ul class="specs-preview">
-                            <li><i class="fa-solid fa-microchip"></i> 12th Gen i5</li>
-                            <li><i class="fa-solid fa-memory"></i> 16GB Dual Channel</li>
-                        </ul>
-                    </div>
-                    <button class="btn-explore">Explore <i class="fa-solid fa-arrow-right"></i></button>
-                </div>
+                    <div class="result-box" id="calc-result">
+                        <div class="result-tier badge badge-blue" id="tier-badge">Entry Level Tier</div>
+                        <h3 id="tier-title">Basic Productivity & Browsing</h3>
+                        <p id="tier-desc">Perfect for students and everyday home use. Expect swift document editing and
+                            reliable web browsing without dedicated gaming capabilities.</p>
 
-                <!-- 80K Desktop -->
-                <div class="component-card reveal stagger-1" data-category="80k" onclick="openModal('desktop-80k')">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&q=80&w=600"
-                            alt="Budget Action Setup">
-                        <div class="overlay-icon"><i class="fa-solid fa-desktop"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3>Budget Action Setup</h3>
-                        <p class="role">Rs. 80,000</p>
-                        <p class="desc">This is where true 1080p gaming starts, providing consistent frames in eSports
-                            titles.</p>
-                        <ul class="specs-preview">
-                            <li><i class="fa-solid fa-microchip"></i> i3-12100F</li>
-                            <li><i class="fa-solid fa-gamepad"></i> GTX 1650 4GB</li>
-                        </ul>
-                    </div>
-                    <button class="btn-explore">Explore <i class="fa-solid fa-arrow-right"></i></button>
-                </div>
+                        <div class="realistic-expectations">
+                            <h4>Realistic Expectations:</h4>
+                            <ul id="expectation-list">
+                                <li><i class="fa-solid fa-check text-green"></i> Smooth MS Office Experience</li>
+                                <li><i class="fa-solid fa-check text-green"></i> Fast 1080p Web Browsing</li>
+                                <li><i class="fa-solid fa-xmark text-red"></i> Modern AAA Gaming</li>
+                            </ul>
+                        </div>
 
-                <!-- 120K Laptop -->
-                <div class="component-card reveal" data-category="120k" onclick="openModal('laptop-120k')">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&q=80&w=600"
-                            alt="Creator & Gaming Hybrid">
-                        <div class="overlay-icon"><i class="fa-solid fa-laptop"></i></div>
+                        <a href="#tier-low" class="btn btn-primary btn-sm mt-4" id="explore-tier-btn">Explore
+                            Options</a>
                     </div>
-                    <div class="card-content">
-                        <h3>Creator & Gaming Hybrid</h3>
-                        <p class="role">Rs. 120,000</p>
-                        <p class="desc">Serious power for video editing, modern gaming, and digital creation on the go.
-                        </p>
-                        <ul class="specs-preview">
-                            <li><i class="fa-solid fa-microchip"></i> i5 (H-Series)</li>
-                            <li><i class="fa-solid fa-gamepad"></i> RTX 3050 / 4050</li>
-                        </ul>
-                    </div>
-                    <button class="btn-explore">Explore <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
-
-                <!-- 120K Desktop -->
-                <div class="component-card reveal stagger-1" data-category="120k" onclick="openModal('desktop-120k')">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&q=80&w=600"
-                            alt="1080p Max Rig">
-                        <div class="overlay-icon"><i class="fa-solid fa-desktop"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3>The 1080p Max Rig</h3>
-                        <p class="role">Rs. 120,000</p>
-                        <p class="desc">An absolute steal for creators, handling heavy timelines and ultra graphics
-                            settings effortlessly.</p>
-                        <ul class="specs-preview">
-                            <li><i class="fa-solid fa-microchip"></i> i5-12400F</li>
-                            <li><i class="fa-solid fa-gamepad"></i> RTX 3060 12GB</li>
-                        </ul>
-                    </div>
-                    <button class="btn-explore">Explore <i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-
-                <!-- 160K Laptop -->
-                <div class="component-card reveal" data-category="160k" onclick="openModal('laptop-160k')">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&q=80&w=600"
-                            alt="Command Center">
-                        <div class="overlay-icon"><i class="fa-solid fa-laptop"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3>Mobile Command Center</h3>
-                        <p class="role">Rs. 160,000+</p>
-                        <p class="desc">Uncompromising 1440p gaming and professional 3D rendering workstations.</p>
-                        <ul class="specs-preview">
-                            <li><i class="fa-solid fa-microchip"></i> i7 (13th Gen+)</li>
-                            <li><i class="fa-solid fa-gamepad"></i> RTX 4060 8GB</li>
-                        </ul>
-                    </div>
-                    <button class="btn-explore">Explore <i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-
-                <!-- 160K Desktop -->
-                <div class="component-card reveal stagger-1" data-category="160k" onclick="openModal('desktop-160k')">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&q=80&w=600"
-                            alt="Future-Proof Titan">
-                        <div class="overlay-icon"><i class="fa-solid fa-desktop"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3>The Future-Proof Titan</h3>
-                        <p class="role">Rs. 160,000+</p>
-                        <p class="desc">A powerhouse desktop ensuring top tier performance and upgradeability for years.
-                        </p>
-                        <ul class="specs-preview">
-                            <li><i class="fa-solid fa-microchip"></i> Ryzen 5 7600X</li>
-                            <li><i class="fa-solid fa-gamepad"></i> RTX 4060 Ti</li>
-                        </ul>
-                    </div>
-                    <button class="btn-explore">Explore <i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Detail Modals -->
-    <div id="modal-overlay" class="modal-overlay"></div>
-
-    <!-- 50K Laptop Modal -->
-    <div id="modal-laptop-50k" class="component-modal">
-        <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
-        <div class="modal-header">
-            <div class="modal-icon"><i class="fa-solid fa-laptop"></i></div>
-            <h2>Everyday Core Laptop</h2>
-            <span class="badge badge-outline">Rs. 50,000</span>
-        </div>
-        <div class="modal-body">
-            <div class="modal-image">
-                <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?auto=format&fit=crop&q=80&w=800"
-                    alt="Laptop Detail">
-            </div>
-            <div class="modal-details">
-                <h3>Why it matters</h3>
-                <p>The perfect starting point for students and general home users without sacrificing reliability.
-                    Provides a smooth Windows 11 experience.</p>
-                <div class="key-specs">
-                    <div class="spec-item"><span class="spec-label">Processor</span><span class="spec-value">12th Gen i3
-                            / Ryzen 3</span></div>
-                    <div class="spec-item"><span class="spec-label">Memory</span><span class="spec-value">8GB
-                            DDR4</span></div>
-                    <div class="spec-item"><span class="spec-label">Storage</span><span class="spec-value">256GB / 512GB
-                            NVMe</span></div>
-                </div>
-                <div class="pro-tip">
-                    <i class="fa-solid fa-lightbulb"></i>
-                    <p><strong>Pro Tip:</strong> Don't settle for Celeron or Pentium processors. At 50K NPR, a 12th Gen
-                        i3 is the baseline for a lag-free experience.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 50K Desktop Modal -->
-    <div id="modal-desktop-50k" class="component-modal">
-        <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
-        <div class="modal-header">
-            <div class="modal-icon"><i class="fa-solid fa-desktop"></i></div>
-            <h2>Home Office Workstation</h2>
-            <span class="badge badge-outline">Rs. 50,000</span>
-        </div>
-        <div class="modal-body">
-            <div class="modal-image">
-                <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&q=80&w=800"
-                    alt="Desktop Detail">
-            </div>
-            <div class="modal-details">
-                <h3>Why it matters</h3>
-                <p>A reliable, APU-powered custom desktop perfect for multitasking and home office use. Its upgradable
-                    path makes this a smart long-term investment.</p>
-                <div class="key-specs">
-                    <div class="spec-item"><span class="spec-label">Processor</span><span class="spec-value">Ryzen 5
-                            4600G</span></div>
-                    <div class="spec-item"><span class="spec-label">Graphics</span><span class="spec-value">Vega 7
-                            (Integrated)</span></div>
-                    <div class="spec-item"><span class="spec-label">Memory</span><span class="spec-value">8GB DDR4
-                            3200MHz</span></div>
-                </div>
-                <div class="pro-tip">
-                    <i class="fa-solid fa-lightbulb"></i>
-                    <p><strong>Pro Tip:</strong> An APU like the 4600G combines CPU and GPU. Later, you can drop in a
-                        dedicated graphics card for an instant gaming upgrade.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 80K Laptop Modal -->
-    <div id="modal-laptop-80k" class="component-modal">
-        <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
-        <div class="modal-header">
-            <div class="modal-icon"><i class="fa-solid fa-laptop"></i></div>
-            <h2>Productivity Masterbook</h2>
-            <span class="badge badge-outline">Rs. 80,000</span>
-        </div>
-        <div class="modal-body">
-            <div class="modal-image">
-                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=800"
-                    alt="Laptop Detail">
-            </div>
-            <div class="modal-details">
-                <h3>Why it matters</h3>
-                <p>The sweet spot for heavy multitasking, coding, and light photo editing. Pure price-to-performance
-                    ratio.</p>
-                <div class="key-specs">
-                    <div class="spec-item"><span class="spec-label">Processor</span><span class="spec-value">12th Gen i5
-                            / Ryzen 5</span></div>
-                    <div class="spec-item"><span class="spec-label">Memory</span><span class="spec-value">16GB
-                            RAM</span></div>
-                    <div class="spec-item"><span class="spec-label">Storage</span><span class="spec-value">512GB
-                            NVMe</span></div>
-                </div>
-                <div class="pro-tip">
-                    <i class="fa-solid fa-lightbulb"></i>
-                    <p><strong>Pro Tip:</strong> Look for screens with 100% sRGB coverage at this price point if you
-                        plan on doing digital editing.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 80K Desktop Modal -->
-    <div id="modal-desktop-80k" class="component-modal">
-        <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
-        <div class="modal-header">
-            <div class="modal-icon"><i class="fa-solid fa-desktop"></i></div>
-            <h2>Budget Action Setup</h2>
-            <span class="badge badge-outline">Rs. 80,000</span>
-        </div>
-        <div class="modal-body">
-            <div class="modal-image">
-                <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&q=80&w=800"
-                    alt="Desktop Detail">
-            </div>
-            <div class="modal-details">
-                <h3>Why it matters</h3>
-                <p>This is where true 1080p gaming starts. It brings enough processing power and dedicated graphics to
-                    run modern eSports titles perfectly.</p>
-                <div class="key-specs">
-                    <div class="spec-item"><span class="spec-label">Processor</span><span class="spec-value">Intel Core
-                            i3-12100F</span></div>
-                    <div class="spec-item"><span class="spec-label">Graphics</span><span class="spec-value">NVIDIA GTX
-                            1650 4GB</span></div>
-                    <div class="spec-item"><span class="spec-label">Memory</span><span class="spec-value">16GB DDR4
-                            3200MHz</span></div>
-                </div>
-                <div class="pro-tip">
-                    <i class="fa-solid fa-lightbulb"></i>
-                    <p><strong>Pro Tip:</strong> Pairing the i3-12100F with a dedicated GTX 1650 provides consistent
-                        frames in games like Valorant and CS2.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 120K Laptop Modal -->
-    <div id="modal-laptop-120k" class="component-modal">
-        <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
-        <div class="modal-header">
-            <div class="modal-icon"><i class="fa-solid fa-laptop"></i></div>
-            <h2>Creator & Gaming Hybrid</h2>
-            <span class="badge badge-outline">Rs. 120,000</span>
-        </div>
-        <div class="modal-body">
-            <div class="modal-image">
-                <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&q=80&w=800"
-                    alt="Laptop Detail">
-            </div>
-            <div class="modal-details">
-                <h3>Why it matters</h3>
-                <p>Serious power for video editing, modern gaming, and digital creation on the go. You start seeing
-                    dedicated RTX graphics at this tier.</p>
-                <div class="key-specs">
-                    <div class="spec-item"><span class="spec-label">Processor</span><span class="spec-value">i5 / Ryzen
-                            5 (H-Series)</span></div>
-                    <div class="spec-item"><span class="spec-label">Graphics</span><span class="spec-value">RTX 3050 /
-                            4050 6GB</span></div>
-                    <div class="spec-item"><span class="spec-label">Display</span><span class="spec-value">144Hz IPS
-                            Panel</span></div>
-                </div>
-                <div class="pro-tip">
-                    <i class="fa-solid fa-lightbulb"></i>
-                    <p><strong>Pro Tip:</strong> "H-Series" processors (like i5-12500H) draw more power but perform
-                        significantly better than standard laptop chips.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 120K Desktop Modal -->
-    <div id="modal-desktop-120k" class="component-modal">
-        <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
-        <div class="modal-header">
-            <div class="modal-icon"><i class="fa-solid fa-desktop"></i></div>
-            <h2>The 1080p Max Rig</h2>
-            <span class="badge badge-outline">Rs. 120,000</span>
-        </div>
-        <div class="modal-body">
-            <div class="modal-image">
-                <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&q=80&w=800"
-                    alt="Desktop Detail">
-            </div>
-            <div class="modal-details">
-                <h3>Why it matters</h3>
-                <p>An absolute steal for creators, handling heavy timelines and letting you play newest titles on Ultra
-                    graphics settings effortlessly.</p>
-                <div class="key-specs">
-                    <div class="spec-item"><span class="spec-label">Processor</span><span class="spec-value">Intel
-                            i5-12400F</span></div>
-                    <div class="spec-item"><span class="spec-label">Graphics</span><span class="spec-value">RTX 3060
-                            12GB</span></div>
-                    <div class="spec-item"><span class="spec-label">Storage</span><span class="spec-value">1TB Gen 4
-                            NVMe</span></div>
-                </div>
-                <div class="pro-tip">
-                    <i class="fa-solid fa-lightbulb"></i>
-                    <p><strong>Pro Tip:</strong> The 12GB of VRAM on the RTX 3060 makes this build a monster for video
-                        rendering and AI workloads.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 160K Laptop Modal -->
-    <div id="modal-laptop-160k" class="component-modal">
-        <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
-        <div class="modal-header">
-            <div class="modal-icon"><i class="fa-solid fa-laptop"></i></div>
-            <h2>Mobile Command Center</h2>
-            <span class="badge badge-outline">Rs. 160,000+</span>
-        </div>
-        <div class="modal-body">
-            <div class="modal-image">
-                <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&q=80&w=800"
-                    alt="Laptop Detail">
-            </div>
-            <div class="modal-details">
-                <h3>Why it matters</h3>
-                <p>Uncompromising 1440p gaming and professional 3D rendering workstations. Premium build materials and
-                    high-end cooling systems.</p>
-                <div class="key-specs">
-                    <div class="spec-item"><span class="spec-label">Processor</span><span class="spec-value">i7 13th
-                            Gen+ / Ryzen 7</span></div>
-                    <div class="spec-item"><span class="spec-label">Graphics</span><span class="spec-value">RTX 4060
-                            8GB</span></div>
-                    <div class="spec-item"><span class="spec-label">Memory</span><span class="spec-value">16GB / 32GB
-                            DDR5</span></div>
-                </div>
-                <div class="pro-tip">
-                    <i class="fa-solid fa-lightbulb"></i>
-                    <p><strong>Pro Tip:</strong> At this tier, pay attention to the laptop's TGP (Total Graphics Power).
-                        A 140W RTX 4060 will crush an 80W version.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 160K Desktop Modal -->
-    <div id="modal-desktop-160k" class="component-modal">
-        <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
-        <div class="modal-header">
-            <div class="modal-icon"><i class="fa-solid fa-desktop"></i></div>
-            <h2>The Future-Proof Titan</h2>
-            <span class="badge badge-outline">Rs. 160,000+</span>
-        </div>
-        <div class="modal-body">
-            <div class="modal-image">
-                <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&q=80&w=800"
-                    alt="Desktop Detail">
-            </div>
-            <div class="modal-details">
-                <h3>Why it matters</h3>
-                <p>A powerhouse desktop ensuring top tier performance and upgradeability for years. Capable of flawless
-                    1440p and entry-level 4K gaming.</p>
-                <div class="key-specs">
-                    <div class="spec-item"><span class="spec-label">Processor</span><span class="spec-value">Ryzen 5
-                            7600X</span></div>
-                    <div class="spec-item"><span class="spec-label">Graphics</span><span class="spec-value">RTX 4060 Ti
-                            8GB</span></div>
-                    <div class="spec-item"><span class="spec-label">Platform</span><span class="spec-value">AM5
-                            Motherboard</span></div>
-                </div>
-                <div class="pro-tip">
-                    <i class="fa-solid fa-lightbulb"></i>
-                    <p><strong>Pro Tip:</strong> Building on AMD's new AM5 platform means you can seamlessly upgrade
-                        your processor in 3 years without buying a new motherboard.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Value Matrix Section (Redesigned completely for Premium look) -->
-    <section class="section-padding bg-body" id="comparisons">
+    <!-- Segmented Guide Section -->
+    <section id="segments" class="section-padding">
         <div class="container">
-            <div class="section-header reveal text-center">
-                <span class="badge badge-pill">The Bottom Line</span>
-                <h2 class="section-title">Market Spec Matrix</h2>
-                <p class="section-subtitle">A quick reference chart of what you should expect at every price point in
-                    Nepal.</p>
+            <div class="text-center mb-5">
+                <h2 class="section-title">Market Analysis by Budget</h2>
+                <p class="section-desc">We break down the Nepali market into three major categories so you know exactly
+                    what hardware to look for.</p>
             </div>
 
-            <div class="matrix-container reveal stagger-1">
-                <div class="table-responsive">
-                    <table class="premium-matrix-table">
-                        <thead>
-                            <tr>
-                                <th>Target Budget</th>
-                                <th>Processor (CPU)</th>
-                                <th>Memory (RAM)</th>
-                                <th>Storage Space</th>
-                                <th>Dedicated Graphics</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="tier-label">
-                                        <i class="fa-solid fa-coins"></i>
-                                        <span class="m-price">Rs. 50,000</span>
+            <!-- TIER: LOW -->
+            <div class="tier-section" id="tier-low">
+                <div class="tier-header low-tier">
+                    <div class="tier-icon"><i class="fa-solid fa-piggy-bank"></i></div>
+                    <div class="tier-info">
+                        <h2>Entry & Budget Tier</h2>
+                        <span class="price-range">NPR 40,000 - NPR 90,000</span>
+                    </div>
+                </div>
+                <div class="tier-content">
+                    <p class="tier-summary">At this level, you are prioritizing necessity. Laptops run on integrated
+                        graphics (Intel UHD / AMD Vega), and desktops will rely on APUs. Storage is king: always ensure
+                        you buy an SSD, not a sluggish HDD.</p>
+
+                    <div class="grid-2 mt-4">
+                        <!-- Desktop -->
+                        <div class="product-card">
+                            <div class="product-badge red">Best Budget PC</div>
+                            <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&q=80&w=600"
+                                class="product-img" alt="Entry PC">
+                            <div class="product-content">
+                                <h3>Ryzen 5 APU Build</h3>
+                                <div class="price-tag">~ NPR 55,000</div>
+                                <div class="specs-grid">
+                                    <div class="spec-row"><i class="fa-solid fa-microchip"></i> Ryzen 5 5600G</div>
+                                    <div class="spec-row"><i class="fa-solid fa-memory"></i> 16GB RAM</div>
+                                    <div class="spec-row"><i class="fa-solid fa-hard-drive"></i> 512GB NVMe</div>
+                                    <div class="spec-row"><i class="fa-solid fa-gamepad"></i> Vega 7 Graphics</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Laptop -->
+                        <div class="product-card">
+                            <div class="product-badge red">Best Budget Laptop</div>
+                            <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?auto=format&fit=crop&q=80&w=600"
+                                class="product-img" alt="Budget Laptop">
+                            <div class="product-content">
+                                <h3>Core i3 / Entry Ultrabook</h3>
+                                <div class="price-tag">~ NPR 65,000</div>
+                                <div class="specs-grid">
+                                    <div class="spec-row"><i class="fa-solid fa-microchip"></i> i3 12th/13th Gen</div>
+                                    <div class="spec-row"><i class="fa-solid fa-memory"></i> 8GB RAM</div>
+                                    <div class="spec-row"><i class="fa-solid fa-battery-full"></i> 6+ Hrs Battery</div>
+                                    <div class="spec-row"><i class="fa-solid fa-display"></i> 15.6" FHD IPS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TIER: MID -->
+            <div class="tier-section" id="tier-mid">
+                <div class="tier-header mid-tier">
+                    <div class="tier-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <div class="tier-info">
+                        <h2>Mid-Range Value Tier</h2>
+                        <span class="price-range">NPR 100,000 - NPR 180,000</span>
+                    </div>
+                </div>
+                <div class="tier-content">
+                    <p class="tier-summary">The sweet spot for performance per Rupee. This bracket unlocks dedicated
+                        Graphics Cards (GPUs), high refresh rate screens, and processors capable of serious 1080p gaming
+                        and video editing.</p>
+
+                    <div class="grid-2 mt-4">
+                        <!-- Desktop -->
+                        <div class="product-card">
+                            <div class="product-badge blue">Best Mid-Range PC</div>
+                            <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&q=80&w=600"
+                                class="product-img" alt="Mid PC">
+                            <div class="product-content">
+                                <h3>1080p Ultra Gaming Rig</h3>
+                                <div class="price-tag">~ NPR 125,000</div>
+                                <div class="specs-grid">
+                                    <div class="spec-row"><i class="fa-solid fa-microchip"></i> Core i5-12400F</div>
+                                    <div class="spec-row"><i class="fa-solid fa-memory"></i> 16GB DDR4</div>
+                                    <div class="spec-row"><i class="fa-solid fa-hard-drive"></i> 1TB NVMe</div>
+                                    <div class="spec-row"><i class="fa-solid fa-gamepad"></i> RTX 3060 12GB</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Laptop -->
+                        <div class="product-card">
+                            <div class="product-badge blue">Best Mid-Range Laptop</div>
+                            <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&q=80&w=600"
+                                class="product-img" alt="Mid Laptop">
+                            <div class="product-content">
+                                <h3>RTX 4050 Action Series</h3>
+                                <div class="price-tag">~ NPR 140,000</div>
+                                <div class="specs-grid">
+                                    <div class="spec-row"><i class="fa-solid fa-microchip"></i> i5 / Ryzen 7</div>
+                                    <div class="spec-row"><i class="fa-solid fa-memory"></i> 16GB RAM</div>
+                                    <div class="spec-row"><i class="fa-solid fa-gamepad"></i> RTX 4050 6GB</div>
+                                    <div class="spec-row"><i class="fa-solid fa-tachometer-alt"></i> 144Hz Display</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TIER: HIGH -->
+            <div class="tier-section" id="tier-high">
+                <div class="tier-header high-tier">
+                    <div class="tier-icon"><i class="fa-solid fa-rocket"></i></div>
+                    <div class="tier-info">
+                        <h2>High-End Enthusiast Tier</h2>
+                        <span class="price-range">NPR 200,000+</span>
+                    </div>
+                </div>
+                <div class="tier-content">
+                    <p class="tier-summary">Enter the enthusiast zone. At these prices, you are paying for premium build
+                        quality, 1440p to 4K gaming, advanced thermal designs, and future-proof components like DDR5 RAM
+                        and newer architectures.</p>
+
+                    <div class="grid-2 mt-4">
+                        <!-- Desktop -->
+                        <div class="product-card">
+                            <div class="product-badge purple">Best High-End PC</div>
+                            <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&q=80&w=600"
+                                class="product-img" alt="High PC">
+                            <div class="product-content">
+                                <h3>1440p AM5 Workstation</h3>
+                                <div class="price-tag">~ NPR 230,000</div>
+                                <div class="specs-grid">
+                                    <div class="spec-row"><i class="fa-solid fa-microchip"></i> Ryzen 5 7600X</div>
+                                    <div class="spec-row"><i class="fa-solid fa-memory"></i> 32GB DDR5 6000MHz</div>
+                                    <div class="spec-row"><i class="fa-solid fa-hard-drive"></i> 2TB Gen4 NVMe</div>
+                                    <div class="spec-row"><i class="fa-solid fa-gamepad"></i> RTX 4070 Super</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Laptop -->
+                        <div class="product-card">
+                            <div class="product-badge purple">Best High-End Laptop</div>
+                            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=600"
+                                class="product-img" alt="High Laptop">
+                            <div class="product-content">
+                                <h3>Premium Creator MacBook Pro</h3>
+                                <div class="price-tag">~ NPR 320,000</div>
+                                <div class="specs-grid">
+                                    <div class="spec-row"><i class="fa-solid fa-microchip"></i> Apple M3 Pro</div>
+                                    <div class="spec-row"><i class="fa-solid fa-memory"></i> 18GB Unified</div>
+                                    <div class="spec-row"><i class="fa-solid fa-display"></i> Mini-LED Display</div>
+                                    <div class="spec-row"><i class="fa-solid fa-battery-full"></i> 18+ Hours Battery
                                     </div>
-                                    <span class="tier-sub">Entry / Office</span>
-                                </td>
-                                <td><i class="fa-solid fa-microchip tbl-icon"></i> i3 12th Gen / Ryzen 3</td>
-                                <td><i class="fa-solid fa-memory tbl-icon"></i> 8GB Minimum</td>
-                                <td><i class="fa-solid fa-hard-drive tbl-icon"></i> 256GB - 512GB SSD</td>
-                                <td><span class="badge" style="background: #f1f5f9; color: #64748B;">Integrated
-                                        Only</span></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="tier-label">
-                                        <i class="fa-solid fa-sack-dollar"></i>
-                                        <span class="m-price">Rs. 80,000</span>
-                                    </div>
-                                    <span class="tier-sub">1080p Entry</span>
-                                </td>
-                                <td><i class="fa-solid fa-microchip tbl-icon"></i> i5 12th Gen / Ryzen 5</td>
-                                <td><i class="fa-solid fa-memory tbl-icon"></i> 16GB Recommended</td>
-                                <td><i class="fa-solid fa-hard-drive tbl-icon"></i> 512GB NVMe M.2</td>
-                                <td><span class="badge" style="background: #eff6ff; color: #3b82f6;"><i
-                                            class="fa-solid fa-gamepad" style="margin-right: 5px;"></i> GTX 1650</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="tier-label">
-                                        <i class="fa-solid fa-wallet"></i>
-                                        <span class="m-price">Rs. 120,000</span>
-                                    </div>
-                                    <span class="tier-sub">1080p Ultra</span>
-                                </td>
-                                <td><i class="fa-solid fa-microchip tbl-icon"></i> i5 13th Gen / Ryzen 5</td>
-                                <td><i class="fa-solid fa-memory tbl-icon"></i> 16GB DDR5</td>
-                                <td><i class="fa-solid fa-hard-drive tbl-icon"></i> 512GB - 1TB Gen4</td>
-                                <td><span class="badge" style="background: #fdf4ff; color: #d946ef;"><i
-                                            class="fa-solid fa-bolt" style="margin-right: 5px;"></i> RTX 3060</span>
-                                </td>
-                            </tr>
-                            <tr class="premium-row">
-                                <td>
-                                    <div class="tier-label" style="color: var(--primary);">
-                                        <i class="fa-solid fa-crown"></i>
-                                        <span class="m-price">Rs. 160,000+</span>
-                                    </div>
-                                    <span class="tier-sub" style="color: var(--primary);">1440p / Creator</span>
-                                </td>
-                                <td><i class="fa-solid fa-microchip tbl-icon"></i> i7 13th Gen+ / Ryzen 7/9</td>
-                                <td><i class="fa-solid fa-memory tbl-icon"></i> 32GB DDR5</td>
-                                <td><i class="fa-solid fa-hard-drive tbl-icon"></i> 1TB+ Gen4 NVMe</td>
-                                <td><span class="badge"
-                                        style="background: linear-gradient(135deg, #10b981, #059669); color: white; border: none;"><i
-                                            class="fa-solid fa-rocket" style="margin-right: 5px;"></i> RTX 4060
-                                        Ti+</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section-padding bg-slate">
+        <div class="container text-center">
+            <div class="cta-box">
+                <h2>Ready to Make a Decision?</h2>
+                <p>Read our full buying guide and part comparisons to finalize your build.</p>
+                <div class="action-buttons justify-center mt-4">
+                    <a href="guide.html" class="btn btn-primary">Go to Buying Guide</a>
+                    <a href="comparison.html" class="btn btn-outline-white">Compare Models</a>
                 </div>
             </div>
         </div>
@@ -682,7 +362,6 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <!-- Brand Column -->
                 <div class="footer-col brand-col">
                     <div class="logo footer-logo"
                         style="display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem;">
@@ -692,9 +371,8 @@
                             style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.02em; background: linear-gradient(135deg, var(--text-main) 0%, var(--primary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;">Know
                             Your PC</span>
                     </div>
-                    <p class="footer-desc">
-                        The #1 Resource for understanding computer hardware and making smart buying decisions.
-                    </p>
+                    <p class="footer-desc">The #1 Resource for understanding computer hardware and making smart buying
+                        decisions.</p>
                     <div style="display: flex; gap: 1rem; margin-top: 2rem;">
                         <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
                         <a href="#"><i class="fa-brands fa-twitter fa-lg"></i></a>
@@ -702,8 +380,6 @@
                         <a href="#"><i class="fa-brands fa-youtube fa-lg"></i></a>
                     </div>
                 </div>
-
-                <!-- Explore Column -->
                 <div class="footer-col">
                     <h4>Explore</h4>
                     <ul>
@@ -713,8 +389,6 @@
                         <li><a href="brand.html">Top Brands</a></li>
                     </ul>
                 </div>
-
-                <!-- Resources Column -->
                 <div class="footer-col">
                     <h4>Resources</h4>
                     <ul>
@@ -724,8 +398,6 @@
                         <li><a href="faq.html#glossary">Tech Glossary</a></li>
                     </ul>
                 </div>
-
-                <!-- Legal Column -->
                 <div class="footer-col">
                     <h4>Legal</h4>
                     <ul>
@@ -736,7 +408,6 @@
                     </ul>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p>&copy; 2026 Know Your PC. All rights reserved.</p>
             </div>
