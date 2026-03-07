@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../CSS/brand.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
 </head>
 
 <body class="brand-body">
@@ -25,32 +26,95 @@
     <div class="ambient-glow glow-2"></div>
 
     <!-- Navbar -->
-    <nav class="navbar">
+        <!-- Navigation -->
+    <nav class="navbar" id="main-navbar">
         <div class="container nav-container">
-            <a href="home.html" class="logo"
-                style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
-                <img src="../image/logo.jpg" alt="Know Your PC Logo" width="40" height="40"
-                    style="object-fit: cover; border-radius: 8px;">
-                <span
-                    style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.02em; background: linear-gradient(135deg, var(--text-main) 0%, var(--primary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;">Know
-                    Your PC</span>
+            <a href="home.html" class="logo">
+                <img src="../image/logo.jpg" alt="Know Your PC Logo" width="40" height="40" class="logo-img">
+                <span class="logo-text">Know Your PC</span>
             </a>
 
-            <button class="mobile-menu-toggle">
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
             <ul class="nav-menu">
-                <li><a href="home.html" class="nav-link">Home</a></li>
-                <li><a href="parts.html" class="nav-link">Parts Explained</a></li>
-                <li><a href="brand.html" class="nav-link active">Top Brands</a></li>
-                <li><a href="guide.html" class="nav-link">Buying Guide</a></li>
-                <li><a href="comparison.html" class="nav-link">Comparisons</a></li>
-                <li><a href="budget.html" class="nav-link">Budget Guide</a></li>
-                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li class="nav-item">
+                    <a href="home.html" class="nav-link ">Home</a>
+                </li>
+                
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link ">Learn <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <a href="parts.html" class="dropdown-item">
+                                <div class="icon-wrapper"><i class="fa-solid fa-microchip"></i></div>
+                                <div class="item-details">
+                                    <span class="item-title">Parts Explained</span>
+                                    <span class="item-desc">Deep dive into PC components</span>
+                                </div>
+                            </a>
+                            <a href="faq.html" class="dropdown-item">
+                                <div class="icon-wrapper"><i class="fa-solid fa-circle-question"></i></div>
+                                <div class="item-details">
+                                    <span class="item-title">FAQ & Glossary</span>
+                                    <span class="item-desc">Answers to common tech questions</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link ">Buying Advice <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <a href="guide.html" class="dropdown-item">
+                                <div class="icon-wrapper"><i class="fa-solid fa-book-open"></i></div>
+                                <div class="item-details">
+                                    <span class="item-title">Buying Guide</span>
+                                    <span class="item-desc">Step-by-step buyer's manual</span>
+                                </div>
+                            </a>
+                            <a href="budget.html" class="dropdown-item">
+                                <div class="icon-wrapper"><i class="fa-solid fa-wallet"></i></div>
+                                <div class="item-details">
+                                    <span class="item-title">Budget Guide</span>
+                                    <span class="item-desc">Best builds for every price point</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link active">Reviews & Compare <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <a href="comparison.html" class="dropdown-item">
+                                <div class="icon-wrapper"><i class="fa-solid fa-scale-balanced"></i></div>
+                                <div class="item-details">
+                                    <span class="item-title">Comparisons</span>
+                                    <span class="item-desc">Head-to-head hardware battles</span>
+                                </div>
+                            </a>
+                            <a href="brand.html" class="dropdown-item">
+                                <div class="icon-wrapper"><i class="fa-solid fa-star"></i></div>
+                                <div class="item-details">
+                                    <span class="item-title">Top Brands</span>
+                                    <span class="item-desc">Rankings & recommendations</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
             </ul>
+            
+            <div class="nav-actions">
+                <a href="budget.html" class="btn btn-primary nav-btn">Build Your PC</a>
+            </div>
         </div>
     </nav>
 
@@ -590,6 +654,7 @@
     </div>
 
     <script src="../JS/brand.js"></script>
+    <script src="../JS/navbar.js"></script>
 </body>
 
 </html>
