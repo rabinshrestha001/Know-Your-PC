@@ -165,8 +165,64 @@
         </div>
     </header>
 
+
+
+    <!-- Smart PC Finder Component -->
+    <section class="section-padding bg-slate" id="smart-finder">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="badge badge-accent mb-4"
+                    style="background:#8B5CF6; color:white; border:none; padding:8px 18px; border-radius:50px;"><i
+                        class="fa-solid fa-wand-magic-sparkles"></i> AI Recommender</div>
+                <h2 class="section-title">Smart PC Finder</h2>
+                <p class="section-desc">Answer 3 simple questions and we'll point you to the perfect build.</p>
+            </div>
+            <div class="quiz-container box-shadow-glass">
+                <div class="quiz-step active" id="quiz-step-1">
+                    <h3>1. Primary Use Case?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" data-val="office"><i class="fa-solid fa-briefcase"></i> Office &
+                            Study</button>
+                        <button class="quiz-btn" data-val="gaming"><i class="fa-solid fa-gamepad"></i> Heavy
+                            Gaming</button>
+                        <button class="quiz-btn" data-val="editing"><i class="fa-solid fa-video"></i> Video
+                            Editing</button>
+                    </div>
+                </div>
+                <div class="quiz-step" id="quiz-step-2" style="display:none;">
+                    <h3>2. Do you need a laptop or desktop?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" data-val="laptop"><i class="fa-solid fa-laptop"></i> Laptop
+                            (Mobility)</button>
+                        <button class="quiz-btn" data-val="desktop"><i class="fa-solid fa-desktop"></i> Desktop
+                            (Power)</button>
+                    </div>
+                </div>
+                <div class="quiz-step" id="quiz-step-3" style="display:none;">
+                    <h3>3. Your budget preference?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" data-val="low"><i class="fa-solid fa-piggy-bank"></i> Budget</button>
+                        <button class="quiz-btn" data-val="high"><i class="fa-solid fa-money-bill-trend-up"></i>
+                            Premium</button>
+                    </div>
+                </div>
+                <div class="quiz-result" id="quiz-result" style="display:none;">
+                    <h3
+                        style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom:1rem; font-size:2.5rem; font-weight:800;">
+                        We Found Your Match!</h3>
+                    <div id="quiz-match-text" class="match-text"
+                        style="font-size:1.1rem; color:var(--text-muted); margin-bottom:2rem;"></div>
+                    <button class="btn btn-primary" id="quiz-go-btn" style="margin-right:1rem;">See Recommendation <i
+                            class="fa-solid fa-arrow-down" style="margin-left:8px;"></i></button>
+                    <button class="btn btn-outline" id="quiz-reset-btn"><i class="fa-solid fa-rotate-left"></i>
+                        Restart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Interactive Top Recommendations Section -->
-    <section id="recommendations" class="section-padding bg-slate">
+    <section id="recommendations" class="section-padding">
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="section-title">Top Recommendations <span>(2026 Edition)</span></h2>
