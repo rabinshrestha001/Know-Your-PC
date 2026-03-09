@@ -54,40 +54,43 @@
 
     <!-- Article Content -->
     <main class="article-detail-page section-padding" style="margin-top: 80px;">
-        <div class="container article-container">
-            <a href="home.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Articles</a>
+        <div class="container">
+            <div class="article-container">
+                <a href="home.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Articles</a>
 
-            <div id="loading" style="text-align: center; padding: 50px;">
-                <i class="fa-solid fa-circle-notch fa-spin" style="font-size: 2rem; color: var(--primary);"></i>
-                <p style="margin-top: 10px;">Loading Article...</p>
-            </div>
-
-            <div id="articleContent" class="hidden">
-                <div class="article-header">
-                    <span id="articleTag" class="badge"
-                        style="background: var(--bg-secondary); color: var(--primary); font-weight: 600;">Technology</span>
-                    <span id="articleDate"
-                        style="color: var(--text-muted); font-size: 0.9rem; margin-left: 15px;">Date</span>
+                <div id="loading" style="text-align: center; padding: 50px;">
+                    <i class="fa-solid fa-circle-notch fa-spin" style="font-size: 2rem; color: var(--primary);"></i>
+                    <p style="margin-top: 10px;">Loading Article...</p>
                 </div>
 
-                <h1 id="articleTitle" class="article-title">Article Title</h1>
+                <div id="articleContent" class="hidden">
+                    <div class="article-header">
+                        <span id="articleTag" class="badge"
+                            style="background: var(--bg-secondary); color: var(--primary); font-weight: 600;">Technology</span>
+                        <span id="articleDate"
+                            style="color: var(--text-muted); font-size: 0.9rem; margin-left: 15px;">Date</span>
+                    </div>
 
-                <div class="article-hero-image">
-                    <img id="articleImage" src="" alt="Article cover image">
+                    <h1 id="articleTitle" class="article-title">Article Title</h1>
+
+                    <div class="article-hero-image">
+                        <img id="articleImage" src="" alt="Article cover image">
+                    </div>
+
+                    <div id="articleBody" class="article-body">
+                        <!-- Content injected via JS -->
+                    </div>
                 </div>
 
-                <div id="articleBody" class="article-body">
-                    <!-- Content injected via JS -->
+                <div id="errorState" class="hidden text-center" style="padding: 50px;">
+                    <i class="fa-solid fa-circle-exclamation"
+                        style="font-size: 3rem; color: #ef4444; margin-bottom: 20px;"></i>
+                    <h2>Article Not Found</h2>
+                    <p>We couldn't find the article you're looking for. It might have been removed or the link is
+                        incorrect.
+                    </p>
+                    <a href="home.html" class="btn btn-primary" style="margin-top: 20px;">Return to Home</a>
                 </div>
-            </div>
-
-            <div id="errorState" class="hidden text-center" style="padding: 50px;">
-                <i class="fa-solid fa-circle-exclamation"
-                    style="font-size: 3rem; color: #ef4444; margin-bottom: 20px;"></i>
-                <h2>Article Not Found</h2>
-                <p>We couldn't find the article you're looking for. It might have been removed or the link is incorrect.
-                </p>
-                <a href="home.html" class="btn btn-primary" style="margin-top: 20px;">Return to Home</a>
             </div>
         </div>
     </main>

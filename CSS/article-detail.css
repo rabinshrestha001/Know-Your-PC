@@ -8,12 +8,11 @@
 
 .article-container {
     max-width: 800px;
-    /* Keep articles readable on large screens */
     margin: 0 auto;
     background: #ffffff;
-    border-radius: 16px;
-    padding: 40px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: var(--shadow-xl);
 }
 
 .back-link {

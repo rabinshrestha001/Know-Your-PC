@@ -124,16 +124,19 @@
 
     <!-- Hero Section -->
     <header class="budget-hero">
-        <div class="container hero-content text-center">
-            <div class="badge mb-4"><i class="fa-solid fa-tag"></i> NRS Market Updated: March 2026</div>
-            <h1 class="font-heading text-gradient">Master Your Budget</h1>
-            <p class="subtitle">
-                Stop overpaying. Discover the exact performance you get for your Nepalese Rupees. Explore our segmented
-                guide for Low, Mid, and High-end tiers across the Nepali market.
-            </p>
-            <div class="action-buttons justify-center">
-                <a href="#calculator" class="btn btn-primary">Start Budget Calculator</a>
-                <a href="#segments" class="btn btn-outline">Explore Segments</a>
+        <div class="container">
+            <div class="hero-content text-center">
+                <div class="badge mb-4"><i class="fa-solid fa-tag"></i> NRS Market Updated: March 2026</div>
+                <h1 class="font-heading text-gradient">Master Your Budget</h1>
+                <p class="subtitle">
+                    Stop overpaying. Discover the exact performance you get for your Nepalese Rupees. Explore our
+                    segmented
+                    guide for Low, Mid, and High-end tiers across the Nepali market.
+                </p>
+                <div class="action-buttons justify-center">
+                    <a href="#calculator" class="btn btn-primary">Start Budget Calculator</a>
+                    <a href="#segments" class="btn btn-outline">Explore Segments</a>
+                </div>
             </div>
         </div>
     </header>
@@ -150,38 +153,51 @@
 
                 <div class="calc-tool box-shadow-glass">
                     <div class="device-toggle mb-4">
-                        <button class="toggle-btn active" data-type="desktop"><i class="fa-solid fa-desktop"></i> Desktop</button>
+                        <button class="toggle-btn active" data-type="desktop"><i class="fa-solid fa-desktop"></i>
+                            Desktop</button>
                         <button class="toggle-btn" data-type="laptop"><i class="fa-solid fa-laptop"></i> Laptop</button>
                     </div>
                     <div class="slider-container">
                         <label for="budget-slider" class="slider-label">Your Maximum Budget (NRS)</label>
-                        <input type="range" id="budget-slider" class="range-slider" min="30000" max="400000" step="5000" value="80000">
+                        <input type="range" id="budget-slider" class="range-slider" min="30000" max="400000" step="5000"
+                            value="80000">
                         <div class="slider-value">Rs. <span id="budget-output">80,000</span></div>
                     </div>
 
                     <div class="result-box" id="calc-result">
                         <div class="result-header">
-                            <div class="result-tier badge badge-blue" id="tier-badge" style="color: white; border: none;">Entry Level Tier</div>
+                            <div class="result-tier badge badge-blue" id="tier-badge"
+                                style="color: white; border: none;">Entry Level Tier</div>
                             <h3 id="tier-title">Basic Productivity & Browsing</h3>
-                            <p id="tier-desc">Perfect for students and everyday home use. Expect swift document editing and reliable web browsing without dedicated gaming capabilities.</p>
+                            <p id="tier-desc">Perfect for students and everyday home use. Expect swift document editing
+                                and reliable web browsing without dedicated gaming capabilities.</p>
                         </div>
-                        
+
                         <div class="advanced-metrics mt-4">
                             <h4>Estimated Performance:</h4>
                             <div class="metric-grid">
                                 <div class="metric-item">
                                     <span class="metric-label">Gaming (1080p)</span>
-                                    <div class="metric-bar-bg"><div class="metric-bar" id="bar-gaming" style="width: 20%; background: #EF4444;"></div></div>
+                                    <div class="metric-bar-bg">
+                                        <div class="metric-bar" id="bar-gaming"
+                                            style="width: 20%; background: #EF4444;"></div>
+                                    </div>
                                     <span class="metric-val" id="val-gaming">Low</span>
                                 </div>
                                 <div class="metric-item">
                                     <span class="metric-label">Productivity</span>
-                                    <div class="metric-bar-bg"><div class="metric-bar" id="bar-prod" style="width: 90%; background: #10B981;"></div></div>
+                                    <div class="metric-bar-bg">
+                                        <div class="metric-bar" id="bar-prod" style="width: 90%; background: #10B981;">
+                                        </div>
+                                    </div>
                                     <span class="metric-val" id="val-prod">Excellent</span>
                                 </div>
                                 <div class="metric-item">
                                     <span class="metric-label">Content Creation</span>
-                                    <div class="metric-bar-bg"><div class="metric-bar" id="bar-create" style="width: 40%; background: #F59E0B;"></div></div>
+                                    <div class="metric-bar-bg">
+                                        <div class="metric-bar" id="bar-create"
+                                            style="width: 40%; background: #F59E0B;"></div>
+                                    </div>
                                     <span class="metric-val" id="val-create">Basic</span>
                                 </div>
                             </div>
@@ -190,23 +206,33 @@
                         <div class="budget-allocation mt-4" id="allocation-section">
                             <h4>Suggested Budget Allocation (<span id="alloc-type">Desktop Breakdown</span>):</h4>
                             <div class="allocation-bar-container">
-                                <div class="alloc-part" id="alloc-gpu" style="width: 0%; background: #8B5CF6;" data-label="GPU"></div>
-                                <div class="alloc-part" id="alloc-cpu" style="width: 0%; background: #3B82F6;" data-label="CPU"></div>
-                                <div class="alloc-part" id="alloc-ram" style="width: 0%; background: #10B981;" data-label="RAM/SSD"></div>
-                                <div class="alloc-part" id="alloc-board" style="width: 0%; background: #F59E0B;" data-label="Other"></div>
+                                <div class="alloc-part" id="alloc-gpu" style="width: 0%; background: #8B5CF6;"
+                                    data-label="GPU"></div>
+                                <div class="alloc-part" id="alloc-cpu" style="width: 0%; background: #3B82F6;"
+                                    data-label="CPU"></div>
+                                <div class="alloc-part" id="alloc-ram" style="width: 0%; background: #10B981;"
+                                    data-label="RAM/SSD"></div>
+                                <div class="alloc-part" id="alloc-board" style="width: 0%; background: #F59E0B;"
+                                    data-label="Other"></div>
                             </div>
                             <div class="alloc-legend">
-                                <span><span class="dot" style="background:#8B5CF6;"></span> GPU <b id="lbl-gpu">0%</b></span>
-                                <span><span class="dot" style="background:#3B82F6;"></span> CPU <b id="lbl-cpu">0%</b></span>
-                                <span><span class="dot" style="background:#10B981;"></span> RAM/SSD <b id="lbl-ram">0%</b></span>
-                                <span><span class="dot" style="background:#F59E0B;"></span> Other <b id="lbl-board">0%</b></span>
+                                <span><span class="dot" style="background:#8B5CF6;"></span> GPU <b
+                                        id="lbl-gpu">0%</b></span>
+                                <span><span class="dot" style="background:#3B82F6;"></span> CPU <b
+                                        id="lbl-cpu">0%</b></span>
+                                <span><span class="dot" style="background:#10B981;"></span> RAM/SSD <b
+                                        id="lbl-ram">0%</b></span>
+                                <span><span class="dot" style="background:#F59E0B;"></span> Other <b
+                                        id="lbl-board">0%</b></span>
                             </div>
                         </div>
-                        
-                        <a href="#tier-low" class="btn btn-primary w-100 mt-4" id="explore-tier-btn">Explore Options <i class="fa-solid fa-arrow-down" style="margin-left:8px;"></i></a>
+
+                        <a href="#tier-low" class="btn btn-primary w-100 mt-4" id="explore-tier-btn">Explore Options <i
+                                class="fa-solid fa-arrow-down" style="margin-left:8px;"></i></a>
                     </div>
-                </div></div>
+                </div>
             </div>
+        </div>
         </div>
     </section>
 

@@ -24,8 +24,19 @@
     transform: translateY(-100%);
 }
 
+:root {
+    --container-width: 1280px;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+
 .nav-container {
-    max-width: 1280px;
+    max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 1.5rem;
     height: 100%;
@@ -62,6 +73,7 @@
     letter-spacing: -0.02em;
     background: linear-gradient(135deg, #0F172A 0%, #0EA5E9 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     line-height: 1;
 }
