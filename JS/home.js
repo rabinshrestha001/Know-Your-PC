@@ -118,5 +118,74 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ===== Article Modal Functionality =====
+    const articleCards = document.querySelectorAll('.news-card');
+    const articleModal = document.getElementById('articleModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+
+    if (articleModal && closeModalBtn) {
+        const modalImg = document.querySelector('#modalImage img');
+        const modalTag = document.getElementById('modalTag');
+        const modalDate = document.getElementById('modalDate');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalText = document.getElementById('modalText');
+
+        articleCards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                // Prevent default navigation if the anchor is clicked
+                if (e.target.closest('a')) {
+                    e.preventDefault();
+                }
+
+                // Extract data from the clicked card
+                const imgSrc = card.querySelector('.news-image img').src;
+                const tag = card.querySelector('.news-tag').textContent;
+                const date = card.querySelector('.news-date').textContent;
+                const title = card.querySelector('.news-title').textContent;
+                const desc = card.querySelector('.news-content p').textContent;
+
+                // Populate Modal content
+                if (modalImg) modalImg.src = imgSrc;
+                if (modalTag) modalTag.textContent = tag;
+                if (modalDate) modalDate.textContent = date;
+                if (modalTitle) modalTitle.textContent = title;
+
+                if (modalText) {
+                    modalText.innerHTML = `
+                        <p style="font-weight: 600; font-size: 1.1rem; color: var(--text-main); margin-bottom: 1.5rem;">${desc}</p>
+                        <p>This is a detailed placeholder for the full article content. In a real-world scenario, this content could be fetched from a database or a separate HTML file based on the article's unique ID.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    `;
+                }
+
+                // Show Modal
+                articleModal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            });
+        });
+
+        // Close Modal function
+        const closeModal = () => {
+            articleModal.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        // Event listeners for closing the modal
+        closeModalBtn.addEventListener('click', closeModal);
+
+        articleModal.addEventListener('click', (e) => {
+            if (e.target === articleModal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && articleModal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    }
+
     console.log("Know Your PC: Animations Loaded 🚀");
 });
