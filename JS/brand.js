@@ -133,43 +133,50 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: "Dell is renowned for its reliability and wide range of products suitable for both business and personal use. Their XPS line is a market standard for ultrabooks.",
             bestFor: "Business & Productivity",
             popular: "XPS, Inspiron, Alienware",
-            price: "NPR 40k - 300k"
+            price: "NPR 40k - 300k",
+            url: "https://www.dell.com"
         },
         'HP': {
             desc: "HP combines style with performance, offering sleek designs across all price points. Their Spectre and Envy series are top-tier premium choices.",
             bestFor: "Students & Home Office",
             popular: "Spectre, Envy, Pavilion",
-            price: "NPR 35k - 250k"
+            price: "NPR 35k - 250k",
+            url: "https://www.hp.com"
         },
         'Lenovo': {
             desc: "Lenovo dominates the market with its ThinkPad legendary durability and the Legion gaming series delivering pure performance.",
             bestFor: "Durability & Value",
             popular: "ThinkPad, Legion, Yoga",
-            price: "NPR 30k - 280k"
+            price: "NPR 30k - 280k",
+            url: "https://www.lenovo.com"
         },
         'Asus': {
             desc: "Asus pushes boundaries with innovation, especially in the OLED and gaming space with their ROG and ZenBook lineup.",
             bestFor: "Gaming & Creators",
             popular: "ROG Zephyrus, ZenBook",
-            price: "NPR 45k - 400k"
+            price: "NPR 45k - 400k",
+            url: "https://www.asus.com"
         },
         'Acer': {
             desc: "Acer is the go-to brand for budget-conscious buyers who don't want to compromise on essential specs.",
             bestFor: "Entry Level & Budget",
             popular: "Nitro, Aspire, Predator",
-            price: "NPR 35k - 200k"
+            price: "NPR 35k - 200k",
+            url: "https://www.acer.com"
         },
         'Apple': {
             desc: "Apple stands alone with its ecosystem and build quality. The M-series chips have revolutionized laptop efficiency and power.",
             bestFor: "Creatives & Professionals",
             popular: "MacBook Air, MacBook Pro",
-            price: "NPR 120k+"
+            price: "NPR 120k+",
+            url: "https://www.apple.com"
         },
         'MSI': {
             desc: "MSI is purely dedicated to the gaming enthusiast, offering high-refresh-rate screens and powerful cooling solutions.",
             bestFor: "Hardcore Gaming",
             popular: "Raider, Stealth, Titan",
-            price: "NPR 90k - 500k"
+            price: "NPR 90k - 500k",
+            url: "https://www.msi.com"
         }
     };
 
@@ -193,13 +200,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     desc: "Information currently unavailable for this brand.",
                     bestFor: "General Use",
                     popular: "Various Models",
-                    price: "Standard Market Rates"
+                    price: "Standard Market Rates",
+                    url: "#"
                 };
 
                 document.getElementById('modalDesc').innerText = data.desc;
                 document.getElementById('modalBestFor').innerText = data.bestFor;
                 document.getElementById('modalPopular').innerText = data.popular;
                 document.getElementById('modalPrice').innerText = data.price;
+                
+                const visitSiteBtn = document.querySelector('.modal-footer a.btn');
+                if (visitSiteBtn) {
+                    visitSiteBtn.href = data.url;
+                    visitSiteBtn.target = '_blank';
+                }
 
                 modal.classList.add('active');
             }

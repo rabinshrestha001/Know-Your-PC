@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="screen-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0EA5E9" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Sparkle Star -->
+  <g transform="translate(120, 70) scale(0.8)">
+    <path d="M 0 -15 L 3 -4 L 15 -2 L 3 2 L 0 15 L -3 2 L -15 -2 L -3 -4 Z" fill="#0EA5E9" filter="url(#glow)"/>
+  </g>
+
+  <!-- Monitor Stand -->
+  <path d="M 120 140 C 120 110 90 90 90 60" fill="none" stroke="#64748B" stroke-width="8" stroke-linecap="round" />
+  <path d="M 100 140 L 135 140" fill="none" stroke="#64748B" stroke-width="8" stroke-linecap="round" />
+
+  <!-- Monitor Body (Side view facing Left) -->
+  <!-- Back is to the right -->
+  <!-- Screen is at X=0, Back is X=30 -->
+  <g transform="translate(90, 75) rotate(-12)">
+    <!-- Back Bulge -->
+    <path d="M 0 -55 Q 35 -40 35 0 Q 35 40 0 55 Z" fill="#0F172A" />
+    <!-- Light reflection on the back -->
+    <path d="M 5 -50 Q 30 -35 30 0 Q 30 35 5 50" fill="none" stroke="#1E293B" stroke-width="2" />
+    <!-- Screen Edge -->
+    <rect x="-8" y="-55" width="8" height="110" rx="3" fill="url(#screen-grad)" filter="url(#glow)"/>
+  </g>
+
+  <!-- Mouse -->
+  <g transform="translate(50, 140)">
+    <path d="M -15 0 C -15 -8 -10 -12 0 -12 C 10 -12 15 -8 15 0 Z" fill="#0F172A" />
+    <!-- Mouse accent light -->
+    <path d="M -12 0 C -12 -5 0 -5 0 -8 C 5 -8 7 -5 7 0" fill="none" stroke="#0EA5E9" stroke-width="2" filter="url(#glow)"/>
+  </g>
+  
+  <!-- Desk Base -->
+  <line x1="20" y1="146" x2="180" y2="146" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round" />
+</svg>
