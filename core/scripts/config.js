@@ -3,7 +3,7 @@
  */
 const CONFIG = {
     // Change this to your production API URL when hosting (e.g., https://api.knowyourpc.com)
-    API_BASE_URL: 'http://localhost:8000',
+    API_BASE_URL: 'https://know-your-pc-2.onrender.com',
     
     // Helper to get full API path
     getApiUrl: (endpoint) => `${CONFIG.API_BASE_URL}${endpoint}`
