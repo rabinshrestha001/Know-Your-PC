@@ -3,12 +3,16 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from typing import List
 
-from . import models, schemas, database
-
-# Create database tables
-models.Base.metadata.create_all(bind=database.engine)
+import models
+import schemas
+import database
 
 app = FastAPI(title="Know Your PC API")
+
+# Create database tables
+@app.on_event("startup")
+def startup():
+    models.Base.metadata.create_all(bind=database.engine)
 
 # Enable CORS for frontend integration
 app.add_middleware(
