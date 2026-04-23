@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Text, DateTime, JSON
 from datetime import datetime
-from .database import Base
+from database import Base
 
 class ContactMessage(Base):
     __tablename__ = "contact_messages"

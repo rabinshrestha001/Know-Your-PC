@@ -259,6 +259,7 @@
         </div>
     </footer>
 
+    <script src="../../core/scripts/config.js"></script>
     <script src="../../components/layout/navbar/navbar.js"></script>
     <script>
         const contactForm = document.querySelector('.contact-form');
@@ -274,7 +275,7 @@
                 };
 
                 try {
-                    const response = await fetch('http://localhost:8000/api/contact', {
+                    const response = await fetch(APP_CONFIG.getApiUrl('/api/contact'), {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -291,7 +292,7 @@
                     }
                 } catch (error) {
                     console.error('Error:', error);
-                    alert('Connection error. Is the backend server running at http://localhost:8000?');
+                    alert('Connection error. Is the backend server running at ' + APP_CONFIG.API_BASE_URL + '?');
                 }
             });
         }

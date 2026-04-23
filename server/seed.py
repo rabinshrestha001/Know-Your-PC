@@ -35,7 +35,7 @@ def seed():
         },
         {
             "category": "core",
-            "slug": "motherboard",
+            "slug": "mobo",
             "name": "Motherboard",
             "role": "The Nervous System",
             "description": "Connects all components and allows them to communicate.",

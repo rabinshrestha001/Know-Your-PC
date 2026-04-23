@@ -18,7 +18,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 // Function to fetch and render parts
 async function loadParts() {
     try {
-        const response = await fetch('http://localhost:8000/api/parts');
+        const response = await fetch(APP_CONFIG.getApiUrl('/api/parts'));
         const parts = await response.json();
         
         if (grid) {
