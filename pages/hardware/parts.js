@@ -45,9 +45,10 @@ async function loadParts() {
                     <li><i class="fa-solid fa-circle-info"></i> ${value}</li>
                 `).join('') : '';
 
+                const imgPath = part.image_path.startsWith('http') ? part.image_path : `../../${part.image_path}`;
                 card.innerHTML = `
                     <div class="card-image">
-                        <img src="${part.image_path}" alt="${part.name}">
+                        <img src="${imgPath}" alt="${part.name}">
                         <div class="overlay-icon"><i class="fa-solid ${getIcon(part.category)}"></i></div>
                     </div>
                     <div class="card-content">

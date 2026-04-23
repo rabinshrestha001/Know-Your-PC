@@ -13,6 +13,16 @@ app = FastAPI(title="Know Your PC API")
 @app.on_event("startup")
 def startup():
     models.Base.metadata.create_all(bind=database.engine)
+    
+    # Auto-seed if database is empty
+    db = database.SessionLocal()
+    try:
+        if db.query(models.PCPart).count() == 0:
+            print("Database empty, running seed...")
+            from seed import seed
+            seed()
+    finally:
+        db.close()
 
 # Enable CORS for frontend integration
 app.add_middleware(
