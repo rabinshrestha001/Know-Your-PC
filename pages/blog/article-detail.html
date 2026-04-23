@@ -17,19 +17,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../CSS/home.css">
-    <link rel="stylesheet" href="../CSS/article-detail.css">
-    <link rel="stylesheet" href="../CSS/footer.css">
-    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../../core/styles/global.css">
+    <link rel="stylesheet" href="article-detail.css">
+    <link rel="stylesheet" href="../../components/layout/footer/footer.css">
+    <link rel="stylesheet" href="../../components/layout/navbar/navbar.css">
 </head>
 
 <body>
     <!-- Navbar -->
     <nav class="navbar scrolled">
         <div class="container nav-container">
-            <a href="home.html" class="logo"
+            <a href="../../index.html" class="logo"
                 style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
-                <img src="../IMG/logo.png" alt="Know Your PC Logo" width="40" height="40"
+                <img src="../../assets/images/branding/logo.png" alt="Know Your PC Logo" width="40" height="40"
                     style="object-fit: cover; border-radius: 8px;">
                 <span
                     style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.02em; background: linear-gradient(135deg, var(--text-main) 0%, var(--primary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;">Know
@@ -41,11 +41,11 @@
             </button>
 
             <ul class="nav-menu">
-                <li><a href="home.html" class="nav-link">Home</a></li>
-                <li><a href="parts.html" class="nav-link">Parts Explained</a></li>
-                <li><a href="brand.html" class="nav-link">Top Brands</a></li>
-                <li><a href="guide.html" class="nav-link">Buying Guide</a></li>
-                <li><a href="home.html#comparisons" class="nav-link">Comparisons</a></li>
+                <li><a href="../../index.html" class="nav-link">Home</a></li>
+                <li><a href="../hardware/parts-explained.html" class="nav-link">Parts Explained</a></li>
+                <li><a href="../hardware/top-brands.html" class="nav-link">Top Brands</a></li>
+                <li><a href="../guides/buying-guide.html" class="nav-link">Buying Guide</a></li>
+                <li><a href="../../index.html#comparisons" class="nav-link">Comparisons</a></li>
                 <li><button class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Get
                         Started</button></li>
             </ul>
@@ -56,7 +56,7 @@
     <main class="article-detail-page section-padding" style="margin-top: 80px;">
         <div class="container">
             <div class="article-container">
-                <a href="home.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Articles</a>
+                <a href="../../index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Articles</a>
 
                 <div id="loading" style="text-align: center; padding: 50px;">
                     <i class="fa-solid fa-circle-notch fa-spin" style="font-size: 2rem; color: var(--primary);"></i>
@@ -89,7 +89,7 @@
                     <p>We couldn't find the article you're looking for. It might have been removed or the link is
                         incorrect.
                     </p>
-                    <a href="home.html" class="btn btn-primary" style="margin-top: 20px;">Return to Home</a>
+                    <a href="../../index.html" class="btn btn-primary" style="margin-top: 20px;">Return to Home</a>
                 </div>
             </div>
         </div>
@@ -103,7 +103,7 @@
                 <div class="footer-col brand-col">
                     <!-- Logo Section (Inline styles removed since footer.css handles this) -->
                     <div class="logo footer-logo">
-                        <img src="../IMG/logo.png" alt="Know Your PC Logo">
+                        <img src="../../assets/images/branding/logo.png" alt="Know Your PC Logo">
                         <span>Know Your PC</span>
                     </div>
                     <p class="footer-desc">
@@ -125,10 +125,10 @@
                 <div class="footer-col">
                     <h4>Explore</h4>
                     <ul>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="parts.html">Parts Explained</a></li>
-                        <li><a href="guide.html">Buying Guide</a></li>
-                        <li><a href="brand.html">Top Brands</a></li>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../hardware/parts-explained.html">Parts Explained</a></li>
+                        <li><a href="../guides/buying-guide.html">Buying Guide</a></li>
+                        <li><a href="../hardware/top-brands.html">Top Brands</a></li>
                     </ul>
                 </div>
 
@@ -136,10 +136,10 @@
                 <div class="footer-col">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="comparison.html">Comparisons</a></li>
-                        <li><a href="budget.html">Budget Guide</a></li>
-                        <li><a href="faq.html">FAQ Help</a></li>
-                        <li><a href="faq.html#glossary">Tech Glossary</a></li>
+                        <li><a href="../hardware/comparisons.html">Comparisons</a></li>
+                        <li><a href="../guides/budget-builds.html">Budget Guide</a></li>
+                        <li><a href="../support/faq.html">FAQ Help</a></li>
+                        <li><a href="../support/faq.html#glossary">Tech Glossary</a></li>
                     </ul>
                 </div>
 
@@ -147,10 +147,10 @@
                 <div class="footer-col">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="cookie.html">Cookie Policy</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="../legal/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../legal/terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="../legal/cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="../support/contact-us.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -161,8 +161,8 @@
         </div>
     </footer>
 
-    <script src="../JS/article-detail.js"></script>
-    <script src="../JS/navbar.js"></script>
+    <script src="article-detail.js"></script>
+    <script src="../../components/layout/navbar/navbar.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,51 @@
+/* ===== CSS Variables (Premium Light Theme) ===== */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Colors - Matching Brand Page consistency */
+    --primary: #0EA5E9;
+    /* Sky Blue */
+    --primary-dark: #0284C7;
+    --secondary: #6366F1;
+    /* Indigo */
+    --accent: #EC4899;
+    /* Pink */
+    --gold: #F59E0B;
+    /* Gold for premium accents */
+
+    /* Light Theme Backgrounds */
+    --bg-body: #F8FAFC;
+    /* Very light slate */
+    --bg-white: #FFFFFF;
+    --bg-glass: rgba(255, 255, 255, 0.7);
+
+    /* Typography Colors */
+    --text-main: #0F172A;
+    /* Dark Slate */
+    --text-muted: #64748B;
+    /* Muted Slate */
+    --text-light: #94A3B8;
+
+    /* Borders & Decor */
+    --border-light: #E2E8F0;
+    --border-glass: rgba(255, 255, 255, 0.5);
+
+    /* Spacing */
+    --header-height: 80px;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    /* Softer shadows for light mode */
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+    --shadow-color: 0 20px 40px -5px rgba(99, 102, 241, 0.15);
+    /* Colored glow */
+
+    /* Fonts */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+
+    /* Animation Easing */
+    --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+}

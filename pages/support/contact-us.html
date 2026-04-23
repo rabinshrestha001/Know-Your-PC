@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Know Your PC</title>
+    <title>Contact Us - Know Your PC</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,10 +17,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../CSS/home.css">
-    <link rel="stylesheet" href="../CSS/navbar.css">
-    <link rel="stylesheet" href="../CSS/footer.css">
-    <link rel="stylesheet" href="../CSS/legal.css">
+    <link rel="stylesheet" href="../../core/styles/global.css">
+    <link rel="stylesheet" href="../../components/layout/navbar/navbar.css">
+    <link rel="stylesheet" href="../../components/layout/footer/footer.css">
+    <link rel="stylesheet" href="../legal/legal.css">
 </head>
 
 <body>
@@ -28,8 +28,8 @@
     <!-- Navigation -->
     <nav class="navbar" id="main-navbar">
         <div class="container nav-container">
-            <a href="home.html" class="logo">
-                <img src="../IMG/logo.png" alt="Know Your PC Logo" width="40" height="40" class="logo-img">
+            <a href="../../index.html" class="logo">
+                <img src="../../assets/images/branding/logo.png" alt="Know Your PC Logo" width="40" height="40" class="logo-img">
                 <span class="logo-text">Know Your PC</span>
             </a>
 
@@ -41,14 +41,14 @@
 
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="home.html" class="nav-link">Home</a>
+                    <a href="../../index.html" class="nav-link">Home</a>
                 </li>
 
                 <li class="nav-item has-dropdown">
                     <a href="#" class="nav-link ">Learn <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
                     <div class="dropdown-menu">
                         <div class="dropdown-content">
-                            <a href="parts.html" class="dropdown-item">
+                            <a href="../hardware/parts-explained.html" class="dropdown-item">
                                 <div class="icon-wrapper"><i class="fa-solid fa-microchip"></i></div>
                                 <div class="item-details">
                                     <span class="item-title">Parts Explained</span>
@@ -71,14 +71,14 @@
                             class="fa-solid fa-chevron-down dropdown-icon"></i></a>
                     <div class="dropdown-menu">
                         <div class="dropdown-content">
-                            <a href="guide.html" class="dropdown-item">
+                            <a href="../guides/buying-guide.html" class="dropdown-item">
                                 <div class="icon-wrapper"><i class="fa-solid fa-book-open"></i></div>
                                 <div class="item-details">
                                     <span class="item-title">Buying Guide</span>
                                     <span class="item-desc">Step-by-step buyer's manual</span>
                                 </div>
                             </a>
-                            <a href="budget.html" class="dropdown-item">
+                            <a href="../guides/budget-builds.html" class="dropdown-item">
                                 <div class="icon-wrapper"><i class="fa-solid fa-wallet"></i></div>
                                 <div class="item-details">
                                     <span class="item-title">Budget Guide</span>
@@ -94,14 +94,14 @@
                             class="fa-solid fa-chevron-down dropdown-icon"></i></a>
                     <div class="dropdown-menu">
                         <div class="dropdown-content">
-                            <a href="comparison.html" class="dropdown-item">
+                            <a href="../hardware/comparisons.html" class="dropdown-item">
                                 <div class="icon-wrapper"><i class="fa-solid fa-scale-balanced"></i></div>
                                 <div class="item-details">
                                     <span class="item-title">Comparisons</span>
                                     <span class="item-desc">Head-to-head hardware battles</span>
                                 </div>
                             </a>
-                            <a href="brand.html" class="dropdown-item">
+                            <a href="../hardware/top-brands.html" class="dropdown-item">
                                 <div class="icon-wrapper"><i class="fa-solid fa-star"></i></div>
                                 <div class="item-details">
                                     <span class="item-title">Top Brands</span>
@@ -114,7 +114,7 @@
             </ul>
 
             <div class="nav-actions">
-                <a href="budget.html" class="btn btn-primary nav-btn">Build Your PC</a>
+                <a href="../guides/budget-builds.html" class="btn btn-primary nav-btn">Build Your PC</a>
             </div>
         </div>
     </nav>
@@ -122,55 +122,75 @@
     <!-- Page Header -->
     <header class="legal-header">
         <div class="container">
-            <h1 class="legal-title">Privacy Policy</h1>
-            <p class="legal-date">Last Updated: April 2026</p>
+            <h1 class="legal-title">Get In Touch</h1>
+            <p class="legal-date">We'd love to hear from you. Reach out with any questions or suggestions.</p>
         </div>
     </header>
 
     <!-- Main Content Area -->
-    <section class="legal-content">
-        <p>Welcome to Know Your PC ("we", "our", or "us"). We respect your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.</p>
+    <section class="section-padding">
+        <div class="contact-grid">
+            
+            <!-- Contact Information -->
+            <div>
+                <h2 style="font-size: 2rem; font-family: var(--font-heading); margin-bottom: 1.5rem; color: var(--text-main);">Contact Information</h2>
+                <p style="color: var(--text-muted); margin-bottom: 2.5rem; line-height: 1.8;">
+                    Whether you have a question about PC parts, want to give feedback on our guides, or are interested in partnership opportunities, our team is ready to answer all your questions.
+                </p>
+                
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="contact-info-item">
+                        <h4>Email Us</h4>
+                        <p>hello@knowyourpc.com</p>
+                    </div>
+                </div>
 
-        <h2>1. Information We Collect</h2>
-        <p>We only collect the necessary information to ensure you have a great experience on our website. This includes:</p>
-        <ul>
-            <li><strong>Usage Data:</strong> We may collect your IP address, browser type, operating system, and the pages you visit on our site for analytics purposes.</li>
-            <li><strong>Cookies:</strong> We use cookies to enhance your browsing experience. (See our <a href="cookie.html">Cookie Policy</a> for details).</li>
-            <li><strong>Contact Information:</strong> If you use our contact form or subscribe to our newsletter, we collect the email address and name you provide.</li>
-        </ul>
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="contact-info-item">
+                        <h4>Location</h4>
+                        <p>Kathmandu, Nepal (Global Operations)</p>
+                    </div>
+                </div>
+            </div>
 
-        <h2>2. How We Use Your Information</h2>
-        <p>Your information is used strictly to improve the services we provide. We use the collected data in the following ways:</p>
-        <ul>
-            <li>To analyze site traffic and improve website performance and user experience.</li>
-            <li>To respond to your inquiries when you contact us via our contact form.</li>
-            <li>To send periodic newsletters or updates if you have opted in.</li>
-            <li>To show relevant advertisements and affiliate product links.</li>
-        </ul>
+            <div>
+                <form class="contact-form">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--text-main);">Send a Message</h3>
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                    </div>
 
-        <h2>3. Third-Party Services</h2>
-        <p>We may use third-party services that collect, monitor, and analyze data:</p>
-        <ul>
-            <li><strong>Google Analytics:</strong> We use Google Analytics to track user behavior on our website to understand how visitors engage with our content.</li>
-            <li><strong>Advertising and Affiliate Networks:</strong> We may display ads or include affiliate links to related PC hardware or services. These networks may use cookies to track your visits and provide relevant recommendations.</li>
-        </ul>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                    </div>
 
-        <h2>4. Data Protection and User Rights</h2>
-        <p>We take appropriate security measures to prevent unauthorized access, disclosure, or modification of your personal data. You have the right to:</p>
-        <ul>
-            <li>Request a copy of the personal data we hold about you.</li>
-            <li>Request the deletion or correction of your personal data.</li>
-            <li>Opt-out of our newsletter or marketing communications at any time.</li>
-        </ul>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-control" placeholder="How can we help?" required>
+                    </div>
 
-        <h2>5. We Do Not Sell Your Data</h2>
-        <p><strong>Your trust is important to us. We explicitly do not sell, trade, or rent your personal information to third parties.</strong> Any data shared with third parties is strictly for analytical, advertising, or operational purposes as mentioned above.</p>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" placeholder="Write your message here..." required></textarea>
+                    </div>
 
-        <h2>6. Changes to This Privacy Policy</h2>
-        <p>We may update our Privacy Policy from time to time. Any changes will be reflected on this page with an updated "Last Updated" date at the top. We encourage you to review this policy periodically.</p>
+                    <button type="submit" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">
+                        Send Message <i class="fa-solid fa-paper-plane" style="margin-left: 8px;"></i>
+                    </button>
+                </form>
+            </div>
 
-        <h2>7. Contact Us</h2>
-        <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us via our <a href="contact.html">Contact Us</a> page.</p>
+
+        </div>
     </section>
 
     <!-- Footer -->
@@ -181,7 +201,7 @@
                 <div class="footer-col brand-col">
                     <!-- Logo Section (Inline styles removed since footer.css handles this) -->
                     <div class="logo footer-logo">
-                        <img src="../IMG/logo.png" alt="Know Your PC Logo">
+                        <img src="../../assets/images/branding/logo.png" alt="Know Your PC Logo">
                         <span>Know Your PC</span>
                     </div>
                     <p class="footer-desc">
@@ -203,10 +223,10 @@
                 <div class="footer-col">
                     <h4>Explore</h4>
                     <ul>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="parts.html">Parts Explained</a></li>
-                        <li><a href="guide.html">Buying Guide</a></li>
-                        <li><a href="brand.html">Top Brands</a></li>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../hardware/parts-explained.html">Parts Explained</a></li>
+                        <li><a href="../guides/buying-guide.html">Buying Guide</a></li>
+                        <li><a href="../hardware/top-brands.html">Top Brands</a></li>
                     </ul>
                 </div>
 
@@ -214,8 +234,8 @@
                 <div class="footer-col">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="comparison.html">Comparisons</a></li>
-                        <li><a href="budget.html">Budget Guide</a></li>
+                        <li><a href="../hardware/comparisons.html">Comparisons</a></li>
+                        <li><a href="../guides/budget-builds.html">Budget Guide</a></li>
                         <li><a href="faq.html">FAQ Help</a></li>
                         <li><a href="faq.html#glossary">Tech Glossary</a></li>
                     </ul>
@@ -225,10 +245,10 @@
                 <div class="footer-col">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="cookie.html">Cookie Policy</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="../legal/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../legal/terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="../legal/cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -239,7 +259,43 @@
         </div>
     </footer>
 
-    <script src="../JS/navbar.js"></script>
+    <script src="../../components/layout/navbar/navbar.js"></script>
+    <script>
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                };
+
+                try {
+                    const response = await fetch('http://localhost:8000/api/contact', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        alert('Message sent successfully! Reference ID: ' + data.id);
+                        contactForm.reset();
+                    } else {
+                        alert('Error sending message. Please check the backend server.');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('Connection error. Is the backend server running at http://localhost:8000?');
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

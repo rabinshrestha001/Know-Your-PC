@@ -17,9 +17,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../CSS/home.css">
-    <link rel="stylesheet" href="../CSS/navbar.css">
-    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="core/styles/global.css">
+    <link rel="stylesheet" href="components/layout/navbar/navbar.css">
+    <link rel="stylesheet" href="components/layout/footer/footer.css">
 </head>
 
 <body>
@@ -28,8 +28,8 @@
     <!-- Navigation -->
     <nav class="navbar" id="main-navbar">
         <div class="container nav-container">
-            <a href="home.html" class="logo">
-                <img src="../IMG/logo.png" alt="Know Your PC Logo" width="40" height="40" class="logo-img">
+            <a href="index.html" class="logo">
+                <img src="assets/images/branding/logo.png" alt="Know Your PC Logo" width="40" height="40" class="logo-img">
                 <span class="logo-text">Know Your PC</span>
             </a>
 
@@ -41,21 +41,21 @@
 
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="home.html" class="nav-link active">Home</a>
+                    <a href="index.html" class="nav-link active">Home</a>
                 </li>
 
                 <li class="nav-item has-dropdown">
                     <a href="#" class="nav-link ">Learn <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
                     <div class="dropdown-menu">
                         <div class="dropdown-content">
-                            <a href="parts.html" class="dropdown-item">
+                            <a href="pages/hardware/parts-explained.html" class="dropdown-item">
                                 <div class="icon-wrapper"><i class="fa-solid fa-microchip"></i></div>
                                 <div class="item-details">
                                     <span class="item-title">Parts Explained</span>
                                     <span class="item-desc">Deep dive into PC components</span>
                                 </div>
                             </a>
-                            <a href="faq.html" class="dropdown-item">
+                            <a href="pages/support/faq.html" class="dropdown-item">
                                 <div class="icon-wrapper"><i class="fa-solid fa-circle-question"></i></div>
                                 <div class="item-details">
                                     <span class="item-title">FAQ & Glossary</span>
@@ -71,14 +71,14 @@
                             class="fa-solid fa-chevron-down dropdown-icon"></i></a>
                     <div class="dropdown-menu">
                         <div class="dropdown-content">
-                            <a href="guide.html" class="dropdown-item">
+                            <a href="pages/guides/buying-guide.html" class="dropdown-item">
                                 <div class="icon-wrapper"><i class="fa-solid fa-book-open"></i></div>
                                 <div class="item-details">
                                     <span class="item-title">Buying Guide</span>
                                     <span class="item-desc">Step-by-step buyer's manual</span>
                                 </div>
                             </a>
-                            <a href="budget.html" class="dropdown-item">
+                            <a href="pages/guides/budget-builds.html" class="dropdown-item">
                                 <div class="icon-wrapper"><i class="fa-solid fa-wallet"></i></div>
                                 <div class="item-details">
                                     <span class="item-title">Budget Guide</span>
@@ -94,14 +94,14 @@
                             class="fa-solid fa-chevron-down dropdown-icon"></i></a>
                     <div class="dropdown-menu">
                         <div class="dropdown-content">
-                            <a href="comparison.html" class="dropdown-item">
+                            <a href="pages/hardware/comparisons.html" class="dropdown-item">
                                 <div class="icon-wrapper"><i class="fa-solid fa-scale-balanced"></i></div>
                                 <div class="item-details">
                                     <span class="item-title">Comparisons</span>
                                     <span class="item-desc">Head-to-head hardware battles</span>
                                 </div>
                             </a>
-                            <a href="brand.html" class="dropdown-item">
+                            <a href="pages/hardware/top-brands.html" class="dropdown-item">
                                 <div class="icon-wrapper"><i class="fa-solid fa-star"></i></div>
                                 <div class="item-details">
                                     <span class="item-title">Top Brands</span>
@@ -114,7 +114,7 @@
             </ul>
 
             <div class="nav-actions">
-                <a href="budget.html" class="btn btn-primary nav-btn">Build Your PC</a>
+                <a href="pages/guides/budget-builds.html" class="btn btn-primary nav-btn">Build Your PC</a>
             </div>
         </div>
     </nav>
@@ -142,10 +142,10 @@
                         and simple.
                     </p>
                     <div class="hero-buttons">
-                        <a href="parts.html" class="btn btn-primary">
+                        <a href="pages/hardware/parts-explained.html" class="btn btn-primary">
                             Explore Parts <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
                         </a>
-                        <a href="guide.html" class="btn btn-secondary">
+                        <a href="pages/guides/buying-guide.html" class="btn btn-secondary">
                             View Buying Guide
                         </a>
                     </div>
@@ -298,7 +298,7 @@
                     <h3 class="bento-title">Parts Explained</h3>
                     <p class="bento-desc">Deep dive into CPU, GPU, RAM, Storage, and Motherboards. Understand what each
                         part does without the technical jargon.</p>
-                    <a href="parts.html" class="btn btn-secondary" style="margin-top: auto; width: fit-content;">Start
+                    <a href="pages/hardware/parts-explained.html" class="btn btn-secondary" style="margin-top: auto; width: fit-content;">Start
                         Learning</a>
 
                     <!-- Decor -->
@@ -329,7 +329,7 @@
                             <i class="fa-solid fa-check-circle" style="color: var(--secondary);"></i> Choose Specs
                         </li>
                     </ul>
-                    <a href="guide.html" class="btn btn-primary" style="margin-top: auto; width: 100%;">Read Guide</a>
+                    <a href="pages/guides/buying-guide.html" class="btn btn-primary" style="margin-top: auto; width: 100%;">Read Guide</a>
                 </div>
 
                 <!-- Card: Top Brands -->
@@ -339,7 +339,7 @@
                     </div>
                     <h3 class="bento-title">Top Brands</h3>
                     <p class="bento-desc">Best Laptop brands of 2026 ranked.</p>
-                    <a href="brand.html"
+                    <a href="pages/hardware/top-brands.html"
                         style="color: var(--primary); font-weight: 600; margin-top: 1rem; display: inline-flex; align-items: center; gap: 5px;">View
                         Ranking <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
@@ -351,7 +351,7 @@
                     </div>
                     <h3 class="bento-title">Comparisons</h3>
                     <p class="bento-desc">Intel vs AMD. Mac vs PC. See the winner.</p>
-                    <a href="comparison.html"
+                    <a href="pages/hardware/comparisons.html"
                         style="color: var(--primary); font-weight: 600; margin-top: 1rem; display: inline-flex; align-items: center; gap: 5px;">Compare
                         Now <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
@@ -377,7 +377,7 @@
                         <div class="step-number">1</div>
                     </div>
                     <h3 style="font-weight: 700; margin-bottom: 0.5rem;">Learn The Basics</h3>
-                    <p style="color: var(--text-muted);">Don't know what RAM is? Start with our <a href="parts.html"
+                    <p style="color: var(--text-muted);">Don't know what RAM is? Start with our <a href="pages/hardware/parts-explained.html"
                             style="color: var(--primary); font-weight: 600;">Parts Explained</a> section to understand
                         the jargon.</p>
                 </div>
@@ -389,7 +389,7 @@
                         <div class="step-number">2</div>
                     </div>
                     <h3 style="font-weight: 700; margin-bottom: 0.5rem;">Follow The Guide</h3>
-                    <p style="color: var(--text-muted);">Use our interactive <a href="guide.html"
+                    <p style="color: var(--text-muted);">Use our interactive <a href="pages/guides/buying-guide.html"
                             style="color: var(--primary); font-weight: 600;">Buying Guide</a> to find recommendations
                         based on your budget & needs.</p>
                 </div>
@@ -401,7 +401,7 @@
                         <div class="step-number">3</div>
                     </div>
                     <h3 style="font-weight: 700; margin-bottom: 0.5rem;">Buy With Confidence</h3>
-                    <p style="color: var(--text-muted);">Check our <a href="brand.html"
+                    <p style="color: var(--text-muted);">Check our <a href="pages/hardware/top-brands.html"
                             style="color: var(--primary); font-weight: 600;">Top Brands</a> and comparison list to make
                         the smart final choice.</p>
                 </div>
@@ -554,7 +554,7 @@
                 <div class="footer-col brand-col">
                     <!-- Logo Section (Inline styles removed since footer.css handles this) -->
                     <div class="logo footer-logo">
-                        <img src="../IMG/logo.png" alt="Know Your PC Logo">
+                        <img src="assets/images/branding/logo.png" alt="Know Your PC Logo">
                         <span>Know Your PC</span>
                     </div>
                     <p class="footer-desc">
@@ -576,10 +576,10 @@
                 <div class="footer-col">
                     <h4>Explore</h4>
                     <ul>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="parts.html">Parts Explained</a></li>
-                        <li><a href="guide.html">Buying Guide</a></li>
-                        <li><a href="brand.html">Top Brands</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/hardware/parts-explained.html">Parts Explained</a></li>
+                        <li><a href="pages/guides/buying-guide.html">Buying Guide</a></li>
+                        <li><a href="pages/hardware/top-brands.html">Top Brands</a></li>
                     </ul>
                 </div>
 
@@ -587,10 +587,10 @@
                 <div class="footer-col">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="comparison.html">Comparisons</a></li>
-                        <li><a href="budget.html">Budget Guide</a></li>
-                        <li><a href="faq.html">FAQ Help</a></li>
-                        <li><a href="faq.html#glossary">Tech Glossary</a></li>
+                        <li><a href="pages/hardware/comparisons.html">Comparisons</a></li>
+                        <li><a href="pages/guides/budget-builds.html">Budget Guide</a></li>
+                        <li><a href="pages/support/faq.html">FAQ Help</a></li>
+                        <li><a href="pages/support/faq.html#glossary">Tech Glossary</a></li>
                     </ul>
                 </div>
 
@@ -598,10 +598,10 @@
                 <div class="footer-col">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="cookie.html">Cookie Policy</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="pages/legal/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="pages/legal/terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="pages/legal/cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="pages/support/contact-us.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -630,8 +630,48 @@
         </div>
     </div>
 
-    <script src="../JS/home.js"></script>
-    <script src="../JS/navbar.js"></script>
+    <script src="core/scripts/main.js"></script>
+    <script src="components/layout/navbar/navbar.js"></script>
+    <script>
+        const newsletterForm = document.querySelector('.newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const emailInput = newsletterForm.querySelector('.newsletter-input');
+                const email = emailInput.value;
+
+                try {
+                    const response = await fetch('http://localhost:8000/api/newsletter', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ email })
+                    });
+
+                    if (response.ok) {
+                        alert('Thanks for subscribing! Check your inbox for our latest guide.');
+                        newsletterForm.reset();
+                    } else {
+                        alert('Subscription failed. Are you already subscribed?');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('Newsletter service is currently offline.');
+                }
+            });
+        }
+
+        // View All News functionality
+        const viewAllBtn = document.getElementById('viewAllBtn');
+        const hiddenArticles = document.querySelectorAll('.hidden-article');
+        if (viewAllBtn && hiddenArticles.length > 0) {
+            viewAllBtn.addEventListener('click', () => {
+                hiddenArticles.forEach(art => art.classList.remove('hidden-article'));
+                viewAllBtn.style.display = 'none';
+            });
+        }
+    </script>
 </body>
 
 </html>
