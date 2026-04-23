@@ -21,14 +21,32 @@
 }
 
 .footer-logo img {
-    border-radius: 8px;
-    object-fit: cover;
+    height: 28px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    border-radius: 0 !important;
 }
 
 .footer-logo span {
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-family: var(--font-heading);
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 1.2rem !important;
+    letter-spacing: -0.02em !important;
+    background: linear-gradient(to right, #0EA5E9, #6366F1, #8B5CF6, #0EA5E9) !important;
+    background-size: 300% auto !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    line-height: 1 !important;
+    animation: shine 4s linear infinite !important;
+    text-transform: uppercase !important;
+    display: inline-block !important;
+}
+
+@keyframes shine {
+    to {
+        background-position: 300% center;
+    }
 }
 
 .footer-desc {

@@ -1,15 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ===== Mobile Menu Toggle =====
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
 
-    if (mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', () => {
-            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
-            mobileMenuToggle.classList.toggle('active');
-        });
-    }
 
     // ===== Navbar Scroll Effect =====
     const navbar = document.querySelector('.navbar');

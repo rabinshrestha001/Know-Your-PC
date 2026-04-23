@@ -56,9 +56,9 @@
 }
 
 .navbar .logo-img {
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    height: 50px;
+    width: auto;
+    object-fit: contain;
     transition: transform 0.3s ease;
 }
 
@@ -67,15 +67,7 @@
 }
 
 .navbar .logo-text {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 800;
-    font-size: 1.4rem;
-    letter-spacing: -0.02em;
-    background: linear-gradient(135deg, #0F172A 0%, #0EA5E9 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    line-height: 1;
+    display: none;
 }
 
 /* Nav Menu Desktop */

@@ -1,16 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ---- 1. Mobile Menu Toggle ----
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
 
-    if (mobileMenuToggle && navMenu) {
-        mobileMenuToggle.addEventListener('click', () => {
-            const isFlex = navMenu.style.display === 'flex';
-            navMenu.style.display = isFlex ? 'none' : 'flex';
-            mobileMenuToggle.classList.toggle('active');
-        });
-    }
 
     // ---- 2. Scroll Reveal Animation ----
     const revealElements = document.querySelectorAll('.reveal');

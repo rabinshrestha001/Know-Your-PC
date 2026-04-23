@@ -1,12 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Know Your PC</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/legal.css">
 </head>
-<body style="font-family: 'Outfit', sans-serif; padding: 100px 20px; text-align: center; max-width: 600px; margin: auto;">
-    <h1 style="color: #0ea5e9;">Contact Us</h1>
-    <p style="color: #64748B; margin-bottom: 30px;">Have any questions regarding PC parts or our website? Reach out to us via our official social accounts linked in the footer!</p>
-    <a href="home.html" style="background: #0ea5e9; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600;">&larr; Return to Home</a>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="main-navbar">
+        <div class="container nav-container">
+            <a href="home.html" class="logo">
+                <img src="../IMG/logo.png" alt="Know Your PC Logo" width="40" height="40" class="logo-img">
+                <span class="logo-text">Know Your PC</span>
+            </a>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="home.html" class="nav-link">Home</a>
+                </li>
+
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link ">Learn <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <a href="parts.html" class="dropdown-item">
+                                <div class="icon-wrapper"><i class="fa-solid fa-microchip"></i></div>
+                                <div class="item-details">
+                                    <span class="item-title">Parts Explained</span>
+                                    <span class="item-desc">Deep dive into PC components</span>
+                                </div>
+                            </a>
+                            <a href="faq.html" class="dropdown-item">
+                                <div class="icon-wrapper"><i class="fa-solid fa-circle-question"></i></div>
+                                <div class="item-details">
+                                    <span class="item-title">FAQ & Glossary</span>
+                                    <span class="item-desc">Answers to common tech questions</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link ">Buying Advice <i
+                            class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <a href="guide.html" class="dropdown-item">
+                                <div class="icon-wrapper"><i class="fa-solid fa-book-open"></i></div>
+                                <div class="item-details">
+                                    <span class="item-title">Buying Guide</span>
+                                    <span class="item-desc">Step-by-step buyer's manual</span>
+                                </div>
+                            </a>
+                            <a href="budget.html" class="dropdown-item">
+                                <div class="icon-wrapper"><i class="fa-solid fa-wallet"></i></div>
+                                <div class="item-details">
+                                    <span class="item-title">Budget Guide</span>
+                                    <span class="item-desc">Best builds for every price point</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link ">Reviews & Compare <i
+                            class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <a href="comparison.html" class="dropdown-item">
+                                <div class="icon-wrapper"><i class="fa-solid fa-scale-balanced"></i></div>
+                                <div class="item-details">
+                                    <span class="item-title">Comparisons</span>
+                                    <span class="item-desc">Head-to-head hardware battles</span>
+                                </div>
+                            </a>
+                            <a href="brand.html" class="dropdown-item">
+                                <div class="icon-wrapper"><i class="fa-solid fa-star"></i></div>
+                                <div class="item-details">
+                                    <span class="item-title">Top Brands</span>
+                                    <span class="item-desc">Rankings & recommendations</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="budget.html" class="btn btn-primary nav-btn">Build Your PC</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="legal-header">
+        <div class="container">
+            <h1 class="legal-title">Get In Touch</h1>
+            <p class="legal-date">We'd love to hear from you. Reach out with any questions or suggestions.</p>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <section class="section-padding">
+        <div class="contact-grid">
+            
+            <!-- Contact Information -->
+            <div>
+                <h2 style="font-size: 2rem; font-family: var(--font-heading); margin-bottom: 1.5rem; color: var(--text-main);">Contact Information</h2>
+                <p style="color: var(--text-muted); margin-bottom: 2.5rem; line-height: 1.8;">
+                    Whether you have a question about PC parts, want to give feedback on our guides, or are interested in partnership opportunities, our team is ready to answer all your questions.
+                </p>
+                
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="contact-info-item">
+                        <h4>Email Us</h4>
+                        <p>hello@knowyourpc.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="contact-info-item">
+                        <h4>Location</h4>
+                        <p>Kathmandu, Nepal (Global Operations)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div>
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--text-main);">Send a Message</h3>
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-control" placeholder="How can we help?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" placeholder="Write your message here..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">
+                        Send Message <i class="fa-solid fa-paper-plane" style="margin-left: 8px;"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Brand Column -->
+                <div class="footer-col brand-col">
+                    <!-- Logo Section (Inline styles removed since footer.css handles this) -->
+                    <div class="logo footer-logo">
+                        <img src="../IMG/logo.png" alt="Know Your PC Logo">
+                        <span>Know Your PC</span>
+                    </div>
+                    <p class="footer-desc">
+                        The #1 Resource for understanding computer hardware and making smart buying decisions.
+                    </p>
+                    <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                        <a href="https://www.facebook.com/rabinshrestha00" target="_blank"><i
+                                class="fa-brands fa-facebook fa-lg"></i></a>
+                        <a href="https://www.instagram.com/rabin___shrestha/" target="_blank"><i
+                                class="fa-brands fa-instagram fa-lg"></i></a>
+                        <a href="https://www.linkedin.com/in/rabin-shrestha-60354032a/" target="_blank"><i
+                                class="fa-brands fa-linkedin fa-lg"></i></a>
+                        <a href="https://github.com/rabinshrestha001" target="_blank"><i
+                                class="fa-brands fa-github fa-lg"></i></a>
+                    </div>
+                </div>
+
+                <!-- Explore Column -->
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="parts.html">Parts Explained</a></li>
+                        <li><a href="guide.html">Buying Guide</a></li>
+                        <li><a href="brand.html">Top Brands</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources Column -->
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="comparison.html">Comparisons</a></li>
+                        <li><a href="budget.html">Budget Guide</a></li>
+                        <li><a href="faq.html">FAQ Help</a></li>
+                        <li><a href="faq.html#glossary">Tech Glossary</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Column -->
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookie.html">Cookie Policy</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Know Your PC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/navbar.js"></script>
 </body>
+
 </html>

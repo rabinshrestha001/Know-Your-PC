@@ -1,12 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service - Know Your PC</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/legal.css">
 </head>
-<body style="font-family: 'Outfit', sans-serif; padding: 100px 20px; text-align: center; max-width: 600px; margin: auto;">
-    <h1 style="color: #0ea5e9;">Terms of Service</h1>
-    <p style="color: #64748B; margin-bottom: 30px;">By using Know Your PC, you agree to optimize your computer knowledge and respect the community. Prices in the budget builder may vary locally.</p>
-    <a href="home.html" style="background: #0ea5e9; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600;">&larr; Return to Home</a>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="main-navbar">
+        <div class="container nav-container">
+            <a href="home.html" class="logo">
+                <img src="../IMG/logo.png" alt="Know Your PC Logo" width="40" height="40" class="logo-img">
+                <span class="logo-text">Know Your PC</span>
+            </a>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="home.html" class="nav-link">Home</a>
+                </li>
+
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link ">Learn <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <a href="parts.html" class="dropdown-item">
+                                <div class="icon-wrapper"><i class="fa-solid fa-microchip"></i></div>
+                                <div class="item-details">
+                                    <span class="item-title">Parts Explained</span>
+                                    <span class="item-desc">Deep dive into PC components</span>
+                                </div>
+                            </a>
+                            <a href="faq.html" class="dropdown-item">
+                                <div class="icon-wrapper"><i class="fa-solid fa-circle-question"></i></div>
+                                <div class="item-details">
+                                    <span class="item-title">FAQ & Glossary</span>
+                                    <span class="item-desc">Answers to common tech questions</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link ">Buying Advice <i
+                            class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <a href="guide.html" class="dropdown-item">
+                                <div class="icon-wrapper"><i class="fa-solid fa-book-open"></i></div>
+                                <div class="item-details">
+                                    <span class="item-title">Buying Guide</span>
+                                    <span class="item-desc">Step-by-step buyer's manual</span>
+                                </div>
+                            </a>
+                            <a href="budget.html" class="dropdown-item">
+                                <div class="icon-wrapper"><i class="fa-solid fa-wallet"></i></div>
+                                <div class="item-details">
+                                    <span class="item-title">Budget Guide</span>
+                                    <span class="item-desc">Best builds for every price point</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link ">Reviews & Compare <i
+                            class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <a href="comparison.html" class="dropdown-item">
+                                <div class="icon-wrapper"><i class="fa-solid fa-scale-balanced"></i></div>
+                                <div class="item-details">
+                                    <span class="item-title">Comparisons</span>
+                                    <span class="item-desc">Head-to-head hardware battles</span>
+                                </div>
+                            </a>
+                            <a href="brand.html" class="dropdown-item">
+                                <div class="icon-wrapper"><i class="fa-solid fa-star"></i></div>
+                                <div class="item-details">
+                                    <span class="item-title">Top Brands</span>
+                                    <span class="item-desc">Rankings & recommendations</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="budget.html" class="btn btn-primary nav-btn">Build Your PC</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="legal-header">
+        <div class="container">
+            <h1 class="legal-title">Terms of Service</h1>
+            <p class="legal-date">Last Updated: April 2026</p>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <section class="legal-content">
+        <p>By accessing or using Know Your PC, you agree to comply with and be bound by the following Terms of Service. Please review them carefully.</p>
+
+        <h2>1. Informational Purposes Only</h2>
+        <p>All content provided on Know Your PC, including component guides, build recommendations, rankings, and comparisons, is intended for informational and educational purposes only. We strive to provide accurate and helpful information, but we do not guarantee the completeness, reliability, or suitability of the information.</p>
+
+        <h2>2. Price Accuracy and Product Availability</h2>
+        <p>The PC hardware market is highly volatile. Prices, specifications, and availability of parts mentioned on our website are subject to change without notice. The estimated prices (including NPR pricing) and stock statuses we provide may not always be completely accurate or up to date. We strongly recommend verifying prices and specifications with the respective retailers before making any purchase.</p>
+
+        <h2>3. No Liability</h2>
+        <p>Know Your PC and its authors shall not be held liable or responsible for any errors or omissions in the content, nor for any loss, damage, or hardware issues arising from the use of the information provided on this site. Any decisions you make based on our guides or recommendations, including purchasing or assembling PC components, are made entirely at your own risk.</p>
+
+        <h2>4. Rules for Using the Website</h2>
+        <p>When using our website, you agree to the following rules of conduct:</p>
+        <ul>
+            <li>Do not use the website in any way that causes, or may cause, damage to the website or impairment of the availability or accessibility of the website.</li>
+            <li>Do not use the website to copy, store, host, transmit, send, use, publish, or distribute any material which consists of (or is linked to) any spyware, computer virus, Trojan horse, or other malicious computer software.</li>
+            <li>Do not conduct any systematic or automated data collection activities (such as scraping, data mining, or data extraction) on or in relation to our website without our express written consent.</li>
+        </ul>
+
+        <h2>5. Intellectual Property Rights</h2>
+        <p>Unless otherwise stated, Know Your PC and/or its licensors own the intellectual property rights for all material on the website. This includes text, graphics, logos, images, and the compilation thereof. All intellectual property rights are reserved. You may view and/or print pages from the website for your own personal use, subject to restrictions set in these terms and conditions.</p>
+
+        <h2>6. Third-Party Links</h2>
+        <p>Our website may contain links to third-party websites or services that are not owned or controlled by Know Your PC. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party web sites or services.</p>
+
+        <h2>7. Changes to Terms</h2>
+        <p>We reserve the right to modify these Terms of Service at any time. We will notify users of any changes by updating the "Last Updated" date at the top of this page. Your continued use of the website following the posting of changes will mean you accept and agree to the changes.</p>
+        
+        <h2>8. Contact Information</h2>
+        <p>If you have any queries regarding any of our terms, please feel free to <a href="contact.html">contact us</a>.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Brand Column -->
+                <div class="footer-col brand-col">
+                    <!-- Logo Section (Inline styles removed since footer.css handles this) -->
+                    <div class="logo footer-logo">
+                        <img src="../IMG/logo.png" alt="Know Your PC Logo">
+                        <span>Know Your PC</span>
+                    </div>
+                    <p class="footer-desc">
+                        The #1 Resource for understanding computer hardware and making smart buying decisions.
+                    </p>
+                    <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                        <a href="https://www.facebook.com/rabinshrestha00" target="_blank"><i
+                                class="fa-brands fa-facebook fa-lg"></i></a>
+                        <a href="https://www.instagram.com/rabin___shrestha/" target="_blank"><i
+                                class="fa-brands fa-instagram fa-lg"></i></a>
+                        <a href="https://www.linkedin.com/in/rabin-shrestha-60354032a/" target="_blank"><i
+                                class="fa-brands fa-linkedin fa-lg"></i></a>
+                        <a href="https://github.com/rabinshrestha001" target="_blank"><i
+                                class="fa-brands fa-github fa-lg"></i></a>
+                    </div>
+                </div>
+
+                <!-- Explore Column -->
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="parts.html">Parts Explained</a></li>
+                        <li><a href="guide.html">Buying Guide</a></li>
+                        <li><a href="brand.html">Top Brands</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources Column -->
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="comparison.html">Comparisons</a></li>
+                        <li><a href="budget.html">Budget Guide</a></li>
+                        <li><a href="faq.html">FAQ Help</a></li>
+                        <li><a href="faq.html#glossary">Tech Glossary</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Column -->
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookie.html">Cookie Policy</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Know Your PC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/navbar.js"></script>
 </body>
+
 </html>
